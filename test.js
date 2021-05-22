@@ -1,11 +1,12 @@
-let input = `100 99 1000000000`.split(' ').map(x => Number(x));
-let a = input[0];
-let b = input[1];
-let v = input[2];
+let input = `5
+OOXXOXXOOO
+OOXXOOXXOO
+OXOXOXOXOXOXOX
+OOOOOOOOOO
+OOOOXOOOOXOOOOX`.split('\n');
 
-function climb(a, b, v){
-    let x = Math.ceil((v-b)/(a-b));
-    return x;    
+for(let i=1; i<input.length; i++){
+    let quiz = input[i].split('');
 }
 
-console.log(climb(a, b, v));
+console.log(quiz);
