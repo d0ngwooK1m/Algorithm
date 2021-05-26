@@ -26,4 +26,4 @@ for(let i=1; i<=length; i++){
 }
 
 console.log(answer);
-//9012번
+//9012번 stack의 실행 컨텍스트 렉시컬 스코프 주의

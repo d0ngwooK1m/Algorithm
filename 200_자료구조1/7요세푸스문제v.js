@@ -21,3 +21,25 @@ while(queue.length){
 
 console.log(`<${answer.join(', ')}>`);
 //1158번
+
+/*
+let arrLength = Number(input[0]);
+let step = Number(input[1])-1;
+let queue = Array(arrLength).fill().map((_, x) => x+1);
+let answerStr = '<';
+let count = 0;
+
+while(answer.length !== arrLength){
+    queue.push(queue.shift());
+    count++;
+    if(count === step && queue.length !== 1){
+        answerStr+= `${queue.shift()}, `
+        count = 0;
+    } else if(count === step && queue.length === 1){
+        answerStr+= `${queue.shift()}>`;
+        break;        
+    }
+}
+
+console.log(answerStr);
+*/

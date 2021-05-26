@@ -34,3 +34,30 @@ while (stack2.length) {
 
 console.log(stack.join(""));
 //1406 split join stack 활용
+
+/*
+let length = Number(input[1])+1;
+let chars = input[0].split('');
+let stack = [];
+
+for(let i=2; i<=length; i++){
+    let command = input[i]
+    if(command[0] === 'L' && chars.length !== 0){
+        stack.push(chars.pop());
+    }
+    else if(command[0] === 'D' && stack.length !== 0){
+        chars.push(stack.pop());
+    }
+    else if(command[0] === 'B' && chars.length !== 0){
+        chars.splice(chars.length-1, 1);
+    }
+    else if(command[0] === 'P'){
+        chars.push(command[2]);
+    }
+    // console.log(chars, stack);
+}
+
+let answer = chars.concat(stack.reverse()).join('');
+console.log(answer);
+*/
+//이게 더 깔끔한듯
