@@ -1,26 +1,25 @@
-let input = `4
-9 5 4 8`.split('\n');
-let length = Number(input[0]);
-let numbers = input[1].split(' ').map(x => Number(x));
-let queue = [];
-let answer = [];
+let input = `8
+20
+42
+0`.split('\n').map(x => Number(x));
 
-for(let i=0; i<length; i++){
-    queue.push(numbers.shift());
-    for(let j=0; j<numbers.length; j++){
-        if(queue[i] < numbers[j]){
-            answer.push(numbers[j]);
-            break;   
-        }
-        else if(queue[i] >= numbers[j]){
-            continue;
-        }
-        else if(j === numbers.length-1 && queue.length-1 === i) answer+=`-1 `;
+let max = Math.max(...input);
+let prime = Array(max);
+let check = Array(max).fill(false);
+let pn = 0;
+let answer = '';
 
+for (let i=2; i<=max; i++) {
+    if(check[i] === false) {
+        prime[pn++] = i;
+        for (let j = i*i; j<=max; j+=i) {
+            check[j] = true;
+        }
     }
-
-    console.log(answer);
-
 }
-// answer+='-1'
-// console.log(answer);
+
+// for (let k=0; k<=end; k++) {
+//     if(prime[k]>=start && prime[k]<=end) answer+=`${prime[k]}\n`;
+// }
+
+console.log(prime);
