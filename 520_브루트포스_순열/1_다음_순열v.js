@@ -1,5 +1,5 @@
-const input = `5
-5 4 3 2 1`.split('\n');
+const input = `4
+1 2 4 3`.split('\n');
 
 let n = Number(input[0]);
 let a = input[1].split(' ').map((x) => Number(x));
@@ -17,8 +17,8 @@ const nextPermutation = function (a) {
         j -= 1;
     }
     let temp = a[i-1];
-    a[i-1] = a[i];
-    a[i] = temp;
+    a[i-1] = a[j];
+    a[j] = temp;
 
     j = a.length-1;
     while (i < j) {
@@ -26,7 +26,7 @@ const nextPermutation = function (a) {
         a[i] = a[j];
         a[j] = temp;
         i += 1;
-        j += 1;
+        j -= 1;
     }
     return true;
 }

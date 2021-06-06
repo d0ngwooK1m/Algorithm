@@ -1,26 +1,34 @@
-let input = `17`;
+const input = `4
+1 3 4 2`.split('\n');
 
-function solution (numbers) {
+const n = Number(input[0]);
+let a = input[1].split(' ').map((x) => Number(x));
 
-    let num = [...numbers];
+const pastPermutation = function (a) {
+    let i = n-1;
+    while (i > 0 && a[i-1] <= a[i]) i -= 1;
+    if (i <= 0) return false;
     
-    const permutation = (arr, selectNum) => {
-        let result = [];
-        if (selectNum === 1) return arr.map((v) => [v]);
-        //selectNum === 1 각 원소 배열로 리턴
+    let j = n-1;
+    while (a[j] >= a[i-1]) j -= 1;
+    let temp = a[j];
+    a[j] = a[i-1];
+    a[i-1] = temp;
 
-        arr.forEach ((v, idx, arr) => {
-            const fixer = v;
-            const restArr = arr.filter((val, index) => index !== idx);
-            //나머지Arr = index가 idx와 같지 않은 val, index 반환?
-            const permuArr = permutation(restArr, selectNum-1);
-            //permuArr = permutation(나머지Arr, selectNum-1)
-            const combineFixer = permuArr.map((v) => fixer + v);
-            //combineFixer = fixer에 v 더하기
-            result.push(...combineFixer);
-            //결과에 combineFixer 넣기
-        })
-        return result
+    j=n-1;
+    while (i < j) {
+        let temp = a[i];
+        a[i] = a[j];
+        a[j] = temp;
+        i += 1;
+        j -= 1;
     }
+
+    return true;
 }
 
+if (pastPermutation(a)) {
+    console.log(a.join(' '));
+} else {
+    console.log(-1);
+}

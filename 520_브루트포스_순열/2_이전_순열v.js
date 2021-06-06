@@ -21,7 +21,7 @@ const pastPermutation = function (a) {
         a[i] = a[j];
         a[j] = temp;
         i += 1;
-        j += 1;
+        j -= 1;
     }
 
     return true;
