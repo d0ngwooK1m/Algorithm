@@ -1,20 +1,23 @@
-const p = [1, 2, 3, 4, 5];
+const p = [70, 50, 80, 50];
+const l = 100;
 
-function solution (prices) {
-    let answer = [];
-    const n = prices.length;
-    let cnt = 0;
-    for (let index=0; index<n; ) {
-        for (let i=index; i<n; i++) {
-            if (prices[index]<=prices[i]) cnt++;     
+function solution(people, limit) {
+    let answer = 0;
+    let newP = people.sort((a, b) => b-a)
+    
+    while (newP.length !== 0) {
+        let n = newP.length;
+        if (newP[0] + newP[n-1] <= limit) {
+            newP.shift();
+            newP.pop();
+            answer++;
+        } else {
+            newP.shift();
+            answer++;
         }
-        // console.log(cnt);
-        answer.push(cnt-1);
-        cnt=0;
-        index++;
-        
+        console.log(newP, n);
     }
     return answer;
 }
 
-console.log(solution(p));
+console.log(solution(p, l));

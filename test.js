@@ -1,47 +1,21 @@
-const l = 100;
-const w = 100;
-const tw = [10];
+const n = "1231234";
+const k = 3;
 
-function solution(bridge_length, weight, truck_weights) {
-    let answer = 0;
-    let bridge = Array(bridge_length).fill(0);
-    let passedT = [];
+function solution(number, k) {
+    let answer = '';
     let cnt = 0;
-    const trucks = truck_weights.length;
-    
-
-    while (passedT.length !== trucks) {
-        let check = bridge.reduce((a, b) => a+b);
-        if (check <= weight) {
-            if (bridge[0] === 0) {
-                bridge.shift();
-                if (truck_weights.length === 0) bridge.push(0);
-                else if (check+truck_weights[0] > weight) bridge.push(0);
-                else bridge.push(truck_weights.shift());
-                if (check !== 0) cnt++;
-            } else {
-                passedT.push(bridge.shift());
-                if (truck_weights.length === 0) bridge.push(0);
-                else if (check+truck_weights[0] > weight) bridge.push(0);
-                else bridge.push(truck_weights.shift());
-                if (check !== 0) cnt++;;
-            }
-        }  else  {
-            if (bridge[0] === 0) {
-                bridge.shift();
-                bridge.push(0);
-                cnt++;
-            } else {
-                passedT.push(bridge.shift());
-                bridge.push(0);
-                cnt++;
-            }
+    let numArr = number.split('').map((x) => Number(x));
+    const n = numArr.length;
+    for (let i=0; i<n; i++) {
+        let min = Math.min(...numArr);
+        if (numArr[x] === min) {
+            numArr.splice(x, 1);
         }
-        console.log(passedT, bridge, truck_weights, cnt);
+        if(num)
+        console.log(numArr, min, cnt);
     }
-    answer+=cnt+1;
-        
+    answer+=numArr.join('')
     return answer;
 }
 
-console.log(solution(l, w, tw));
+console.log(solution(n, k));
