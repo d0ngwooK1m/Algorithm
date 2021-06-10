@@ -1,18 +1,23 @@
-const n = "1231234";
-const k = 3;
+const n = "4177252841";
+const k = 4;
 
 function solution(number, k) {
     let answer = '';
     let cnt = 0;
     let numArr = number.split('').map((x) => Number(x));
+    let stack = [];
+    const check = function () {}
     const n = numArr.length;
     for (let i=0; i<n; i++) {
-        let min = Math.min(...numArr);
-        if (numArr[x] === min) {
-            numArr.splice(x, 1);
-        }
-        if(num)
-        console.log(numArr, min, cnt);
+        if (cnt === k) break;
+        stack.push(numArr.shift());
+        stack.filter((val) => {
+            if (val < numArr[0]) {
+                stack.pop();
+                cnt++;
+            }
+        })
+        console.log(stack ,numArr, cnt);
     }
     answer+=numArr.join('')
     return answer;
