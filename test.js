@@ -1,26 +1,32 @@
-const n = "4177252841";
-const k = 4;
+let y = 22;
+let b = 50;
+let result = [];
+let centers = [];
+let answer = [];
 
-function solution(number, k) {
-    let answer = '';
-    let cnt = 0;
-    let numArr = number.split('').map((x) => Number(x));
-    let stack = [];
-    const check = function () {}
-    const n = numArr.length;
-    for (let i=0; i<n; i++) {
-        if (cnt === k) break;
-        stack.push(numArr.shift());
-        stack.filter((val) => {
-            if (val < numArr[0]) {
-                stack.pop();
-                cnt++;
-            }
-        })
-        console.log(stack ,numArr, cnt);
-    }
-    answer+=numArr.join('')
-    return answer;
+function makeCenter(y, i) {
+    if (y <= 0 && centers.length > centers[0]) return result.push(centers);
+    if (y % i === 0) centers.push(i);
+    else return;
+    y-=i;
+    makeCenter(y, i); 
+    
 }
 
-console.log(solution(n, k));
+// makeCenter(6, 1);
+
+for (let i=1; i<=y; i++) {
+    centers = [];
+    makeCenter(y, i);
+}
+
+for (let j=0; j<result.length; j++) {
+    if (result[j].length*2 + result[j][0]*2 + 4 === b) {
+        answer.push(result[j].length+2);
+        answer.push(result[j][0]+2);
+        break;
+    }
+    console.log(answer);
+}
+
+console.log(answer);
