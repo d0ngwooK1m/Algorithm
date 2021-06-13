@@ -1,4 +1,4 @@
-let n = "1754";
+let n = "011";
 
 function solution(numbers) {
 
@@ -15,7 +15,7 @@ function solution(numbers) {
             const permuArr = permutation(restArr, selectNum-1); // restArr로 만든 순열
             const combineFixer = permuArr.map((v)=> fixer + v); //fixer와 순열의 결합
             result.push(...combineFixer); //result로 결과 push
-            console.log(result);
+            // console.log(result);
         })
         return result
     }
