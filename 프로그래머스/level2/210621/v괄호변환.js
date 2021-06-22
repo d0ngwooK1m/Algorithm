@@ -27,7 +27,7 @@ function solution(p) {
               
                 // 첫번째, 마지막 문자 제거하고 나머지 반전 후 뒤에 붙이기
 				for (let j = 1; j < i; j++) {
-					if (p[j] == ')') answer += '(';~
+					if (p[j] == ')') answer += '(';
 					if (p[j] == '(') answer += ')';
 				}
 				return answer;

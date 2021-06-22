@@ -1,20 +1,26 @@
-const n = [2,1,3,4,1];
-function solution(numbers) {
-    let answer = [];
-    let check = Array(201).fill(false);
+let s = "abcabcabcabcdededededede";
 
-    for (let i=0; i<numbers.length; i++) {
-        for (let j=0; j<numbers.length; i++) {
-            if (i !== j && check[numbers[i] + numbers[j]] === false) {
-                answer.push(numbers[i] + numbers[j]);
-                check[numbers[i] + numbers[j]] = true;
-            } 
-            else continue;
+function solution(s) {
+	//문자열 길이 1인 경우
+    if (s.length === 1) return 1;
+    let strings = [];
+    //첫번째 반복문은 압축할 문자열 길이 1부터 시작 ~ 문자열 길이 / 2
+    for(let i = 1; i <= parseInt(s.length / 2); i++) {
+        let cnt = 1;
+        let string = '';
+        for(let j = 0; j < s.length; j += i) {
+            const current = s.substr(j, i);
+            const next = s.substr(j+i, i);
+            if(current === next) {
+                cnt++;
+            } else {
+                string = cnt > 1? string + cnt + current : string + current;
+                cnt = 1;
+            }
         }
+        strings.push(string.length);
     }
-    console.log(answer);
-    // [...new Set(answer)].sort((a, b) => a-b);
-    return answer;
+    return strings;
 }
 
-console.log(solution(n));
+console.log(solution(s));
