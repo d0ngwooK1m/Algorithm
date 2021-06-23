@@ -1,26 +1,18 @@
-let s = "abcabcabcabcdededededede";
+let c = [["yellowhat", "headgear"], ["bluesunglasses", "eyewear"], ["green_turban", "headgear"]];
 
-function solution(s) {
-	//문자열 길이 1인 경우
-    if (s.length === 1) return 1;
-    let strings = [];
-    //첫번째 반복문은 압축할 문자열 길이 1부터 시작 ~ 문자열 길이 / 2
-    for(let i = 1; i <= parseInt(s.length / 2); i++) {
-        let cnt = 1;
-        let string = '';
-        for(let j = 0; j < s.length; j += i) {
-            const current = s.substr(j, i);
-            const next = s.substr(j+i, i);
-            if(current === next) {
-                cnt++;
-            } else {
-                string = cnt > 1? string + cnt + current : string + current;
-                cnt = 1;
-            }
-        }
-        strings.push(string.length);
+function solution(clothes) {
+    var answer = 1;
+    var obj={};
+    for(var i=0;i<clothes.length;i++){
+        obj[clothes[i][1]]=(obj[clothes[i][1]] || 1) + 1;
     }
-    return strings;
+    console.log(obj);
+
+    for(var key in obj){
+        answer *= obj[key];
+    }
+    
+    return answer-1;
 }
 
-console.log(solution(s));
+solution(c);
