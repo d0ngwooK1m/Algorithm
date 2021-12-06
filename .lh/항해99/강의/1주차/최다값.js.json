@@ -1,0 +1,50 @@
+{
+    "sourceFile": "항해99/강의/1주차/최다값.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 8,
+            "patches": [
+                {
+                    "date": 1638755145613,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1638755411042,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,16 @@\n-const string = \"hello my name is sparta\";\n\\ No newline at end of file\n+const string = \"hello my name is sparta\";\r\n+\r\n+const answer = () => {\r\n+  let maxNum = 0;\r\n+  for (let i = 0; i < string.length; i++) {\r\n+    const count = 0;\r\n+    for (let j = 0; j < string.length; j++) {\r\n+      if (string[i] === string[j]) {\r\n+        count++;\r\n+      }\r\n+    }\r\n+    if (count >= maxNum) {\r\n+      maxNum = count;\r\n+    }\r\n+  }\r\n+};\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638755422111,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,5 +12,6 @@\n     if (count >= maxNum) {\r\n       maxNum = count;\r\n     }\r\n   }\r\n+  return maxNum;\r\n };\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638755456527,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,6 +12,7 @@\n     if (count >= maxNum) {\r\n       maxNum = count;\r\n     }\r\n   }\r\n-  return maxNum;\r\n-};\n\\ No newline at end of file\n+  return console.log(maxNum);\r\n+};\r\n+answer();\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638755490891,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n const answer = () => {\r\n   let maxNum = 0;\r\n   for (let i = 0; i < string.length; i++) {\r\n-    const count = 0;\r\n+    let count = 0;\r\n     for (let j = 0; j < string.length; j++) {\r\n       if (string[i] === string[j]) {\r\n         count++;\r\n       }\r\n"
+                },
+                {
+                    "date": 1638755631833,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,9 @@\n   for (let i = 0; i < string.length; i++) {\r\n     let count = 0;\r\n     for (let j = 0; j < string.length; j++) {\r\n       if (string[i] === string[j]) {\r\n+        console.log(string[i], string[j]);\r\n         count++;\r\n       }\r\n     }\r\n     if (count >= maxNum) {\r\n"
+                },
+                {
+                    "date": 1638755713710,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,10 +4,11 @@\n   let maxNum = 0;\r\n   for (let i = 0; i < string.length; i++) {\r\n     let count = 0;\r\n     for (let j = 0; j < string.length; j++) {\r\n+      console.log(string[i], string[j]);\r\n       if (string[i] === string[j]) {\r\n-        console.log(string[i], string[j]);\r\n+        \r\n         count++;\r\n       }\r\n     }\r\n     if (count >= maxNum) {\r\n"
+                },
+                {
+                    "date": 1638755765389,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,14 @@\n const string = \"hello my name is sparta\";\r\n+string\r\n \r\n const answer = () => {\r\n   let maxNum = 0;\r\n   for (let i = 0; i < string.length; i++) {\r\n     let count = 0;\r\n     for (let j = 0; j < string.length; j++) {\r\n       console.log(string[i], string[j]);\r\n       if (string[i] === string[j]) {\r\n-        \r\n         count++;\r\n       }\r\n     }\r\n     if (count >= maxNum) {\r\n"
+                },
+                {
+                    "date": 1638755784318,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n   for (let i = 0; i < string.length; i++) {\r\n     let count = 0;\r\n     for (let j = 0; j < string.length; j++) {\r\n       console.log(string[i], string[j]);\r\n-      if (string[i] === string[j]) {\r\n+      if (string[i] === string[j] && string[i] !== ' ') {\r\n         count++;\r\n       }\r\n     }\r\n     if (count >= maxNum) {\r\n"
+                }
+            ],
+            "date": 1638755145613,
+            "name": "Commit-0",
+            "content": "const string = \"hello my name is sparta\";"
+        }
+    ]
+}

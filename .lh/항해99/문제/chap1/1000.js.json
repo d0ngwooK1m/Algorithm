@@ -1,0 +1,74 @@
+{
+    "sourceFile": "항해99/문제/chap1/1000.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 14,
+            "patches": [
+                {
+                    "date": 1638766642688,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1638766699309,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,7 +16,8 @@\n })();\r\n  \r\n let t = input();\r\n while (t--) {\r\n-    const [a, b] = input().split(' ').map(Number);\r\n-    console.log(a + b);\r\n+  console.log(t);\r\n+  const [a, b] = input().split(' ').map(Number);\r\n+  console.log(a + b);\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638766726438,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,6 +18,6 @@\n let t = input();\r\n while (t--) {\r\n   console.log(t);\r\n   const [a, b] = input().split(' ').map(Number);\r\n-  console.log(a + b);\r\n+  // console.log(a + b);\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638766786238,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,8 +16,8 @@\n })();\r\n  \r\n let t = input();\r\n while (t--) {\r\n-  console.log(t);\r\n+  // console.log(t);\r\n   const [a, b] = input().split(' ').map(Number);\r\n-  // console.log(a + b);\r\n+  console.log(a + b);\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638766794037,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,8 +15,9 @@\n     return () => stdin[line++];\r\n })();\r\n  \r\n let t = input();\r\n+console.log(t);\r\n while (t--) {\r\n   // console.log(t);\r\n   const [a, b] = input().split(' ').map(Number);\r\n   console.log(a + b);\r\n"
+                },
+                {
+                    "date": 1638766867837,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n     let line = 0;\r\n     return () => stdin[line++];\r\n })();\r\n  \r\n-let t = input();\r\n+// let t = input();\r\n console.log(t);\r\n while (t--) {\r\n   // console.log(t);\r\n   const [a, b] = input().split(' ').map(Number);\r\n"
+                },
+                {
+                    "date": 1638767149769,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,24 +1,44 @@\n+// const fs = require('fs');\r\n+// const stdin = (process.platform === 'linux'\r\n+//     ? fs.readFileSync('/dev/stdin').toString()\r\n+//     : `5\r\n+// 1 1\r\n+// 2 3\r\n+// 3 4\r\n+// 9 8\r\n+// 5 2\r\n+// `\r\n+// ).split('\\n');\r\n+ \r\n+// const input = (() => {\r\n+//     let line = 0;\r\n+//     return () => stdin[line++];\r\n+// })();\r\n+ \r\n+// // let t = input();\r\n+// console.log(t);\r\n+// while (t--) {\r\n+//   // console.log(t);\r\n+//   const [a, b] = input().split(' ').map(Number);\r\n+//   console.log(a + b);\r\n+// }\r\n+\r\n+//실제문제 적용\r\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n     ? fs.readFileSync('/dev/stdin').toString()\r\n-    : `5\r\n+    : `\r\n 1 1\r\n-2 3\r\n-3 4\r\n-9 8\r\n-5 2\r\n `\r\n ).split('\\n');\r\n  \r\n const input = (() => {\r\n     let line = 0;\r\n     return () => stdin[line++];\r\n })();\r\n  \r\n-// let t = input();\r\n-console.log(t);\r\n+let t = input();\r\n while (t--) {\r\n-  // console.log(t);\r\n-  const [a, b] = input().split(' ').map(Number);\r\n-  console.log(a + b);\r\n+    const [a, b] = input().split(' ').map(Number);\r\n+    console.log(a + b);\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638767169542,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,8 +37,9 @@\n     return () => stdin[line++];\r\n })();\r\n  \r\n let t = input();\r\n+console.log(t);\r\n while (t--) {\r\n     const [a, b] = input().split(' ').map(Number);\r\n     console.log(a + b);\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638767194933,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,16 +30,17 @@\n     : `\r\n 1 1\r\n `\r\n ).split('\\n');\r\n+console.log(stdin);\r\n  \r\n const input = (() => {\r\n     let line = 0;\r\n     return () => stdin[line++];\r\n })();\r\n  \r\n let t = input();\r\n-console.log(t);\r\n+// console.log(t);\r\n while (t--) {\r\n     const [a, b] = input().split(' ').map(Number);\r\n     console.log(a + b);\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638767236584,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,21 +26,19 @@\n //실제문제 적용\r\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n     ? fs.readFileSync('/dev/stdin').toString()\r\n-    : `\r\n-1 1\r\n-`\r\n+    : `1 1`\r\n ).split('\\n');\r\n console.log(stdin);\r\n  \r\n-const input = (() => {\r\n-    let line = 0;\r\n-    return () => stdin[line++];\r\n-})();\r\n+// const input = (() => {\r\n+//     let line = 0;\r\n+//     return () => stdin[line++];\r\n+// })();\r\n  \r\n-let t = input();\r\n\\ No newline at end of file\n-// console.log(t);\r\n-while (t--) {\r\n-    const [a, b] = input().split(' ').map(Number);\r\n-    console.log(a + b);\r\n-}\n+// let t = input();\r\n+// // console.log(t);\r\n+// while (t--) {\r\n+//     const [a, b] = input().split(' ').map(Number);\r\n+//     console.log(a + b);\r\n+// }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638767298173,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,17 +28,17 @@\n const stdin = (process.platform === 'linux'\r\n     ? fs.readFileSync('/dev/stdin').toString()\r\n     : `1 1`\r\n ).split('\\n');\r\n-console.log(stdin);\r\n+// console.log(stdin);\r\n  \r\n-// const input = (() => {\r\n-//     let line = 0;\r\n-//     return () => stdin[line++];\r\n-// })();\r\n+const input = (() => {\r\n+    let line = 0;\r\n+    return () => stdin[line];\r\n+})();\r\n  \r\n-// let t = input();\r\n\\ No newline at end of file\n-// // console.log(t);\r\n-// while (t--) {\r\n-//     const [a, b] = input().split(' ').map(Number);\r\n-//     console.log(a + b);\r\n-// }\n+let t = input();\r\n+// console.log(t);\r\n+while (t--) {\r\n+    const [a, b] = input().split(' ').map(Number);\r\n+    console.log(a + b);\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638767305369,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,8 +37,6 @@\n })();\r\n  \r\n let t = input();\r\n // console.log(t);\r\n-while (t--) {\r\n-    const [a, b] = input().split(' ').map(Number);\r\n-    console.log(a + b);\r\n-}\n\\ No newline at end of file\n+const [a, b] = input().split(' ').map(Number);\r\n+console.log(a + b);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638769984777,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,42 +1,42 @@\n+const fs = require('fs');\r\n+const stdin = (process.platform === 'linux'\r\n+    ? fs.readFileSync('/dev/stdin').toString()\r\n+    : `5\r\n+1 1\r\n+2 3\r\n+3 4\r\n+9 8\r\n+5 2\r\n+`\r\n+).split('\\n');\r\n+ \r\n+const input = (() => {\r\n+    let line = 0;\r\n+    return () => stdin[line++];\r\n+})();\r\n+ \r\n+// let t = input();\r\n+console.log(t);\r\n+while (t--) {\r\n+  // console.log(t);\r\n+  const [a, b] = input().split(' ').map(Number);\r\n+  console.log(a + b);\r\n+}\r\n+\r\n+//실제문제 적용\r\n // const fs = require('fs');\r\n // const stdin = (process.platform === 'linux'\r\n //     ? fs.readFileSync('/dev/stdin').toString()\r\n-//     : `5\r\n-// 1 1\r\n-// 2 3\r\n-// 3 4\r\n-// 9 8\r\n-// 5 2\r\n-// `\r\n+//     : `1 1`\r\n // ).split('\\n');\r\n+// // console.log(stdin);\r\n  \r\n // const input = (() => {\r\n //     let line = 0;\r\n\\ No newline at end of file\n-//     return () => stdin[line++];\r\n+//     return () => stdin[line];\r\n // })();\r\n  \r\n-// // let t = input();\r\n-// console.log(t);\r\n-// while (t--) {\r\n-//   // console.log(t);\r\n-//   const [a, b] = input().split(' ').map(Number);\r\n-//   console.log(a + b);\r\n-// }\r\n-\r\n-//실제문제 적용\r\n-const fs = require('fs');\r\n-const stdin = (process.platform === 'linux'\r\n-    ? fs.readFileSync('/dev/stdin').toString()\r\n-    : `1 1`\r\n-).split('\\n');\r\n-// console.log(stdin);\r\n- \r\n-const input = (() => {\r\n-    let line = 0;\r\n-    return () => stdin[line];\r\n-})();\r\n- \r\n-let t = input();\r\n-// console.log(t);\r\n-const [a, b] = input().split(' ').map(Number);\r\n-console.log(a + b);\n+// let t = input();\r\n+// // console.log(t);\r\n+// const [a, b] = input().split(' ').map(Number);\r\n+// console.log(a + b);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638778747329,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,42 +1,42 @@\n+// const fs = require('fs');\r\n+// const stdin = (process.platform === 'linux'\r\n+//     ? fs.readFileSync('/dev/stdin').toString()\r\n+//     : `5\r\n+// 1 1\r\n+// 2 3\r\n+// 3 4\r\n+// 9 8\r\n+// 5 2\r\n+// `\r\n+// ).split('\\n');\r\n+ \r\n+// const input = (() => {\r\n+//     let line = 0;\r\n+//     return () => stdin[line++];\r\n+// })();\r\n+ \r\n+// // let t = input();\r\n+// console.log(t);\r\n+// while (t--) {\r\n+//   // console.log(t);\r\n+//   const [a, b] = input().split(' ').map(Number);\r\n+//   console.log(a + b);\r\n+// }\r\n+\r\n+//실제문제 적용\r\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n     ? fs.readFileSync('/dev/stdin').toString()\r\n-    : `5\r\n-1 1\r\n-2 3\r\n-3 4\r\n-9 8\r\n-5 2\r\n-`\r\n+    : `1 1`\r\n ).split('\\n');\r\n+// console.log(stdin);\r\n  \r\n const input = (() => {\r\n     let line = 0;\r\n\\ No newline at end of file\n-    return () => stdin[line++];\r\n+    return () => stdin[line];\r\n })();\r\n  \r\n-// let t = input();\r\n-console.log(t);\r\n-while (t--) {\r\n-  // console.log(t);\r\n-  const [a, b] = input().split(' ').map(Number);\r\n-  console.log(a + b);\r\n-}\r\n-\r\n-//실제문제 적용\r\n-// const fs = require('fs');\r\n-// const stdin = (process.platform === 'linux'\r\n-//     ? fs.readFileSync('/dev/stdin').toString()\r\n-//     : `1 1`\r\n-// ).split('\\n');\r\n-// // console.log(stdin);\r\n- \r\n-// const input = (() => {\r\n-//     let line = 0;\r\n-//     return () => stdin[line];\r\n-// })();\r\n- \r\n-// let t = input();\r\n-// // console.log(t);\r\n-// const [a, b] = input().split(' ').map(Number);\r\n-// console.log(a + b);\n+let t = input();\r\n+// console.log(t);\r\n+const [a, b] = input().split(' ').map(Number);\r\n+console.log(a + b);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638778997287,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,42 +1,42 @@\n+const fs = require('fs');\r\n+const stdin = (process.platform === 'linux'\r\n+    ? fs.readFileSync('/dev/stdin').toString()\r\n+    : `5\r\n+1 1\r\n+2 3\r\n+3 4\r\n+9 8\r\n+5 2\r\n+`\r\n+).split('\\n');\r\n+ \r\n+const input = (() => {\r\n+    let line = 0;\r\n+    return () => stdin[line++];\r\n+})();\r\n+ \r\n+// let t = input();\r\n+console.log(t);\r\n+while (t--) {\r\n+  // console.log(t);\r\n+  const [a, b] = input().split(' ').map(Number);\r\n+  console.log(a + b);\r\n+}\r\n+\r\n+//실제문제 적용\r\n // const fs = require('fs');\r\n // const stdin = (process.platform === 'linux'\r\n //     ? fs.readFileSync('/dev/stdin').toString()\r\n-//     : `5\r\n-// 1 1\r\n-// 2 3\r\n-// 3 4\r\n-// 9 8\r\n-// 5 2\r\n-// `\r\n+//     : `1 1`\r\n // ).split('\\n');\r\n+// // console.log(stdin);\r\n  \r\n // const input = (() => {\r\n //     let line = 0;\r\n\\ No newline at end of file\n-//     return () => stdin[line++];\r\n+//     return () => stdin[line];\r\n // })();\r\n  \r\n-// // let t = input();\r\n-// console.log(t);\r\n-// while (t--) {\r\n-//   // console.log(t);\r\n-//   const [a, b] = input().split(' ').map(Number);\r\n-//   console.log(a + b);\r\n-// }\r\n-\r\n-//실제문제 적용\r\n-const fs = require('fs');\r\n-const stdin = (process.platform === 'linux'\r\n-    ? fs.readFileSync('/dev/stdin').toString()\r\n-    : `1 1`\r\n-).split('\\n');\r\n-// console.log(stdin);\r\n- \r\n-const input = (() => {\r\n-    let line = 0;\r\n-    return () => stdin[line];\r\n-})();\r\n- \r\n-let t = input();\r\n-// console.log(t);\r\n-const [a, b] = input().split(' ').map(Number);\r\n-console.log(a + b);\n+// let t = input();\r\n+// // console.log(t);\r\n+// const [a, b] = input().split(' ').map(Number);\r\n+// console.log(a + b);\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1638766642688,
+            "name": "Commit-0",
+            "content": "const fs = require('fs');\r\nconst stdin = (process.platform === 'linux'\r\n    ? fs.readFileSync('/dev/stdin').toString()\r\n    : `5\r\n1 1\r\n2 3\r\n3 4\r\n9 8\r\n5 2\r\n`\r\n).split('\\n');\r\n \r\nconst input = (() => {\r\n    let line = 0;\r\n    return () => stdin[line++];\r\n})();\r\n \r\nlet t = input();\r\nwhile (t--) {\r\n    const [a, b] = input().split(' ').map(Number);\r\n    console.log(a + b);\r\n}"
+        }
+    ]
+}

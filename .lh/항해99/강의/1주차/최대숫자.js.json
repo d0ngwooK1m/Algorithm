@@ -1,0 +1,38 @@
+{
+    "sourceFile": "항해99/강의/1주차/최대숫자.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1638760096129,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1638760285087,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,15 @@\n-const numbers = []\n\\ No newline at end of file\n+const numbers = [0, 3, 5, 6, 1, 2, 4];\r\n+\r\n+const answer = () => {\r\n+  let answer = 0\r\n+  for (let i = 0; i < numbers.length; i++) {\r\n+    if (numbers[i] === 0 || numbers[i] === 1) {\r\n+      answer = answer + numbers[i];\r\n+    } else {\r\n+      answer = answer * numbers[i];\r\n+    }\r\n+    return answer;\r\n+  }\r\n+}\r\n+\r\n+console.log(answer());\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638760324185,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n       answer = answer + numbers[i];\r\n     } else {\r\n       answer = answer * numbers[i];\r\n     }\r\n-    return answer;\r\n   }\r\n+  return answer;\r\n }\r\n \r\n console.log(answer());\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638760359309,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,9 @@\n       answer = answer + numbers[i];\r\n     } else {\r\n       answer = answer * numbers[i];\r\n     }\r\n+    console.log(answer);\r\n   }\r\n   return answer;\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1638760459429,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n   let answer = 0\r\n   for (let i = 0; i < numbers.length; i++) {\r\n     if (numbers[i] === 0 || numbers[i] === 1) {\r\n       answer = answer + numbers[i];\r\n-    } else {\r\n+    } else if (numbers[i] !== 0 && numbers[i] !== 1 && answer === 0) {\r\n       answer = answer * numbers[i];\r\n     }\r\n     console.log(answer);\r\n   }\r\n"
+                },
+                {
+                    "date": 1638760477237,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,10 @@\n   for (let i = 0; i < numbers.length; i++) {\r\n     if (numbers[i] === 0 || numbers[i] === 1) {\r\n       answer = answer + numbers[i];\r\n     } else if (numbers[i] !== 0 && numbers[i] !== 1 && answer === 0) {\r\n+      answer = answer + numbers[i];\r\n+    } else {\r\n       answer = answer * numbers[i];\r\n     }\r\n     console.log(answer);\r\n   }\r\n"
+                }
+            ],
+            "date": 1638760096129,
+            "name": "Commit-0",
+            "content": "const numbers = []"
+        }
+    ]
+}

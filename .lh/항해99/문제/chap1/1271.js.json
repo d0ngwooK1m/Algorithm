@@ -1,0 +1,58 @@
+{
+    "sourceFile": "항해99/문제/chap1/1271.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 10,
+            "patches": [
+                {
+                    "date": 1638767850528,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1638767909018,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,5 +13,5 @@\n let t = input();\r\n // console.log(t);\r\n const [a, b] = input().split(' ').map(Number);\r\n const people = a / b;\r\n-console.log(people);\n\\ No newline at end of file\n+console.log(Math.floor(people));\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638767975159,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,6 +12,7 @@\n  \r\n let t = input();\r\n // console.log(t);\r\n const [a, b] = input().split(' ').map(Number);\r\n-const people = a / b;\r\n-console.log(Math.floor(people));\n\\ No newline at end of file\n+const people = Math.floor(a / b);\r\n+const rest = Math.ceil(a % b);\r\n+console.log(rest);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638767991866,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,6 +13,6 @@\n let t = input();\r\n // console.log(t);\r\n const [a, b] = input().split(' ').map(Number);\r\n const people = Math.floor(a / b);\r\n-const rest = Math.ceil(a % b);\r\n+const rest = a % b;\r\n console.log(rest);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638768026431,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,7 +12,7 @@\n  \r\n let t = input();\r\n // console.log(t);\r\n const [a, b] = input().split(' ').map(Number);\r\n-const people = Math.floor(a / b);\r\n+const money = Math.floor(a / b);\r\n const rest = a % b;\r\n\\ No newline at end of file\n-console.log(rest);\n+console.log(money * b + rest);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638768036369,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,6 +13,5 @@\n let t = input();\r\n // console.log(t);\r\n const [a, b] = input().split(' ').map(Number);\r\n const money = Math.floor(a / b);\r\n-const rest = a % b;\r\n-console.log(money * b + rest);\n\\ No newline at end of file\n+const rest = a % b;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638768071734,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,5 +13,8 @@\n let t = input();\r\n // console.log(t);\r\n const [a, b] = input().split(' ').map(Number);\r\n const money = Math.floor(a / b);\r\n-const rest = a % b;\n\\ No newline at end of file\n+const rest = a % b;\r\n+const answer = `${money}\r\n+${rest}`;\r\n+console.log(answer);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638768175024,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n     ? fs.readFileSync('/dev/stdin').toString()\r\n-    : `1000 12`\r\n+    : `1000 100`\r\n ).split('\\n');\r\n // console.log(stdin);\r\n  \r\n const input = (() => {\r\n"
+                },
+                {
+                    "date": 1638768395330,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,7 +14,6 @@\n // console.log(t);\r\n const [a, b] = input().split(' ').map(Number);\r\n const money = Math.floor(a / b);\r\n const rest = a % b;\r\n-const answer = `${money}\r\n-${rest}`;\r\n-console.log(answer);\n\\ No newline at end of file\n+console.log(money);\r\n+console.log(rest);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638768566678,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n })();\r\n  \r\n let t = input();\r\n // console.log(t);\r\n-const [a, b] = input().split(' ').map(Number);\r\n+const [a, b] = input().split(' ').map(BigInt);\r\n const money = Math.floor(a / b);\r\n const rest = a % b;\r\n console.log(money);\r\n console.log(rest);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638768689988,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,9 @@\n  \r\n let t = input();\r\n // console.log(t);\r\n const [a, b] = input().split(' ').map(BigInt);\r\n-const money = Math.floor(a / b);\r\n+const money = a / b;\r\n const rest = a % b;\r\n-console.log(money);\r\n\\ No newline at end of file\n-console.log(rest);\n+const answer = `${money}\r\n+${rest}`;\r\n+console.log(answer);\r\n"
+                }
+            ],
+            "date": 1638767850528,
+            "name": "Commit-0",
+            "content": "const fs = require('fs');\r\nconst stdin = (process.platform === 'linux'\r\n    ? fs.readFileSync('/dev/stdin').toString()\r\n    : `1000 12`\r\n).split('\\n');\r\n// console.log(stdin);\r\n \r\nconst input = (() => {\r\n    let line = 0;\r\n    return () => stdin[line];\r\n})();\r\n \r\nlet t = input();\r\n// console.log(t);\r\nconst [a, b] = input().split(' ').map(Number);\r\nconst people = a / b;\r\nconsole.log(people);"
+        }
+    ]
+}

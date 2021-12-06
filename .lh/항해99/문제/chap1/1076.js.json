@@ -1,0 +1,138 @@
+{
+    "sourceFile": "항해99/문제/chap1/1076.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 30,
+            "patches": [
+                {
+                    "date": 1638768856765,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1638768874977,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,10 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n     ? fs.readFileSync('/dev/stdin').toString()\r\n   : `red\r\n-    w`\r\n+    violet\r\n+    `\r\n ).split('\\n');\r\n // console.log(stdin);\r\n  \r\n const input = (() => {\r\n"
+                },
+                {
+                    "date": 1638768898128,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n const stdin = (process.platform === 'linux'\r\n     ? fs.readFileSync('/dev/stdin').toString()\r\n   : `red\r\n     violet\r\n-    `\r\n+    red`\r\n ).split('\\n');\r\n // console.log(stdin);\r\n  \r\n const input = (() => {\r\n"
+                },
+                {
+                    "date": 1638769886382,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n })();\r\n  \r\n let t = input();\r\n // console.log(t);\r\n-const [a, b] = input().split(' ').map(BigInt);\r\n+const [a, b] = input().split(' ').map();\r\n const money = a / b;\r\n const rest = a % b;\r\n const answer = `${money}\r\n ${rest}`;\r\n"
+                },
+                {
+                    "date": 1638769898389,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,11 +12,11 @@\n     return () => stdin[line];\r\n })();\r\n  \r\n let t = input();\r\n-// console.log(t);\r\n+console.log(t);\r\n const [a, b] = input().split(' ').map();\r\n-const money = a / b;\r\n-const rest = a % b;\r\n-const answer = `${money}\r\n-${rest}`;\r\n\\ No newline at end of file\n-console.log(answer);\n+// const money = a / b;\r\n+// const rest = a % b;\r\n+// const answer = `${money}\r\n+// ${rest}`;\r\n+// console.log(answer);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638769918820,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n })();\r\n  \r\n let t = input();\r\n console.log(t);\r\n-const [a, b] = input().split(' ').map();\r\n+// const [a, b] = input().split(' ').map();\r\n // const money = a / b;\r\n // const rest = a % b;\r\n // const answer = `${money}\r\n // ${rest}`;\r\n"
+                },
+                {
+                    "date": 1638769971968,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,11 @@\n })();\r\n  \r\n let t = input();\r\n console.log(t);\r\n+while (2--) {\r\n+  \r\n+}\r\n // const [a, b] = input().split(' ').map();\r\n // const money = a / b;\r\n // const rest = a % b;\r\n // const answer = `${money}\r\n"
+                },
+                {
+                    "date": 1638770037951,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n  \r\n let t = input();\r\n console.log(t);\r\n while (2--) {\r\n-  \r\n+  console.log(t);\r\n }\r\n // const [a, b] = input().split(' ').map();\r\n // const money = a / b;\r\n // const rest = a % b;\r\n"
+                },
+                {
+                    "date": 1638770108875,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,22 +4,5 @@\n   : `red\r\n     violet\r\n     red`\r\n ).split('\\n');\r\n-// console.log(stdin);\r\n- \r\n-const input = (() => {\r\n-    let line = 0;\r\n-    return () => stdin[line];\r\n-})();\r\n- \r\n-let t = input();\r\n-console.log(t);\r\n-while (2--) {\r\n-  console.log(t);\r\n-}\r\n-// const [a, b] = input().split(' ').map();\r\n-// const money = a / b;\r\n-// const rest = a % b;\r\n-// const answer = `${money}\r\n-// ${rest}`;\r\n-// console.log(answer);\n\\ No newline at end of file\n+console.log(stdin);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638770129053,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n     ? fs.readFileSync('/dev/stdin').toString()\r\n   : `red\r\n-    violet\r\n-    red`\r\n+violet\r\n+red`\r\n ).split('\\n');\r\n console.log(stdin);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638770279457,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,5 +4,12 @@\n   : `red\r\n violet\r\n red`\r\n ).split('\\n');\r\n-console.log(stdin);\n\\ No newline at end of file\n+console.log(stdin);\r\n+\r\n+const resist = {\r\n+  black: {\r\n+    plus: 0,\r\n+    multiply: 1,\r\n+  }\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638770294530,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n     ? fs.readFileSync('/dev/stdin').toString()\r\n-  : `red\r\n+  : `black\r\n violet\r\n red`\r\n ).split('\\n');\r\n console.log(stdin);\r\n@@ -10,6 +10,7 @@\n const resist = {\r\n   black: {\r\n     plus: 0,\r\n     multiply: 1,\r\n-  }\r\n-}\n\\ No newline at end of file\n+  },\r\n+}\r\n+\r\n"
+                },
+                {
+                    "date": 1638770309612,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,4 +13,5 @@\n     multiply: 1,\r\n   },\r\n }\r\n \r\n+console.log(resist[stdin[0]]);\r\n"
+                },
+                {
+                    "date": 1638770335746,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,5 +13,5 @@\n     multiply: 1,\r\n   },\r\n }\r\n \r\n-console.log(resist[stdin[0]]);\r\n+console.log(resist[stdin[0][plus]]);\r\n"
+                },
+                {
+                    "date": 1638770346561,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,5 +13,5 @@\n     multiply: 1,\r\n   },\r\n }\r\n \r\n-console.log(resist[stdin[0][plus]]);\r\n+console.log(resist[stdin[0]][plus]);\r\n"
+                },
+                {
+                    "date": 1638770361732,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,5 +13,5 @@\n     multiply: 1,\r\n   },\r\n }\r\n \r\n-console.log(resist[stdin[0]][plus]);\r\n+console.log(resist[stdin[0]].plus);\r\n"
+                },
+                {
+                    "date": 1638770501049,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,25 @@\n \r\n const resist = {\r\n   black: {\r\n     plus: 0,\r\n-    multiply: 1,\r\n+    multiply: 10^0,\r\n   },\r\n+  brown: {\r\n+    plus: 1,\r\n+    multiply: 10,\r\n+  },\r\n+  red: {\r\n+    plus: 2,\r\n+    multiply: 100,\r\n+  },\r\n+  orange: {\r\n+    plus: 3,\r\n+    multiply: 1000,\r\n+  },\r\n+  yellow: {\r\n+    plus: 4,\r\n+    multiply: \r\n+  }\r\n }\r\n \r\n console.log(resist[stdin[0]].plus);\r\n"
+                },
+                {
+                    "date": 1638770687649,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,25 +9,47 @@\n \r\n const resist = {\r\n   black: {\r\n     plus: 0,\r\n-    multiply: 10^0,\r\n+    multiply: 10**0,\r\n   },\r\n   brown: {\r\n     plus: 1,\r\n-    multiply: 10,\r\n+    multiply: 10**1,\r\n   },\r\n   red: {\r\n     plus: 2,\r\n-    multiply: 100,\r\n+    multiply: 10**2,\r\n   },\r\n   orange: {\r\n     plus: 3,\r\n-    multiply: 1000,\r\n+    multiply: 10**3,\r\n   },\r\n   yellow: {\r\n     plus: 4,\r\n-    multiply: \r\n-  }\r\n+    multiply: 10**4,\r\n+  },\r\n+  green: {\r\n+    plus: 5,\r\n+    multiply: 10**5,\r\n+  },\r\n+  blue: {\r\n+    plus: 6,\r\n+    multiply: 10**6,\r\n+  },\r\n+  violet: {\r\n+    plus: 7,\r\n+    multiply: 10**7,\r\n+  },\r\n+  grey: {\r\n+    plus: 8,\r\n+    multiply: 10**8,\r\n+  },\r\n+  white: {\r\n+    plus: 9,\r\n+    multiply: 10**9,\r\n+  },\r\n }\r\n \r\n+const answer = resist[stdin[0].plus]\r\n+\r\n console.log(resist[stdin[0]].plus);\r\n"
+                },
+                {
+                    "date": 1638770756177,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n     ? fs.readFileSync('/dev/stdin').toString()\r\n-  : `black\r\n+  : `yellow\r\n violet\r\n red`\r\n ).split('\\n');\r\n console.log(stdin);\r\n@@ -12,41 +12,41 @@\n     plus: 0,\r\n     multiply: 10**0,\r\n   },\r\n   brown: {\r\n-    plus: 1,\r\n+    plus: \"1\",\r\n     multiply: 10**1,\r\n   },\r\n   red: {\r\n-    plus: 2,\r\n+    plus: \"2\",\r\n     multiply: 10**2,\r\n   },\r\n   orange: {\r\n-    plus: 3,\r\n+    plus: \"3\",\r\n     multiply: 10**3,\r\n   },\r\n   yellow: {\r\n-    plus: 4,\r\n+    plus: \"4\",\r\n     multiply: 10**4,\r\n   },\r\n   green: {\r\n-    plus: 5,\r\n+    plus: \"5\",\r\n     multiply: 10**5,\r\n   },\r\n   blue: {\r\n-    plus: 6,\r\n+    plus: \"6\",\r\n     multiply: 10**6,\r\n   },\r\n   violet: {\r\n-    plus: 7,\r\n+    plus: \"7\",\r\n     multiply: 10**7,\r\n   },\r\n   grey: {\r\n-    plus: 8,\r\n+    plus: \"8\",\r\n     multiply: 10**8,\r\n   },\r\n   white: {\r\n-    plus: 9,\r\n+    plus: \"9\",\r\n     multiply: 10**9,\r\n   },\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1638770799730,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,7 +49,7 @@\n     multiply: 10**9,\r\n   },\r\n }\r\n \r\n-const answer = resist[stdin[0].plus]\r\n+const answer = (resist[stdin[0].plus] + resist[stdin[1].plus]) * resist[stdin[2]].multiply\r\n \r\n console.log(resist[stdin[0]].plus);\r\n"
+                },
+                {
+                    "date": 1638770817791,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,7 +49,7 @@\n     multiply: 10**9,\r\n   },\r\n }\r\n \r\n-const answer = (resist[stdin[0].plus] + resist[stdin[1].plus]) * resist[stdin[2]].multiply\r\n+const answer = (resist[stdin[0].plus] + resist[stdin[1].plus]);\r\n \r\n-console.log(resist[stdin[0]].plus);\r\n+console.log(answer);\r\n"
+                },
+                {
+                    "date": 1638770840149,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,7 +49,7 @@\n     multiply: 10**9,\r\n   },\r\n }\r\n \r\n-const answer = (resist[stdin[0].plus] + resist[stdin[1].plus]);\r\n+const answer = (resist[stdin[0].plus]);\r\n \r\n console.log(answer);\r\n"
+                },
+                {
+                    "date": 1638770867702,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,7 +49,7 @@\n     multiply: 10**9,\r\n   },\r\n }\r\n \r\n-const answer = (resist[stdin[0].plus]);\r\n+const answer = (stdin[0]);\r\n \r\n console.log(answer);\r\n"
+                },
+                {
+                    "date": 1638770883904,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,7 +49,7 @@\n     multiply: 10**9,\r\n   },\r\n }\r\n \r\n-const answer = (stdin[0]);\r\n+const answer = (resist[stdin[0]].plus);\r\n \r\n console.log(answer);\r\n"
+                },
+                {
+                    "date": 1638770903267,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,7 +49,7 @@\n     multiply: 10**9,\r\n   },\r\n }\r\n \r\n-const answer = (resist[stdin[0]].plus);\r\n+const answer = (resist[stdin[0]].plus + resist[stdin[1]].plus);\r\n \r\n console.log(answer);\r\n"
+                },
+                {
+                    "date": 1638770922870,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,7 +49,7 @@\n     multiply: 10**9,\r\n   },\r\n }\r\n \r\n-const answer = (resist[stdin[0]].plus + resist[stdin[1]].plus);\r\n+const answer = (resist[stdin[0]].plus + resist[stdin[1]].plus) * resist[stdin[2]].multiply;\r\n \r\n console.log(answer);\r\n"
+                },
+                {
+                    "date": 1638771016913,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n     ? fs.readFileSync('/dev/stdin').toString()\r\n-  : `yellow\r\n-violet\r\n-red`\r\n+  : `orange\r\n+red\r\n+blue`\r\n ).split('\\n');\r\n console.log(stdin);\r\n \r\n const resist = {\r\n"
+                },
+                {
+                    "date": 1638771047530,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n console.log(stdin);\r\n \r\n const resist = {\r\n   black: {\r\n-    plus: 0,\r\n+    plus: \"0\",\r\n     multiply: 10**0,\r\n   },\r\n   brown: {\r\n     plus: \"1\",\r\n"
+                },
+                {
+                    "date": 1638771211109,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n     ? fs.readFileSync('/dev/stdin').toString()\r\n-  : `orange\r\n-red\r\n-blue`\r\n+  : `white\r\n+white\r\n+white`\r\n ).split('\\n');\r\n console.log(stdin);\r\n \r\n const resist = {\r\n"
+                },
+                {
+                    "date": 1638771791873,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -52,4 +52,6 @@\n \r\n const answer = (resist[stdin[0]].plus + resist[stdin[1]].plus) * resist[stdin[2]].multiply;\r\n \r\n console.log(answer);\r\n+\r\n+//plus만 만들고 맨 뒤는 10**Number(resist[stdin[2].plus])\r\n"
+                },
+                {
+                    "date": 1638771799538,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -53,5 +53,5 @@\n const answer = (resist[stdin[0]].plus + resist[stdin[1]].plus) * resist[stdin[2]].multiply;\r\n \r\n console.log(answer);\r\n \r\n-//plus만 만들고 맨 뒤는 10**Number(resist[stdin[2].plus])\r\n+//plus만 만들고 맨 뒤는 10**Number(resist[stdin[2].plus])로 계산하는 게 더 빠를 듯\r\n"
+                }
+            ],
+            "date": 1638768856765,
+            "name": "Commit-0",
+            "content": "const fs = require('fs');\r\nconst stdin = (process.platform === 'linux'\r\n    ? fs.readFileSync('/dev/stdin').toString()\r\n  : `red\r\n    w`\r\n).split('\\n');\r\n// console.log(stdin);\r\n \r\nconst input = (() => {\r\n    let line = 0;\r\n    return () => stdin[line];\r\n})();\r\n \r\nlet t = input();\r\n// console.log(t);\r\nconst [a, b] = input().split(' ').map(BigInt);\r\nconst money = a / b;\r\nconst rest = a % b;\r\nconst answer = `${money}\r\n${rest}`;\r\nconsole.log(answer);"
+        }
+    ]
+}
