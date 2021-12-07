@@ -1,0 +1,342 @@
+{
+    "sourceFile": "항해99/문제/chap1/4948.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 81,
+            "patches": [
+                {
+                    "date": 1638852094116,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1638852113270,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,12 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n-  : ``\r\n+  : `1\r\n+10\r\n+13\r\n+100\r\n+1000\r\n+10000\r\n+100000\r\n+0`\r\n )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638852125917,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,5 +8,5 @@\n 1000\r\n 10000\r\n 100000\r\n 0`\r\n-)\n\\ No newline at end of file\n+).split('\\n');\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638852133666,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,5 +8,7 @@\n 1000\r\n 10000\r\n 100000\r\n 0`\r\n-).split('\\n');\n\\ No newline at end of file\n+).split('\\n');\r\n+\r\n+console.log(stdin);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638852435557,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,5 +10,5 @@\n 100000\r\n 0`\r\n ).split('\\n');\r\n \r\n-console.log(stdin);\n\\ No newline at end of file\n+console.log(stdin);\r\n"
+                },
+                {
+                    "date": 1638852482718,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,5 +10,8 @@\n 100000\r\n 0`\r\n ).split('\\n');\r\n \r\n-console.log(stdin);\r\n+const input = (() => {\r\n+  let line = 0;\r\n+  return () => stdin[line++];\r\n+})();\r\n"
+                },
+                {
+                    "date": 1638852548624,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,4 +14,9 @@\n const input = (() => {\r\n   let line = 0;\r\n   return () => stdin[line++];\r\n })();\r\n+\r\n+while (t--) {\r\n+  const a = Number(input());\r\n+  console.log(a);\r\n+}\r\n"
+                },
+                {
+                    "date": 1638852577216,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,8 +15,10 @@\n   let line = 0;\r\n   return () => stdin[line++];\r\n })();\r\n \r\n+let t = input();\r\n+\r\n while (t--) {\r\n   const a = Number(input());\r\n   console.log(a);\r\n }\r\n"
+                },
+                {
+                    "date": 1638852605155,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,15 +10,5 @@\n 100000\r\n 0`\r\n ).split('\\n');\r\n \r\n-const input = (() => {\r\n-  let line = 0;\r\n-  return () => stdin[line++];\r\n-})();\r\n \r\n-let t = input();\r\n-\r\n-while (t--) {\r\n-  const a = Number(input());\r\n-  console.log(a);\r\n-}\r\n"
+                },
+                {
+                    "date": 1638852709138,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,5 +10,11 @@\n 100000\r\n 0`\r\n ).split('\\n');\r\n \r\n-\r\n+const answer = () => {\r\n+  for (let i = 0; i < stdin.length - 1; i++) {\r\n+    const number = Number(stdin[i]);\r\n+    console.log(number);\r\n+  }\r\n+};\r\n+answer();\r\n"
+                },
+                {
+                    "date": 1638852865962,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,11 @@\n \r\n const answer = () => {\r\n   for (let i = 0; i < stdin.length - 1; i++) {\r\n     const number = Number(stdin[i]);\r\n-    console.log(number);\r\n+    // console.log(number);\r\n+    for (let j = number; j <= number * 2; j++) {\r\n+      \r\n+    }\r\n   }\r\n };\r\n answer();\r\n"
+                },
+                {
+                    "date": 1638853178041,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,12 @@\n   for (let i = 0; i < stdin.length - 1; i++) {\r\n     const number = Number(stdin[i]);\r\n     // console.log(number);\r\n     for (let j = number; j <= number * 2; j++) {\r\n-      \r\n+      const rangeNum = j;\r\n+      for (let k = 1; k < Math.sqrt(rangeNum); k++) {\r\n+        if (rangeNum % k !== 0) break;\r\n+      }\r\n     }\r\n   }\r\n };\r\n answer();\r\n"
+                },
+                {
+                    "date": 1638853343290,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,15 +11,18 @@\n 0`\r\n ).split('\\n');\r\n \r\n const answer = () => {\r\n+  const answerArr = [];\r\n   for (let i = 0; i < stdin.length - 1; i++) {\r\n     const number = Number(stdin[i]);\r\n     // console.log(number);\r\n     for (let j = number; j <= number * 2; j++) {\r\n       const rangeNum = j;\r\n       for (let k = 1; k < Math.sqrt(rangeNum); k++) {\r\n-        if (rangeNum % k !== 0) break;\r\n+        if (rangeNum % k !== 0) {\r\n+\r\n+        }\r\n       }\r\n     }\r\n   }\r\n };\r\n"
+                },
+                {
+                    "date": 1638853380880,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,11 +17,12 @@\n     const number = Number(stdin[i]);\r\n     // console.log(number);\r\n     for (let j = number; j <= number * 2; j++) {\r\n       const rangeNum = j;\r\n+      let cnt = 0;\r\n       for (let k = 1; k < Math.sqrt(rangeNum); k++) {\r\n         if (rangeNum % k !== 0) {\r\n-\r\n+          break;\r\n         }\r\n       }\r\n     }\r\n   }\r\n"
+                },
+                {
+                    "date": 1638853397971,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,12 +14,13 @@\n const answer = () => {\r\n   const answerArr = [];\r\n   for (let i = 0; i < stdin.length - 1; i++) {\r\n     const number = Number(stdin[i]);\r\n+    let cnt = 0;\r\n     // console.log(number);\r\n     for (let j = number; j <= number * 2; j++) {\r\n       const rangeNum = j;\r\n-      let cnt = 0;\r\n+      \r\n       for (let k = 1; k < Math.sqrt(rangeNum); k++) {\r\n         if (rangeNum % k !== 0) {\r\n           break;\r\n         }\r\n"
+                },
+                {
+                    "date": 1638853413087,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,13 +18,13 @@\n     let cnt = 0;\r\n     // console.log(number);\r\n     for (let j = number; j <= number * 2; j++) {\r\n       const rangeNum = j;\r\n-      \r\n       for (let k = 1; k < Math.sqrt(rangeNum); k++) {\r\n         if (rangeNum % k !== 0) {\r\n           break;\r\n         }\r\n+        cnt++;\r\n       }\r\n     }\r\n   }\r\n };\r\n"
+                },
+                {
+                    "date": 1638853446597,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,7 +25,8 @@\n         }\r\n         cnt++;\r\n       }\r\n     }\r\n+    if (cnt !== 0) answerArr.push(cnt);\r\n   }\r\n };\r\n answer();\r\n"
+                },
+                {
+                    "date": 1638853459346,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,6 +27,7 @@\n       }\r\n     }\r\n     if (cnt !== 0) answerArr.push(cnt);\r\n   }\r\n+  console.log(answerArr);\r\n };\r\n answer();\r\n"
+                },
+                {
+                    "date": 1638853562722,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n     // console.log(number);\r\n     for (let j = number; j <= number * 2; j++) {\r\n       const rangeNum = j;\r\n       for (let k = 1; k < Math.sqrt(rangeNum); k++) {\r\n-        if (rangeNum % k !== 0) {\r\n+        if (rangeNum % k === 0) {\r\n           break;\r\n         }\r\n         cnt++;\r\n       }\r\n"
+                },
+                {
+                    "date": 1638853601743,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,8 +19,9 @@\n     // console.log(number);\r\n     for (let j = number; j <= number * 2; j++) {\r\n       const rangeNum = j;\r\n       for (let k = 1; k < Math.sqrt(rangeNum); k++) {\r\n+        console.log(rangeNum, k);\r\n         if (rangeNum % k === 0) {\r\n           break;\r\n         }\r\n         cnt++;\r\n"
+                },
+                {
+                    "date": 1638853623099,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n     // console.log(number);\r\n     for (let j = number; j <= number * 2; j++) {\r\n       const rangeNum = j;\r\n       for (let k = 1; k < Math.sqrt(rangeNum); k++) {\r\n-        console.log(rangeNum, k);\r\n+      console.log(rangeNum, k);\r\n         if (rangeNum % k === 0) {\r\n           break;\r\n         }\r\n         cnt++;\r\n"
+                },
+                {
+                    "date": 1638853671950,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,8 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n-  : `1\r\n-10\r\n-13\r\n-100\r\n-1000\r\n-10000\r\n-100000\r\n+  : `10\r\n 0`\r\n ).split('\\n');\r\n \r\n const answer = () => {\r\n"
+                },
+                {
+                    "date": 1638853812563,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n     let cnt = 0;\r\n     // console.log(number);\r\n     for (let j = number; j <= number * 2; j++) {\r\n       const rangeNum = j;\r\n-      for (let k = 1; k < Math.sqrt(rangeNum); k++) {\r\n+      for (let k = 2; k <= Math.sqrt(rangeNum); k++) {\r\n       console.log(rangeNum, k);\r\n         if (rangeNum % k === 0) {\r\n           break;\r\n         }\r\n"
+                },
+                {
+                    "date": 1638853901711,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,12 +14,12 @@\n     for (let j = number; j <= number * 2; j++) {\r\n       const rangeNum = j;\r\n       for (let k = 2; k <= Math.sqrt(rangeNum); k++) {\r\n       console.log(rangeNum, k);\r\n-        if (rangeNum % k === 0) {\r\n-          break;\r\n+        if (rangeNum % k !== 0) {\r\n+          cnt++;\r\n         }\r\n-        cnt++;\r\n+        \r\n       }\r\n     }\r\n     if (cnt !== 0) answerArr.push(cnt);\r\n   }\r\n"
+                },
+                {
+                    "date": 1638853973184,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,12 +14,12 @@\n     for (let j = number; j <= number * 2; j++) {\r\n       const rangeNum = j;\r\n       for (let k = 2; k <= Math.sqrt(rangeNum); k++) {\r\n       console.log(rangeNum, k);\r\n-        if (rangeNum % k !== 0) {\r\n-          cnt++;\r\n+        if (rangeNum % k === 0) {\r\n+          break;\r\n         }\r\n-        \r\n+        cnt++;\r\n       }\r\n     }\r\n     if (cnt !== 0) answerArr.push(cnt);\r\n   }\r\n"
+                },
+                {
+                    "date": 1638854040265,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,8 +20,9 @@\n         }\r\n         cnt++;\r\n       }\r\n     }\r\n+    console.log(rangeNum, cnt);\r\n     if (cnt !== 0) answerArr.push(cnt);\r\n   }\r\n   console.log(answerArr);\r\n };\r\n"
+                },
+                {
+                    "date": 1638854053736,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,10 +19,11 @@\n           break;\r\n         }\r\n         cnt++;\r\n       }\r\n+      console.log(rangeNum, cnt);\r\n     }\r\n-    console.log(rangeNum, cnt);\r\n+    \r\n     if (cnt !== 0) answerArr.push(cnt);\r\n   }\r\n   console.log(answerArr);\r\n };\r\n"
+                },
+                {
+                    "date": 1638854063946,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,17 +13,16 @@\n     // console.log(number);\r\n     for (let j = number; j <= number * 2; j++) {\r\n       const rangeNum = j;\r\n       for (let k = 2; k <= Math.sqrt(rangeNum); k++) {\r\n-      console.log(rangeNum, k);\r\n+      // console.log(rangeNum, k);\r\n         if (rangeNum % k === 0) {\r\n           break;\r\n         }\r\n         cnt++;\r\n       }\r\n       console.log(rangeNum, cnt);\r\n     }\r\n-    \r\n     if (cnt !== 0) answerArr.push(cnt);\r\n   }\r\n   console.log(answerArr);\r\n };\r\n"
+                },
+                {
+                    "date": 1638854180764,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,11 +8,12 @@\n const answer = () => {\r\n   const answerArr = [];\r\n   for (let i = 0; i < stdin.length - 1; i++) {\r\n     const number = Number(stdin[i]);\r\n-    let cnt = 0;\r\n+    \r\n     // console.log(number);\r\n     for (let j = number; j <= number * 2; j++) {\r\n+      let cnt = 0;\r\n       const rangeNum = j;\r\n       for (let k = 2; k <= Math.sqrt(rangeNum); k++) {\r\n       // console.log(rangeNum, k);\r\n         if (rangeNum % k === 0) {\r\n"
+                },
+                {
+                    "date": 1638854237600,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,16 +8,15 @@\n const answer = () => {\r\n   const answerArr = [];\r\n   for (let i = 0; i < stdin.length - 1; i++) {\r\n     const number = Number(stdin[i]);\r\n-    \r\n     // console.log(number);\r\n     for (let j = number; j <= number * 2; j++) {\r\n       let cnt = 0;\r\n       const rangeNum = j;\r\n       for (let k = 2; k <= Math.sqrt(rangeNum); k++) {\r\n       // console.log(rangeNum, k);\r\n-        if (rangeNum % k === 0) {\r\n+        if (rangeNum % k === 0 && rangeNum !== 2) {\r\n           break;\r\n         }\r\n         cnt++;\r\n       }\r\n"
+                },
+                {
+                    "date": 1638854336201,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,8 @@\n         cnt++;\r\n       }\r\n       console.log(rangeNum, cnt);\r\n     }\r\n-    if (cnt !== 0) answerArr.push(cnt);\r\n   }\r\n   console.log(answerArr);\r\n };\r\n answer();\r\n"
+                },
+                {
+                    "date": 1638854388261,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,8 +20,9 @@\n         }\r\n         cnt++;\r\n       }\r\n       console.log(rangeNum, cnt);\r\n+      if (cnt)\r\n     }\r\n   }\r\n   console.log(answerArr);\r\n };\r\n"
+                },
+                {
+                    "date": 1638854423923,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,16 +13,16 @@\n     for (let j = number; j <= number * 2; j++) {\r\n       let cnt = 0;\r\n       const rangeNum = j;\r\n       for (let k = 2; k <= Math.sqrt(rangeNum); k++) {\r\n-      // console.log(rangeNum, k);\r\n+      console.log(rangeNum, k);\r\n         if (rangeNum % k === 0 && rangeNum !== 2) {\r\n           break;\r\n         }\r\n         cnt++;\r\n       }\r\n-      console.log(rangeNum, cnt);\r\n-      if (cnt)\r\n+      // console.log(rangeNum, cnt);\r\n+      // if (cnt)\r\n     }\r\n   }\r\n   console.log(answerArr);\r\n };\r\n"
+                },
+                {
+                    "date": 1638854489174,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,10 +16,12 @@\n       for (let k = 2; k <= Math.sqrt(rangeNum); k++) {\r\n       console.log(rangeNum, k);\r\n         if (rangeNum % k === 0 && rangeNum !== 2) {\r\n           break;\r\n+        } else {\r\n+          cnt++;\r\n         }\r\n-        cnt++;\r\n+        \r\n       }\r\n       // console.log(rangeNum, cnt);\r\n       // if (cnt)\r\n     }\r\n"
+                },
+                {
+                    "date": 1638854523165,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,14 +14,16 @@\n       let cnt = 0;\r\n       const rangeNum = j;\r\n       for (let k = 2; k <= Math.sqrt(rangeNum); k++) {\r\n       console.log(rangeNum, k);\r\n-        if (rangeNum % k === 0 && rangeNum !== 2) {\r\n-          break;\r\n-        } else {\r\n+        // if (rangeNum % k === 0 && rangeNum !== 2) {\r\n+        //   break;\r\n+        // } else {\r\n+        //   cnt++;\r\n+        // }\r\n+        if (rangeNum % k !== 0 || rangeNum === 2) {\r\n           cnt++;\r\n         }\r\n-        \r\n       }\r\n       // console.log(rangeNum, cnt);\r\n       // if (cnt)\r\n     }\r\n"
+                },
+                {
+                    "date": 1638854661779,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,11 @@\n           cnt++;\r\n         }\r\n       }\r\n       // console.log(rangeNum, cnt);\r\n-      // if (cnt)\r\n+      if (cnt === Math.floor(Math.sqrt(rangeNum)) - 1) {\r\n+        answerArr.push(rangeNum);\r\n+      }\r\n     }\r\n   }\r\n   console.log(answerArr);\r\n };\r\n"
+                },
+                {
+                    "date": 1638854688587,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n     for (let j = number; j <= number * 2; j++) {\r\n       let cnt = 0;\r\n       const rangeNum = j;\r\n       for (let k = 2; k <= Math.sqrt(rangeNum); k++) {\r\n-      console.log(rangeNum, k);\r\n+      // console.log(rangeNum, k);\r\n         // if (rangeNum % k === 0 && rangeNum !== 2) {\r\n         //   break;\r\n         // } else {\r\n         //   cnt++;\r\n"
+                },
+                {
+                    "date": 1638854708741,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,10 +5,11 @@\n 0`\r\n ).split('\\n');\r\n \r\n const answer = () => {\r\n-  const answerArr = [];\r\n+  \r\n   for (let i = 0; i < stdin.length - 1; i++) {\r\n+    const answerArr = [];\r\n     const number = Number(stdin[i]);\r\n     // console.log(number);\r\n     for (let j = number; j <= number * 2; j++) {\r\n       let cnt = 0;\r\n"
+                },
+                {
+                    "date": 1638854721541,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,8 +29,9 @@\n       if (cnt === Math.floor(Math.sqrt(rangeNum)) - 1) {\r\n         answerArr.push(rangeNum);\r\n       }\r\n     }\r\n+    console.log(answerArr);\r\n   }\r\n-  console.log(answerArr);\r\n+  \r\n };\r\n answer();\r\n"
+                },
+                {
+                    "date": 1638854750528,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n \r\n const answer = () => {\r\n   \r\n   for (let i = 0; i < stdin.length - 1; i++) {\r\n-    const answerArr = [];\r\n+    const rangeArr = [];\r\n     const number = Number(stdin[i]);\r\n     // console.log(number);\r\n     for (let j = number; j <= number * 2; j++) {\r\n       let cnt = 0;\r\n@@ -29,9 +29,8 @@\n       if (cnt === Math.floor(Math.sqrt(rangeNum)) - 1) {\r\n         answerArr.push(rangeNum);\r\n       }\r\n     }\r\n-    console.log(answerArr);\r\n+    console.log(rangeArr);\r\n   }\r\n-  \r\n };\r\n answer();\r\n"
+                },
+                {
+                    "date": 1638854787411,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,8 @@\n 0`\r\n ).split('\\n');\r\n \r\n const answer = () => {\r\n-  \r\n   for (let i = 0; i < stdin.length - 1; i++) {\r\n     const rangeArr = [];\r\n     const number = Number(stdin[i]);\r\n     // console.log(number);\r\n@@ -29,8 +28,8 @@\n       if (cnt === Math.floor(Math.sqrt(rangeNum)) - 1) {\r\n         answerArr.push(rangeNum);\r\n       }\r\n     }\r\n-    console.log(rangeArr);\r\n+    console.log(rangeArr.length);\r\n   }\r\n };\r\n answer();\r\n"
+                },
+                {
+                    "date": 1638854806374,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,8 +28,8 @@\n       if (cnt === Math.floor(Math.sqrt(rangeNum)) - 1) {\r\n         answerArr.push(rangeNum);\r\n       }\r\n     }\r\n-    console.log(rangeArr.length);\r\n+    console.log(rangeArr);\r\n   }\r\n };\r\n answer();\r\n"
+                },
+                {
+                    "date": 1638854822930,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,11 +25,11 @@\n         }\r\n       }\r\n       // console.log(rangeNum, cnt);\r\n       if (cnt === Math.floor(Math.sqrt(rangeNum)) - 1) {\r\n-        answerArr.push(rangeNum);\r\n+        rangeArr.push(rangeNum);\r\n       }\r\n     }\r\n-    console.log(rangeArr);\r\n+    console.log(rangeArr.length);\r\n   }\r\n };\r\n answer();\r\n"
+                },
+                {
+                    "date": 1638854841204,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,14 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n-  : `10\r\n+  : `1\r\n+10\r\n+13\r\n+100\r\n+1000\r\n+10000\r\n+100000\r\n 0`\r\n ).split('\\n');\r\n \r\n const answer = () => {\r\n"
+                },
+                {
+                    "date": 1638854882191,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,8 +34,8 @@\n       if (cnt === Math.floor(Math.sqrt(rangeNum)) - 1) {\r\n         rangeArr.push(rangeNum);\r\n       }\r\n     }\r\n-    console.log(rangeArr.length);\r\n+    console.log(rangeArr);\r\n   }\r\n };\r\n answer();\r\n"
+                },
+                {
+                    "date": 1638854939126,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n   for (let i = 0; i < stdin.length - 1; i++) {\r\n     const rangeArr = [];\r\n     const number = Number(stdin[i]);\r\n     // console.log(number);\r\n-    for (let j = number; j <= number * 2; j++) {\r\n+    for (let j = number + 1; j <= number * 2; j++) {\r\n       let cnt = 0;\r\n       const rangeNum = j;\r\n       for (let k = 2; k <= Math.sqrt(rangeNum); k++) {\r\n       // console.log(rangeNum, k);\r\n"
+                },
+                {
+                    "date": 1638854948140,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,8 +34,8 @@\n       if (cnt === Math.floor(Math.sqrt(rangeNum)) - 1) {\r\n         rangeArr.push(rangeNum);\r\n       }\r\n     }\r\n-    console.log(rangeArr);\r\n+    console.log(rangeArr.length);\r\n   }\r\n };\r\n answer();\r\n"
+                },
+                {
+                    "date": 1638855537416,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,24 +12,27 @@\n ).split('\\n');\r\n \r\n const answer = () => {\r\n   for (let i = 0; i < stdin.length - 1; i++) {\r\n-    const rangeArr = [];\r\n+    // const rangeArr = [];\r\n     const number = Number(stdin[i]);\r\n     // console.log(number);\r\n     for (let j = number + 1; j <= number * 2; j++) {\r\n       let cnt = 0;\r\n       const rangeNum = j;\r\n       for (let k = 2; k <= Math.sqrt(rangeNum); k++) {\r\n+        let warning = false;\r\n       // console.log(rangeNum, k);\r\n         // if (rangeNum % k === 0 && rangeNum !== 2) {\r\n         //   break;\r\n         // } else {\r\n         //   cnt++;\r\n         // }\r\n-        if (rangeNum % k !== 0 || rangeNum === 2) {\r\n-          cnt++;\r\n+        if (rangeNum % k === 0 && rangeNum !== 2) {\r\n+          warning = true;\r\n+          break;\r\n         }\r\n+        if (warning) cnt++;\r\n       }\r\n       // console.log(rangeNum, cnt);\r\n       if (cnt === Math.floor(Math.sqrt(rangeNum)) - 1) {\r\n         rangeArr.push(rangeNum);\r\n"
+                },
+                {
+                    "date": 1638855568630,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,12 +33,13 @@\n         }\r\n         if (warning) cnt++;\r\n       }\r\n       // console.log(rangeNum, cnt);\r\n-      if (cnt === Math.floor(Math.sqrt(rangeNum)) - 1) {\r\n-        rangeArr.push(rangeNum);\r\n-      }\r\n+      // if (cnt === Math.floor(Math.sqrt(rangeNum)) - 1) {\r\n+      //   rangeArr.push(rangeNum);\r\n+      // }\r\n     }\r\n-    console.log(rangeArr.length);\r\n+    // console.log(rangeArr.length);\r\n+    console.log(cnt);\r\n   }\r\n };\r\n answer();\r\n"
+                },
+                {
+                    "date": 1638855599686,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,13 +12,14 @@\n ).split('\\n');\r\n \r\n const answer = () => {\r\n   for (let i = 0; i < stdin.length - 1; i++) {\r\n+    let cnt = 0;\r\n     // const rangeArr = [];\r\n     const number = Number(stdin[i]);\r\n     // console.log(number);\r\n     for (let j = number + 1; j <= number * 2; j++) {\r\n-      let cnt = 0;\r\n+      \r\n       const rangeNum = j;\r\n       for (let k = 2; k <= Math.sqrt(rangeNum); k++) {\r\n         let warning = false;\r\n       // console.log(rangeNum, k);\r\n"
+                },
+                {
+                    "date": 1638855631233,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,14 +12,13 @@\n ).split('\\n');\r\n \r\n const answer = () => {\r\n   for (let i = 0; i < stdin.length - 1; i++) {\r\n-    let cnt = 0;\r\n     // const rangeArr = [];\r\n     const number = Number(stdin[i]);\r\n     // console.log(number);\r\n     for (let j = number + 1; j <= number * 2; j++) {\r\n-      \r\n+      let cnt = 0;\r\n       const rangeNum = j;\r\n       for (let k = 2; k <= Math.sqrt(rangeNum); k++) {\r\n         let warning = false;\r\n       // console.log(rangeNum, k);\r\n@@ -37,10 +36,11 @@\n       // console.log(rangeNum, cnt);\r\n       // if (cnt === Math.floor(Math.sqrt(rangeNum)) - 1) {\r\n       //   rangeArr.push(rangeNum);\r\n       // }\r\n+      console.log(cnt);\r\n     }\r\n     // console.log(rangeArr.length);\r\n-    console.log(cnt);\r\n+\r\n   }\r\n };\r\n answer();\r\n"
+                },
+                {
+                    "date": 1638855740857,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,13 +12,14 @@\n ).split('\\n');\r\n \r\n const answer = () => {\r\n   for (let i = 0; i < stdin.length - 1; i++) {\r\n+    let cnt = 0;\r\n     // const rangeArr = [];\r\n     const number = Number(stdin[i]);\r\n     // console.log(number);\r\n     for (let j = number + 1; j <= number * 2; j++) {\r\n-      let cnt = 0;\r\n+      \r\n       const rangeNum = j;\r\n       for (let k = 2; k <= Math.sqrt(rangeNum); k++) {\r\n         let warning = false;\r\n       // console.log(rangeNum, k);\r\n@@ -36,11 +37,11 @@\n       // console.log(rangeNum, cnt);\r\n       // if (cnt === Math.floor(Math.sqrt(rangeNum)) - 1) {\r\n       //   rangeArr.push(rangeNum);\r\n       // }\r\n-      console.log(cnt);\r\n+      \r\n     }\r\n     // console.log(rangeArr.length);\r\n-\r\n+    console.log(cnt);\r\n   }\r\n };\r\n answer();\r\n"
+                },
+                {
+                    "date": 1638855761123,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n       \r\n       const rangeNum = j;\r\n       for (let k = 2; k <= Math.sqrt(rangeNum); k++) {\r\n         let warning = false;\r\n-      // console.log(rangeNum, k);\r\n+      console.log(rangeNum, k);\r\n         // if (rangeNum % k === 0 && rangeNum !== 2) {\r\n         //   break;\r\n         // } else {\r\n         //   cnt++;\r\n"
+                },
+                {
+                    "date": 1638855779328,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,8 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n-  : `1\r\n-10\r\n-13\r\n-100\r\n-1000\r\n-10000\r\n-100000\r\n+  : `10\r\n 0`\r\n ).split('\\n');\r\n \r\n const answer = () => {\r\n"
+                },
+                {
+                    "date": 1638855838250,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,8 +25,9 @@\n         if (rangeNum % k === 0 && rangeNum !== 2) {\r\n           warning = true;\r\n           break;\r\n         }\r\n+        console.log(warning, rangeNum);\r\n         if (warning) cnt++;\r\n       }\r\n       // console.log(rangeNum, cnt);\r\n       // if (cnt === Math.floor(Math.sqrt(rangeNum)) - 1) {\r\n"
+                },
+                {
+                    "date": 1638855920570,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n       \r\n       const rangeNum = j;\r\n       for (let k = 2; k <= Math.sqrt(rangeNum); k++) {\r\n         let warning = false;\r\n-      console.log(rangeNum, k);\r\n+      // console.log(rangeNum, k);\r\n         // if (rangeNum % k === 0 && rangeNum !== 2) {\r\n         //   break;\r\n         // } else {\r\n         //   cnt++;\r\n@@ -26,9 +26,9 @@\n           warning = true;\r\n           break;\r\n         }\r\n         console.log(warning, rangeNum);\r\n-        if (warning) cnt++;\r\n+        if (!warning) cnt++;\r\n       }\r\n       // console.log(rangeNum, cnt);\r\n       // if (cnt === Math.floor(Math.sqrt(rangeNum)) - 1) {\r\n       //   rangeArr.push(rangeNum);\r\n"
+                },
+                {
+                    "date": 1638856032196,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n \r\n const answer = () => {\r\n   for (let i = 0; i < stdin.length - 1; i++) {\r\n     let cnt = 0;\r\n-    // const rangeArr = [];\r\n+    const rangeArr = [];\r\n     const number = Number(stdin[i]);\r\n     // console.log(number);\r\n     for (let j = number + 1; j <= number * 2; j++) {\r\n       \r\n@@ -26,9 +26,9 @@\n           warning = true;\r\n           break;\r\n         }\r\n         console.log(warning, rangeNum);\r\n-        if (!warning) cnt++;\r\n+        if (!warning) rangeArr.push(rangeNum);\r\n       }\r\n       // console.log(rangeNum, cnt);\r\n       // if (cnt === Math.floor(Math.sqrt(rangeNum)) - 1) {\r\n       //   rangeArr.push(rangeNum);\r\n"
+                },
+                {
+                    "date": 1638856038542,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,8 +35,8 @@\n       // }\r\n       \r\n     }\r\n     // console.log(rangeArr.length);\r\n-    console.log(cnt);\r\n+    console.log(rangeNum);\r\n   }\r\n };\r\n answer();\r\n"
+                },
+                {
+                    "date": 1638856054433,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,8 +35,8 @@\n       // }\r\n       \r\n     }\r\n     // console.log(rangeArr.length);\r\n-    console.log(rangeNum);\r\n+    console.log(rangeArr);\r\n   }\r\n };\r\n answer();\r\n"
+                },
+                {
+                    "date": 1638856098121,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,8 +35,8 @@\n       // }\r\n       \r\n     }\r\n     // console.log(rangeArr.length);\r\n-    console.log(rangeArr);\r\n+    console.log(new Set(rangeArr));\r\n   }\r\n };\r\n answer();\r\n"
+                },
+                {
+                    "date": 1638856116960,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,8 +35,8 @@\n       // }\r\n       \r\n     }\r\n     // console.log(rangeArr.length);\r\n-    console.log(new Set(rangeArr));\r\n+    console.log(new Set(rangeArr).length);\r\n   }\r\n };\r\n answer();\r\n"
+                },
+                {
+                    "date": 1638856138759,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,8 +35,9 @@\n       // }\r\n       \r\n     }\r\n     // console.log(rangeArr.length);\r\n-    console.log(new Set(rangeArr).length);\r\n+    const answer = new Set(rangeArr)\r\n+    console.log(answer);\r\n   }\r\n };\r\n answer();\r\n"
+                },
+                {
+                    "date": 1638856159315,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,8 +36,8 @@\n       \r\n     }\r\n     // console.log(rangeArr.length);\r\n     const answer = new Set(rangeArr)\r\n-    console.log(answer);\r\n+    console.log([...answer]);\r\n   }\r\n };\r\n answer();\r\n"
+                },
+                {
+                    "date": 1638856232297,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n       \r\n       const rangeNum = j;\r\n       for (let k = 2; k <= Math.sqrt(rangeNum); k++) {\r\n         let warning = false;\r\n-      // console.log(rangeNum, k);\r\n+      console.log(rangeNum, k);\r\n         // if (rangeNum % k === 0 && rangeNum !== 2) {\r\n         //   break;\r\n         // } else {\r\n         //   cnt++;\r\n@@ -25,9 +25,9 @@\n         if (rangeNum % k === 0 && rangeNum !== 2) {\r\n           warning = true;\r\n           break;\r\n         }\r\n-        console.log(warning, rangeNum);\r\n+        // console.log(warning, rangeNum);\r\n         if (!warning) rangeArr.push(rangeNum);\r\n       }\r\n       // console.log(rangeNum, cnt);\r\n       // if (cnt === Math.floor(Math.sqrt(rangeNum)) - 1) {\r\n"
+                },
+                {
+                    "date": 1638856305961,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n         if (rangeNum % k === 0 && rangeNum !== 2) {\r\n           warning = true;\r\n           break;\r\n         }\r\n-        // console.log(warning, rangeNum);\r\n+        console.log(warning, rangeNum, k);\r\n         if (!warning) rangeArr.push(rangeNum);\r\n       }\r\n       // console.log(rangeNum, cnt);\r\n       // if (cnt === Math.floor(Math.sqrt(rangeNum)) - 1) {\r\n"
+                },
+                {
+                    "date": 1638856406038,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,13 +11,14 @@\n     const rangeArr = [];\r\n     const number = Number(stdin[i]);\r\n     // console.log(number);\r\n     for (let j = number + 1; j <= number * 2; j++) {\r\n-      \r\n+      let warning = false;\r\n       const rangeNum = j;\r\n+      let cnt = 0;\r\n       for (let k = 2; k <= Math.sqrt(rangeNum); k++) {\r\n-        let warning = false;\r\n-      console.log(rangeNum, k);\r\n+        \r\n+      // console.log(rangeNum, k);\r\n         // if (rangeNum % k === 0 && rangeNum !== 2) {\r\n         //   break;\r\n         // } else {\r\n         //   cnt++;\r\n@@ -25,16 +26,16 @@\n         if (rangeNum % k === 0 && rangeNum !== 2) {\r\n           warning = true;\r\n           break;\r\n         }\r\n-        console.log(warning, rangeNum, k);\r\n-        if (!warning) rangeArr.push(rangeNum);\r\n+\r\n       }\r\n       // console.log(rangeNum, cnt);\r\n       // if (cnt === Math.floor(Math.sqrt(rangeNum)) - 1) {\r\n       //   rangeArr.push(rangeNum);\r\n       // }\r\n-      \r\n+      // console.log(warning, rangeNum, k);\r\n+      if (!warning) rangeArr.push(rangeNum);\r\n     }\r\n     // console.log(rangeArr.length);\r\n     const answer = new Set(rangeArr)\r\n     console.log([...answer]);\r\n"
+                },
+                {
+                    "date": 1638856415494,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n       // if (cnt === Math.floor(Math.sqrt(rangeNum)) - 1) {\r\n       //   rangeArr.push(rangeNum);\r\n       // }\r\n       // console.log(warning, rangeNum, k);\r\n-      if (!warning) rangeArr.push(rangeNum);\r\n+      if (!warning) cnt++\r\n     }\r\n     // console.log(rangeArr.length);\r\n     const answer = new Set(rangeArr)\r\n     console.log([...answer]);\r\n"
+                },
+                {
+                    "date": 1638856426719,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,12 +33,13 @@\n       // if (cnt === Math.floor(Math.sqrt(rangeNum)) - 1) {\r\n       //   rangeArr.push(rangeNum);\r\n       // }\r\n       // console.log(warning, rangeNum, k);\r\n-      if (!warning) cnt++\r\n+      if (!warning) cnt++;\r\n     }\r\n     // console.log(rangeArr.length);\r\n-    const answer = new Set(rangeArr)\r\n-    console.log([...answer]);\r\n+    // const answer = new Set(rangeArr)\r\n+    // console.log([...answer]);\r\n+    console.log(cnt);\r\n   }\r\n };\r\n answer();\r\n"
+                },
+                {
+                    "date": 1638856517820,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,36 +6,24 @@\n ).split('\\n');\r\n \r\n const answer = () => {\r\n   for (let i = 0; i < stdin.length - 1; i++) {\r\n-    let cnt = 0;\r\n-    const rangeArr = [];\r\n+    // let cnt = 0;\r\n+    // const rangeArr = [];\r\n     const number = Number(stdin[i]);\r\n     // console.log(number);\r\n     for (let j = number + 1; j <= number * 2; j++) {\r\n       let warning = false;\r\n       const rangeNum = j;\r\n       let cnt = 0;\r\n       for (let k = 2; k <= Math.sqrt(rangeNum); k++) {\r\n-        \r\n-      // console.log(rangeNum, k);\r\n-        // if (rangeNum % k === 0 && rangeNum !== 2) {\r\n-        //   break;\r\n-        // } else {\r\n-        //   cnt++;\r\n-        // }\r\n         if (rangeNum % k === 0 && rangeNum !== 2) {\r\n           warning = true;\r\n           break;\r\n         }\r\n-\r\n+        if (!warning) cnt++;\r\n       }\r\n-      // console.log(rangeNum, cnt);\r\n-      // if (cnt === Math.floor(Math.sqrt(rangeNum)) - 1) {\r\n-      //   rangeArr.push(rangeNum);\r\n-      // }\r\n-      // console.log(warning, rangeNum, k);\r\n-      if (!warning) cnt++;\r\n+      \r\n     }\r\n     // console.log(rangeArr.length);\r\n     // const answer = new Set(rangeArr)\r\n     // console.log([...answer]);\r\n"
+                },
+                {
+                    "date": 1638856530879,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,11 +19,11 @@\n         if (rangeNum % k === 0 && rangeNum !== 2) {\r\n           warning = true;\r\n           break;\r\n         }\r\n-        if (!warning) cnt++;\r\n+        \r\n       }\r\n-      \r\n+      if (!warning) cnt++;\r\n     }\r\n     // console.log(rangeArr.length);\r\n     // const answer = new Set(rangeArr)\r\n     // console.log([...answer]);\r\n"
+                },
+                {
+                    "date": 1638856538755,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,8 @@\n         if (rangeNum % k === 0 && rangeNum !== 2) {\r\n           warning = true;\r\n           break;\r\n         }\r\n-        \r\n       }\r\n       if (!warning) cnt++;\r\n     }\r\n     // console.log(rangeArr.length);\r\n"
+                },
+                {
+                    "date": 1638856563704,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,12 +21,10 @@\n           break;\r\n         }\r\n       }\r\n       if (!warning) cnt++;\r\n+      console.log(cnt);\r\n     }\r\n-    // console.log(rangeArr.length);\r\n-    // const answer = new Set(rangeArr)\r\n-    // console.log([...answer]);\r\n-    console.log(cnt);\r\n+    \r\n   }\r\n };\r\n answer();\r\n"
+                },
+                {
+                    "date": 1638856600435,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,25 +6,23 @@\n ).split('\\n');\r\n \r\n const answer = () => {\r\n   for (let i = 0; i < stdin.length - 1; i++) {\r\n-    // let cnt = 0;\r\n-    // const rangeArr = [];\r\n+    let cnt = 0;\r\n     const number = Number(stdin[i]);\r\n-    // console.log(number);\r\n     for (let j = number + 1; j <= number * 2; j++) {\r\n       let warning = false;\r\n       const rangeNum = j;\r\n-      let cnt = 0;\r\n+      // let cnt = 0;\r\n       for (let k = 2; k <= Math.sqrt(rangeNum); k++) {\r\n         if (rangeNum % k === 0 && rangeNum !== 2) {\r\n           warning = true;\r\n           break;\r\n         }\r\n       }\r\n       if (!warning) cnt++;\r\n-      console.log(cnt);\r\n+      \r\n     }\r\n-    \r\n+    console.log(cnt);\r\n   }\r\n };\r\n answer();\r\n"
+                },
+                {
+                    "date": 1638856638543,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,14 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n-  : `10\r\n+  : `1\r\n+10\r\n+13\r\n+100\r\n+1000\r\n+10000\r\n+100000\r\n 0`\r\n ).split('\\n');\r\n \r\n const answer = () => {\r\n@@ -19,9 +25,8 @@\n           break;\r\n         }\r\n       }\r\n       if (!warning) cnt++;\r\n-      \r\n     }\r\n     console.log(cnt);\r\n   }\r\n };\r\n"
+                },
+                {
+                    "date": 1638856808214,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,8 +14,9 @@\n const answer = () => {\r\n   for (let i = 0; i < stdin.length - 1; i++) {\r\n     let cnt = 0;\r\n     const number = Number(stdin[i]);\r\n+    console.log(number);\r\n     for (let j = number + 1; j <= number * 2; j++) {\r\n       let warning = false;\r\n       const rangeNum = j;\r\n       // let cnt = 0;\r\n"
+                },
+                {
+                    "date": 1638856959042,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,8 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n-  : `1\r\n-10\r\n-13\r\n-100\r\n-1000\r\n-10000\r\n-100000\r\n+  : `10\r\n 0`\r\n ).split('\\n');\r\n \r\n const answer = () => {\r\n"
+                },
+                {
+                    "date": 1638856989489,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,13 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n   : `10\r\n+13\r\n+100\r\n+1000\r\n+10000\r\n+100000\r\n 0`\r\n ).split('\\n');\r\n \r\n const answer = () => {\r\n"
+                },
+                {
+                    "date": 1638857006652,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n-  : `10\r\n+  : `2\r\n+10\r\n 13\r\n 100\r\n 1000\r\n 10000\r\n"
+                },
+                {
+                    "date": 1638857011949,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n-  : `2\r\n+  : `1\r\n 10\r\n 13\r\n 100\r\n 1000\r\n"
+                },
+                {
+                    "date": 1638857023943,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n const answer = () => {\r\n   for (let i = 0; i < stdin.length - 1; i++) {\r\n     let cnt = 0;\r\n     const number = Number(stdin[i]);\r\n-    console.log(number);\r\n+    // console.log(number);\r\n     for (let j = number + 1; j <= number * 2; j++) {\r\n       let warning = false;\r\n       const rangeNum = j;\r\n       // let cnt = 0;\r\n"
+                },
+                {
+                    "date": 1638857081340,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,8 +27,8 @@\n         }\r\n       }\r\n       if (!warning) cnt++;\r\n     }\r\n-    console.log(cnt);\r\n+    if (cnt !== 0) console.log(cnt);\r\n   }\r\n };\r\n answer();\r\n"
+                },
+                {
+                    "date": 1638857089758,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,6 +29,7 @@\n       if (!warning) cnt++;\r\n     }\r\n     if (cnt !== 0) console.log(cnt);\r\n   }\r\n+  return;\r\n };\r\n answer();\r\n"
+                }
+            ],
+            "date": 1638852094116,
+            "name": "Commit-0",
+            "content": "const fs = require('fs');\r\nconst stdin = (process.platform === 'linux'\r\n  ? fs.readFileSync('/dev/stdin').toString()\r\n  : ``\r\n)"
+        }
+    ]
+}

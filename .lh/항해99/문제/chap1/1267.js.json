@@ -1,0 +1,170 @@
+{
+    "sourceFile": "항해99/문제/chap1/1267.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 38,
+            "patches": [
+                {
+                    "date": 1638803093570,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1638803113756,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,6 @@\n const fs = require('fs');\r\n-const stdin = \n\\ No newline at end of file\n+const stdin = (process.platform === 'linux'\r\n+  ? fs.readFileSync('/dev/stdin').toString()\r\n+  : `white\r\n+white\r\n+white`);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638803119796,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,5 +2,6 @@\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n   : `white\r\n white\r\n-white`);\n\\ No newline at end of file\n+white`\r\n+);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638803129450,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,6 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n-  : `white\r\n-white\r\n-white`\r\n+  : `3\r\n+  40 40 40`\r\n );\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638803141687,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n   : `3\r\n-  40 40 40`\r\n-);\n\\ No newline at end of file\n+40 40 40`\r\n+).split('\\n');\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638803150326,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,5 +2,7 @@\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n   : `3\r\n 40 40 40`\r\n-).split('\\n');\n\\ No newline at end of file\n+).split('\\n');\r\n+\r\n+console.log(stdin);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638803177405,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,5 +4,6 @@\n   : `3\r\n 40 40 40`\r\n ).split('\\n');\r\n \r\n-console.log(stdin);\n\\ No newline at end of file\n+console.log(stdin);\r\n+stdin[1].split(' ');\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638803195183,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,6 +4,6 @@\n   : `3\r\n 40 40 40`\r\n ).split('\\n');\r\n \r\n-console.log(stdin);\r\n-stdin[1].split(' ');\n\\ No newline at end of file\n+// console.log(stdin);\r\n+const costs = stdin[1].split(' ');\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638803203459,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,5 +5,6 @@\n 40 40 40`\r\n ).split('\\n');\r\n \r\n // console.log(stdin);\r\n-const costs = stdin[1].split(' ');\n\\ No newline at end of file\n+const costs = stdin[1].split(' ');\r\n+console.log(costs);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638803218048,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,6 +5,6 @@\n 40 40 40`\r\n ).split('\\n');\r\n \r\n // console.log(stdin);\r\n-const costs = stdin[1].split(' ');\r\n+const costs = stdin[1].split(' ').map(Number);\r\n console.log(costs);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638803250263,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,5 +6,6 @@\n ).split('\\n');\r\n \r\n // console.log(stdin);\r\n const costs = stdin[1].split(' ').map(Number);\r\n-console.log(costs);\n\\ No newline at end of file\n+console.log(costs);\r\n+const \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638803279758,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,5 +7,7 @@\n \r\n // console.log(stdin);\r\n const costs = stdin[1].split(' ').map(Number);\r\n console.log(costs);\r\n-const \n\\ No newline at end of file\n+const y = (cost) => {\r\n+  if (cost )\r\n+};\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638803365303,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,6 +8,7 @@\n // console.log(stdin);\r\n const costs = stdin[1].split(' ').map(Number);\r\n console.log(costs);\r\n const y = (cost) => {\r\n-  if (cost )\r\n+  let totalCost = 0;\r\n+  cost / 30\r\n };\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638803412258,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,6 +9,7 @@\n const costs = stdin[1].split(' ').map(Number);\r\n console.log(costs);\r\n const y = (cost) => {\r\n   let totalCost = 0;\r\n-  cost / 30\r\n+  totalCost += Math.flooe(cost / 30) * 10;\r\n+  if (cost)\r\n };\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638803446116,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,7 +9,9 @@\n const costs = stdin[1].split(' ').map(Number);\r\n console.log(costs);\r\n const y = (cost) => {\r\n   let totalCost = 0;\r\n-  totalCost += Math.flooe(cost / 30) * 10;\r\n-  if (cost)\r\n+  totalCost += Math.floor(cost / 30) * 10;\r\n+  if (cost % 30 !== 0) {\r\n+    totalCost += 10;\r\n+  }\r\n };\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638803459438,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,5 +13,7 @@\n   totalCost += Math.floor(cost / 30) * 10;\r\n   if (cost % 30 !== 0) {\r\n     totalCost += 10;\r\n   }\r\n+  console.log(totalCost);\r\n+  return;\r\n };\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638803524712,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,5 +15,15 @@\n     totalCost += 10;\r\n   }\r\n   console.log(totalCost);\r\n   return;\r\n-};\n\\ No newline at end of file\n+};\r\n+\r\n+const m = (cost) => {\r\n+  let totalCost = 0;\r\n+  totalCost += Math.floor(cost / 60) * 15;\r\n+  if (cost % 60 !== 0) {\r\n+    totalCost += 15;\r\n+  }\r\n+  console.log(totalCost);\r\n+  return;\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638803747709,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,5 +25,12 @@\n     totalCost += 15;\r\n   }\r\n   console.log(totalCost);\r\n   return;\r\n-}\n\\ No newline at end of file\n+}\r\n+\r\n+const answer = () => {\r\n+  for (let i = 0; i < costs.length; i++) {\r\n+    y(costs[i]);\r\n+    m(costs[i]);\r\n+  }\r\n+};\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638803753302,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,5 +32,6 @@\n   for (let i = 0; i < costs.length; i++) {\r\n     y(costs[i]);\r\n     m(costs[i]);\r\n   }\r\n-};\n\\ No newline at end of file\n+};\r\n+answer();\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638803807173,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,24 +13,25 @@\n   totalCost += Math.floor(cost / 30) * 10;\r\n   if (cost % 30 !== 0) {\r\n     totalCost += 10;\r\n   }\r\n-  console.log(totalCost);\r\n-  return;\r\n+  // console.log(totalCost);\r\n+  return totalCost;\r\n };\r\n \r\n const m = (cost) => {\r\n   let totalCost = 0;\r\n   totalCost += Math.floor(cost / 60) * 15;\r\n   if (cost % 60 !== 0) {\r\n     totalCost += 15;\r\n   }\r\n-  console.log(totalCost);\r\n-  return;\r\n+  // console.log(totalCost);\r\n+  return totalCost;\r\n }\r\n \r\n const answer = () => {\r\n   for (let i = 0; i < costs.length; i++) {\r\n+\r\n     y(costs[i]);\r\n     m(costs[i]);\r\n   }\r\n };\r\n"
+                },
+                {
+                    "date": 1638803840587,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,11 @@\n }\r\n \r\n const answer = () => {\r\n   for (let i = 0; i < costs.length; i++) {\r\n-\r\n+    let costY = 0;\r\n+    let costM = 0;\r\n+    \r\n     y(costs[i]);\r\n     m(costs[i]);\r\n   }\r\n };\r\n"
+                },
+                {
+                    "date": 1638803850044,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,9 @@\n   for (let i = 0; i < costs.length; i++) {\r\n     let costY = 0;\r\n     let costM = 0;\r\n     \r\n-    y(costs[i]);\r\n-    m(costs[i]);\r\n+    // y(costs[i]);\r\n+    // m(costs[i]);\r\n   }\r\n };\r\n answer();\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638803881796,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,10 @@\n   for (let i = 0; i < costs.length; i++) {\r\n     let costY = 0;\r\n     let costM = 0;\r\n     \r\n-    // y(costs[i]);\r\n-    // m(costs[i]);\r\n+    costY+=y(costs[i]);\r\n+    constM+=m(costs[i]);\r\n   }\r\n+  console.log()\r\n };\r\n answer();\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638803893678,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,7 +35,7 @@\n     \r\n     costY+=y(costs[i]);\r\n     constM+=m(costs[i]);\r\n   }\r\n-  console.log()\r\n+  console.log(costY, costM)\r\n };\r\n answer();\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638803903192,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,14 +28,15 @@\n   return totalCost;\r\n }\r\n \r\n const answer = () => {\r\n+  let costY = 0;\r\n+  let costM = 0;\r\n   for (let i = 0; i < costs.length; i++) {\r\n-    let costY = 0;\r\n-    let costM = 0;\r\n+\r\n     \r\n     costY+=y(costs[i]);\r\n     constM+=m(costs[i]);\r\n   }\r\n-  console.log(costY, costM)\r\n+  console.log(costY, costM);\r\n };\r\n answer();\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638803910177,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,12 +31,11 @@\n const answer = () => {\r\n   let costY = 0;\r\n   let costM = 0;\r\n   for (let i = 0; i < costs.length; i++) {\r\n-\r\n     \r\n     costY+=y(costs[i]);\r\n-    constM+=m(costs[i]);\r\n+    costM+=m(costs[i]);\r\n   }\r\n   console.log(costY, costM);\r\n };\r\n answer();\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638803975204,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,7 +35,10 @@\n     \r\n     costY+=y(costs[i]);\r\n     costM+=m(costs[i]);\r\n   }\r\n-  console.log(costY, costM);\r\n+  // console.log(costY, costM);\r\n+  if (costY > costM) {\r\n+    console.log(`Y ${costY}`)\r\n+  }\r\n };\r\n answer();\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638804043171,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,8 +37,12 @@\n     costM+=m(costs[i]);\r\n   }\r\n   // console.log(costY, costM);\r\n   if (costY > costM) {\r\n-    console.log(`Y ${costY}`)\r\n+    console.log(`M ${costM}`);\r\n+  } else if (costY < costM) {\r\n+    console.log(`Y ${costY}`);\r\n+  } else if (costM === costY) {\r\n+    console.log(``)\r\n   }\r\n };\r\n answer();\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638804055940,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,8 +41,8 @@\n     console.log(`M ${costM}`);\r\n   } else if (costY < costM) {\r\n     console.log(`Y ${costY}`);\r\n   } else if (costM === costY) {\r\n-    console.log(``)\r\n+    console.log(`Y M ${costY}`)\r\n   }\r\n };\r\n answer();\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638804071486,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n ).split('\\n');\r\n \r\n // console.log(stdin);\r\n const costs = stdin[1].split(' ').map(Number);\r\n-console.log(costs);\r\n+// console.log(costs);\r\n const y = (cost) => {\r\n   let totalCost = 0;\r\n   totalCost += Math.floor(cost / 30) * 10;\r\n   if (cost % 30 !== 0) {\r\n@@ -41,8 +41,8 @@\n     console.log(`M ${costM}`);\r\n   } else if (costY < costM) {\r\n     console.log(`Y ${costY}`);\r\n   } else if (costM === costY) {\r\n-    console.log(`Y M ${costY}`)\r\n+    console.log(`Y M ${costY}`);\r\n   }\r\n };\r\n answer();\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638804100149,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n   : `3\r\n-40 40 40`\r\n+61 61 61`\r\n ).split('\\n');\r\n \r\n // console.log(stdin);\r\n const costs = stdin[1].split(' ').map(Number);\r\n"
+                },
+                {
+                    "date": 1638804113135,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n-  : `3\r\n-61 61 61`\r\n+  : `2\r\n+61 101`\r\n ).split('\\n');\r\n \r\n // console.log(stdin);\r\n const costs = stdin[1].split(' ').map(Number);\r\n"
+                },
+                {
+                    "date": 1638804126594,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n   : `2\r\n-61 101`\r\n+61 10`\r\n ).split('\\n');\r\n \r\n // console.log(stdin);\r\n const costs = stdin[1].split(' ').map(Number);\r\n"
+                },
+                {
+                    "date": 1638804137148,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n   : `2\r\n-61 10`\r\n+60 65`\r\n ).split('\\n');\r\n \r\n // console.log(stdin);\r\n const costs = stdin[1].split(' ').map(Number);\r\n"
+                },
+                {
+                    "date": 1638804397965,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n // console.log(costs);\r\n const y = (cost) => {\r\n   let totalCost = 0;\r\n   totalCost += Math.floor(cost / 30) * 10;\r\n-  if (cost % 30 !== 0) {\r\n+  if (cost % 30 < 30) {\r\n     totalCost += 10;\r\n   }\r\n   // console.log(totalCost);\r\n   return totalCost;\r\n"
+                },
+                {
+                    "date": 1638804408509,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n \r\n const m = (cost) => {\r\n   let totalCost = 0;\r\n   totalCost += Math.floor(cost / 60) * 15;\r\n-  if (cost % 60 !== 0) {\r\n+  if (cost % 60 < 60) {\r\n     totalCost += 15;\r\n   }\r\n   // console.log(totalCost);\r\n   return totalCost;\r\n"
+                },
+                {
+                    "date": 1638804427934,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n-  : `2\r\n-60 65`\r\n+  : `3\r\n+40 40 40`\r\n ).split('\\n');\r\n \r\n // console.log(stdin);\r\n const costs = stdin[1].split(' ').map(Number);\r\n"
+                },
+                {
+                    "date": 1638804437711,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n   : `3\r\n-40 40 40`\r\n+61 61 61`\r\n ).split('\\n');\r\n \r\n // console.log(stdin);\r\n const costs = stdin[1].split(' ').map(Number);\r\n"
+                },
+                {
+                    "date": 1638804449087,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n-  : `3\r\n-61 61 61`\r\n+  : `2\r\n+61 10`\r\n ).split('\\n');\r\n \r\n // console.log(stdin);\r\n const costs = stdin[1].split(' ').map(Number);\r\n"
+                }
+            ],
+            "date": 1638803093570,
+            "name": "Commit-0",
+            "content": "const fs = require('fs');\r\nconst stdin = "
+        }
+    ]
+}

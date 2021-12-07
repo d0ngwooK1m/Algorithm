@@ -1,0 +1,250 @@
+{
+    "sourceFile": "항해99/문제/chap1/1110.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 58,
+            "patches": [
+                {
+                    "date": 1638876125748,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1638876176532,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,5 @@\n-const fs = require('fs');\n\\ No newline at end of file\n+const fs = require('fs');\r\n+const stdin = (process.platform === 'linux'\r\n+  ? fs.readFileSync('/dev/stdin').toString()\r\n+  : `26`\r\n+);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638876195406,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,7 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n   : `26`\r\n-);\n\\ No newline at end of file\n+);\r\n+\r\n+const number = Number(stdin);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638876201761,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,5 +3,6 @@\n   ? fs.readFileSync('/dev/stdin').toString()\r\n   : `26`\r\n );\r\n \r\n-const number = Number(stdin);\n\\ No newline at end of file\n+const number = Number(stdin);\r\n+console.log(number);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638876248811,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,5 +4,9 @@\n   : `26`\r\n );\r\n \r\n const number = Number(stdin);\r\n-console.log(number);\n\\ No newline at end of file\n+console.log(number);\r\n+\r\n+const answer = (n) => {\r\n+  while\r\n+};\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638876272631,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,6 +7,7 @@\n const number = Number(stdin);\r\n console.log(number);\r\n \r\n const answer = (n) => {\r\n-  while\r\n+  \r\n+  while ()\r\n };\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638876320688,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,7 +7,12 @@\n const number = Number(stdin);\r\n console.log(number);\r\n \r\n const answer = (n) => {\r\n-  \r\n+  let cycle;\r\n+  if (n < 10) {\r\n+\r\n+  } else {\r\n+\r\n+  }\r\n   while ()\r\n };\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638876341318,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n \r\n const answer = (n) => {\r\n   let cycle;\r\n   if (n < 10) {\r\n-\r\n+    cycle = n;\r\n   } else {\r\n \r\n   }\r\n   while ()\r\n"
+                },
+                {
+                    "date": 1638876380603,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,8 +11,8 @@\n   let cycle;\r\n   if (n < 10) {\r\n     cycle = n;\r\n   } else {\r\n-\r\n+    cycle = Math.floor(n / 10) + n % 10\r\n   }\r\n   while ()\r\n };\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638876416828,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,11 +8,14 @@\n console.log(number);\r\n \r\n const answer = (n) => {\r\n   let cycle;\r\n+  let cnt;\r\n   if (n < 10) {\r\n     cycle = n;\r\n   } else {\r\n-    cycle = Math.floor(n / 10) + n % 10\r\n+    cycle = Math.floor(n / 10) + n % 10;\r\n   }\r\n-  while ()\r\n+  while (number !== cycle) {\r\n+\r\n+  }\r\n };\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638876446621,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,7 +15,11 @@\n   } else {\r\n     cycle = Math.floor(n / 10) + n % 10;\r\n   }\r\n   while (number !== cycle) {\r\n-\r\n+    if (n < 10) {\r\n+      cycle = n;\r\n+    } else {\r\n+      cycle = Math.floor(n / 10) + n % 10;\r\n+    }\r\n   }\r\n };\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638876456859,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,5 +21,6 @@\n     } else {\r\n       cycle = Math.floor(n / 10) + n % 10;\r\n     }\r\n   }\r\n+  console.log(cnt + 1)''\r\n };\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638876476144,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n   : `26`\r\n );\r\n \r\n const number = Number(stdin);\r\n-console.log(number);\r\n+// console.log(number);\r\n \r\n const answer = (n) => {\r\n   let cycle;\r\n   let cnt;\r\n@@ -21,6 +21,7 @@\n     } else {\r\n       cycle = Math.floor(n / 10) + n % 10;\r\n     }\r\n   }\r\n-  console.log(cnt + 1)''\r\n-};\n\\ No newline at end of file\n+  console.log(cnt + 1);\r\n+};\r\n+answer(number);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638876579663,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n const answer = (n) => {\r\n   let cycle;\r\n   let cnt;\r\n   if (n < 10) {\r\n-    cycle = n;\r\n+    cycle = Number(`${n}${n}`);\r\n   } else {\r\n     cycle = Math.floor(n / 10) + n % 10;\r\n   }\r\n   while (number !== cycle) {\r\n"
+                },
+                {
+                    "date": 1638876634591,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n   let cnt;\r\n   if (n < 10) {\r\n     cycle = Number(`${n}${n}`);\r\n   } else {\r\n-    cycle = Math.floor(n / 10) + n % 10;\r\n+    cycle = Number(`${n % 10}${Math.floor(n / 10) + n % 10}`);\r\n   }\r\n   while (number !== cycle) {\r\n     if (n < 10) {\r\n       cycle = n;\r\n"
+                },
+                {
+                    "date": 1638876650682,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,11 +16,11 @@\n     cycle = Number(`${n % 10}${Math.floor(n / 10) + n % 10}`);\r\n   }\r\n   while (number !== cycle) {\r\n     if (n < 10) {\r\n-      cycle = n;\r\n+      cycle = Number(`${n}${n}`);\r\n     } else {\r\n-      cycle = Math.floor(n / 10) + n % 10;\r\n+      cycle = Number(`${n % 10}${Math.floor(n / 10) + n % 10}`);\r\n     }\r\n   }\r\n   console.log(cnt + 1);\r\n };\r\n"
+                },
+                {
+                    "date": 1638876673739,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,8 +20,9 @@\n       cycle = Number(`${n}${n}`);\r\n     } else {\r\n       cycle = Number(`${n % 10}${Math.floor(n / 10) + n % 10}`);\r\n     }\r\n+    cnt++;\r\n   }\r\n   console.log(cnt + 1);\r\n };\r\n answer(number);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638876718183,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,15 +14,15 @@\n     cycle = Number(`${n}${n}`);\r\n   } else {\r\n     cycle = Number(`${n % 10}${Math.floor(n / 10) + n % 10}`);\r\n   }\r\n-  while (number !== cycle) {\r\n-    if (n < 10) {\r\n-      cycle = Number(`${n}${n}`);\r\n-    } else {\r\n-      cycle = Number(`${n % 10}${Math.floor(n / 10) + n % 10}`);\r\n-    }\r\n-    cnt++;\r\n-  }\r\n+  // while (number !== cycle) {\r\n+  //   if (n < 10) {\r\n+  //     cycle = Number(`${n}${n}`);\r\n+  //   } else {\r\n+  //     cycle = Number(`${n % 10}${Math.floor(n / 10) + n % 10}`);\r\n+  //   }\r\n+  //   cnt++;\r\n+  // }\r\n   console.log(cnt + 1);\r\n };\r\n answer(number);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638876734176,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,15 +14,16 @@\n     cycle = Number(`${n}${n}`);\r\n   } else {\r\n     cycle = Number(`${n % 10}${Math.floor(n / 10) + n % 10}`);\r\n   }\r\n+  console.log(cycle);\r\n   // while (number !== cycle) {\r\n   //   if (n < 10) {\r\n   //     cycle = Number(`${n}${n}`);\r\n   //   } else {\r\n   //     cycle = Number(`${n % 10}${Math.floor(n / 10) + n % 10}`);\r\n   //   }\r\n   //   cnt++;\r\n   // }\r\n-  console.log(cnt + 1);\r\n+  // console.log(cnt + 1);\r\n };\r\n answer(number);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638876783741,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,10 +11,12 @@\n   let cycle;\r\n   let cnt;\r\n   if (n < 10) {\r\n     cycle = Number(`${n}${n}`);\r\n+    cnt++;\r\n   } else {\r\n     cycle = Number(`${n % 10}${Math.floor(n / 10) + n % 10}`);\r\n+    cnt++;\r\n   }\r\n   console.log(cycle);\r\n   // while (number !== cycle) {\r\n   //   if (n < 10) {\r\n"
+                },
+                {
+                    "date": 1638876798663,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,15 +17,15 @@\n     cycle = Number(`${n % 10}${Math.floor(n / 10) + n % 10}`);\r\n     cnt++;\r\n   }\r\n   console.log(cycle);\r\n-  // while (number !== cycle) {\r\n-  //   if (n < 10) {\r\n-  //     cycle = Number(`${n}${n}`);\r\n-  //   } else {\r\n-  //     cycle = Number(`${n % 10}${Math.floor(n / 10) + n % 10}`);\r\n-  //   }\r\n-  //   cnt++;\r\n-  // }\r\n-  // console.log(cnt + 1);\r\n+  while (number !== cycle) {\r\n+    if (n < 10) {\r\n+      cycle = Number(`${n}${n}`);\r\n+    } else {\r\n+      cycle = Number(`${n % 10}${Math.floor(n / 10) + n % 10}`);\r\n+    }\r\n+    cnt++;\r\n+  }\r\n+  console.log(cnt);\r\n };\r\n answer(number);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638876809362,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,12 +20,14 @@\n   console.log(cycle);\r\n   while (number !== cycle) {\r\n     if (n < 10) {\r\n       cycle = Number(`${n}${n}`);\r\n+      \r\n     } else {\r\n       cycle = Number(`${n % 10}${Math.floor(n / 10) + n % 10}`);\r\n+      cnt++;\r\n     }\r\n-    cnt++;\r\n+    \r\n   }\r\n   console.log(cnt);\r\n };\r\n answer(number);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638876826650,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,11 +18,12 @@\n     cnt++;\r\n   }\r\n   console.log(cycle);\r\n   while (number !== cycle) {\r\n+    console.log(number, cycle);\r\n     if (n < 10) {\r\n       cycle = Number(`${n}${n}`);\r\n-      \r\n+      cnt++;\r\n     } else {\r\n       cycle = Number(`${n % 10}${Math.floor(n / 10) + n % 10}`);\r\n       cnt++;\r\n     }\r\n"
+                },
+                {
+                    "date": 1638876835770,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n   } else {\r\n     cycle = Number(`${n % 10}${Math.floor(n / 10) + n % 10}`);\r\n     cnt++;\r\n   }\r\n-  console.log(cycle);\r\n+  // console.log(cycle);\r\n   while (number !== cycle) {\r\n     console.log(number, cycle);\r\n     if (n < 10) {\r\n       cycle = Number(`${n}${n}`);\r\n@@ -26,9 +26,8 @@\n     } else {\r\n       cycle = Number(`${n % 10}${Math.floor(n / 10) + n % 10}`);\r\n       cnt++;\r\n     }\r\n-    \r\n   }\r\n-  console.log(cnt);\r\n+  // console.log(cnt);\r\n };\r\n answer(number);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638876856761,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n   }\r\n   // console.log(cycle);\r\n   while (number !== cycle) {\r\n     console.log(number, cycle);\r\n-    if (n < 10) {\r\n+    if (cycle < 10) {\r\n       cycle = Number(`${n}${n}`);\r\n       cnt++;\r\n     } else {\r\n       cycle = Number(`${n % 10}${Math.floor(n / 10) + n % 10}`);\r\n"
+                },
+                {
+                    "date": 1638876896211,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,12 +20,12 @@\n   // console.log(cycle);\r\n   while (number !== cycle) {\r\n     console.log(number, cycle);\r\n     if (cycle < 10) {\r\n-      cycle = Number(`${n}${n}`);\r\n+      cycle = Number(`${cycle}${cycle}`);\r\n       cnt++;\r\n     } else {\r\n-      cycle = Number(`${n % 10}${Math.floor(n / 10) + n % 10}`);\r\n+      cycle = Number(`${cycle % 10}${Math.floor(cycle / 10) + cycle % 10}`);\r\n       cnt++;\r\n     }\r\n   }\r\n   // console.log(cnt);\r\n"
+                },
+                {
+                    "date": 1638878017574,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n     if (cycle < 10) {\r\n       cycle = Number(`${cycle}${cycle}`);\r\n       cnt++;\r\n     } else {\r\n-      cycle = Number(`${cycle % 10}${Math.floor(cycle / 10) + cycle % 10}`);\r\n+      cycle = Number(`${cycle % 10}${Math.floor(cycle / 10) + cycle % 10}`) % 10;\r\n       cnt++;\r\n     }\r\n   }\r\n   // console.log(cnt);\r\n"
+                },
+                {
+                    "date": 1638878049183,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n     if (cycle < 10) {\r\n       cycle = Number(`${cycle}${cycle}`);\r\n       cnt++;\r\n     } else {\r\n-      cycle = Number(`${cycle % 10}${Math.floor(cycle / 10) + cycle % 10}`) % 10;\r\n+      cycle = Number(`${cycle % 10}${(Math.floor(cycle / 10) + cycle % 10) % 10}`);\r\n       cnt++;\r\n     }\r\n   }\r\n   // console.log(cnt);\r\n"
+                },
+                {
+                    "date": 1638878072495,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,7 +27,7 @@\n       cycle = Number(`${cycle % 10}${(Math.floor(cycle / 10) + cycle % 10) % 10}`);\r\n       cnt++;\r\n     }\r\n   }\r\n-  // console.log(cnt);\r\n+  console.log(cnt);\r\n };\r\n answer(number);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638878129239,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n // console.log(number);\r\n \r\n const answer = (n) => {\r\n   let cycle;\r\n-  let cnt;\r\n+  let cnt=0\r\n   if (n < 10) {\r\n     cycle = Number(`${n}${n}`);\r\n     cnt++;\r\n   } else {\r\n"
+                },
+                {
+                    "date": 1638878147059,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,16 +1,16 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n-  : `26`\r\n+  : `1`\r\n );\r\n \r\n const number = Number(stdin);\r\n // console.log(number);\r\n \r\n const answer = (n) => {\r\n   let cycle;\r\n-  let cnt=0\r\n+  let cnt = 0;\r\n   if (n < 10) {\r\n     cycle = Number(`${n}${n}`);\r\n     cnt++;\r\n   } else {\r\n"
+                },
+                {
+                    "date": 1638878164538,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n-  : `1`\r\n+  : `0`\r\n );\r\n \r\n const number = Number(stdin);\r\n // console.log(number);\r\n"
+                },
+                {
+                    "date": 1638878173877,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n     cnt++;\r\n   }\r\n   // console.log(cycle);\r\n   while (number !== cycle) {\r\n-    console.log(number, cycle);\r\n+    // console.log(number, cycle);\r\n     if (cycle < 10) {\r\n       cycle = Number(`${cycle}${cycle}`);\r\n       cnt++;\r\n     } else {\r\n"
+                },
+                {
+                    "date": 1638878243945,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,9 @@\n \r\n const answer = (n) => {\r\n   let cycle;\r\n   let cnt = 0;\r\n+  let answer = '';\r\n   if (n < 10) {\r\n     cycle = Number(`${n}${n}`);\r\n     cnt++;\r\n   } else {\r\n@@ -27,7 +28,7 @@\n       cycle = Number(`${cycle % 10}${(Math.floor(cycle / 10) + cycle % 10) % 10}`);\r\n       cnt++;\r\n     }\r\n   }\r\n-  console.log(cnt);\r\n+\r\n };\r\n answer(number);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638878267013,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,7 +28,8 @@\n       cycle = Number(`${cycle % 10}${(Math.floor(cycle / 10) + cycle % 10) % 10}`);\r\n       cnt++;\r\n     }\r\n   }\r\n-\r\n+  answer += `${cnt}\r\n+  `\r\n };\r\n answer(number);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638878303795,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,8 @@\n \r\n const answer = (n) => {\r\n   let cycle;\r\n   let cnt = 0;\r\n-  let answer = '';\r\n   if (n < 10) {\r\n     cycle = Number(`${n}${n}`);\r\n     cnt++;\r\n   } else {\r\n"
+                },
+                {
+                    "date": 1638878327952,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,8 +27,7 @@\n       cycle = Number(`${cycle % 10}${(Math.floor(cycle / 10) + cycle % 10) % 10}`);\r\n       cnt++;\r\n     }\r\n   }\r\n-  answer += `${cnt}\r\n-  `\r\n+  console.log(cnt);\r\n };\r\n answer(number);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638878333288,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n-  : `0`\r\n+  : `99`\r\n );\r\n \r\n const number = Number(stdin);\r\n // console.log(number);\r\n"
+                },
+                {
+                    "date": 1638878364245,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n-  : `99`\r\n+  : `71`\r\n );\r\n \r\n const number = Number(stdin);\r\n // console.log(number);\r\n"
+                },
+                {
+                    "date": 1638878429297,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,10 @@\n const answer = (n) => {\r\n   let cycle;\r\n   let cnt = 0;\r\n   if (n < 10) {\r\n-    cycle = Number(`${n}${n}`);\r\n+    // cycle = Number(`${n}${n}`);\r\n+    cycle = n * 10 + n\r\n     cnt++;\r\n   } else {\r\n     cycle = Number(`${n % 10}${Math.floor(n / 10) + n % 10}`);\r\n     cnt++;\r\n"
+                },
+                {
+                    "date": 1638878510518,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,12 +11,13 @@\n   let cycle;\r\n   let cnt = 0;\r\n   if (n < 10) {\r\n     // cycle = Number(`${n}${n}`);\r\n-    cycle = n * 10 + n\r\n+    cycle = n * 10 + n;\r\n     cnt++;\r\n   } else {\r\n-    cycle = Number(`${n % 10}${Math.floor(n / 10) + n % 10}`);\r\n+    // cycle = Number(`${n % 10}${Math.floor(n / 10) + n % 10}`);\r\n+    cycle = (n % 10) * 10 + (Math.floor(n / 10) + (n % 10))\r\n     cnt++;\r\n   }\r\n   // console.log(cycle);\r\n   while (number !== cycle) {\r\n"
+                },
+                {
+                    "date": 1638878540775,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,16 +15,17 @@\n     cycle = n * 10 + n;\r\n     cnt++;\r\n   } else {\r\n     // cycle = Number(`${n % 10}${Math.floor(n / 10) + n % 10}`);\r\n-    cycle = (n % 10) * 10 + (Math.floor(n / 10) + (n % 10))\r\n+    cycle = (n % 10) * 10 + (Math.floor(n / 10) + (n % 10));\r\n     cnt++;\r\n   }\r\n   // console.log(cycle);\r\n   while (number !== cycle) {\r\n     // console.log(number, cycle);\r\n     if (cycle < 10) {\r\n-      cycle = Number(`${cycle}${cycle}`);\r\n+      // cycle = Number(`${cycle}${cycle}`);\r\n+      cycle = cycle * 10 + cycle;\r\n       cnt++;\r\n     } else {\r\n       cycle = Number(`${cycle % 10}${(Math.floor(cycle / 10) + cycle % 10) % 10}`);\r\n       cnt++;\r\n"
+                },
+                {
+                    "date": 1638878587542,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,8 +27,9 @@\n       cycle = cycle * 10 + cycle;\r\n       cnt++;\r\n     } else {\r\n       cycle = Number(`${cycle % 10}${(Math.floor(cycle / 10) + cycle % 10) % 10}`);\r\n+      cycle = (cycle % 10) * 10 + ((Math.floor(cycle / 10) + cycle % 10) % 10)\r\n       cnt++;\r\n     }\r\n   }\r\n   console.log(cnt);\r\n"
+                },
+                {
+                    "date": 1638878593265,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,10 +26,10 @@\n       // cycle = Number(`${cycle}${cycle}`);\r\n       cycle = cycle * 10 + cycle;\r\n       cnt++;\r\n     } else {\r\n-      cycle = Number(`${cycle % 10}${(Math.floor(cycle / 10) + cycle % 10) % 10}`);\r\n-      cycle = (cycle % 10) * 10 + ((Math.floor(cycle / 10) + cycle % 10) % 10)\r\n+      // cycle = Number(`${cycle % 10}${(Math.floor(cycle / 10) + cycle % 10) % 10}`);\r\n+      cycle = (cycle % 10) * 10 + ((Math.floor(cycle / 10) + cycle % 10) % 10);\r\n       cnt++;\r\n     }\r\n   }\r\n   console.log(cnt);\r\n"
+                },
+                {
+                    "date": 1638878605223,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n-  : `71`\r\n+  : `99`\r\n );\r\n \r\n const number = Number(stdin);\r\n // console.log(number);\r\n"
+                },
+                {
+                    "date": 1638878648976,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n     cnt++;\r\n   }\r\n   // console.log(cycle);\r\n   while (number !== cycle) {\r\n-    // console.log(number, cycle);\r\n+    console.log(number, cycle);\r\n     if (cycle < 10) {\r\n       // cycle = Number(`${cycle}${cycle}`);\r\n       cycle = cycle * 10 + cycle;\r\n       cnt++;\r\n"
+                },
+                {
+                    "date": 1638878950839,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,37 @@\n+const fs = require('fs');\r\n+const stdin = (process.platform === 'linux'\r\n+  ? fs.readFileSync('/dev/stdin').toString()\r\n+  : `10`\r\n+);\r\n+\r\n+const number = Number(stdin);\r\n+// console.log(number);\r\n+\r\n+const answer = (n) => {\r\n+  let cycle;\r\n+  let cnt = 0;\r\n+  if (n < 10) {\r\n+    // cycle = Number(`${n}${n}`);\r\n+    cycle = n * 10 + n;\r\n+    cnt++;\r\n+  } else {\r\n+    // cycle = Number(`${n % 10}${Math.floor(n / 10) + n % 10}`);\r\n+    cycle = (n % 10) * 10 + (Math.floor(n / 10) + (n % 10));\r\n+    cnt++;\r\n+  }\r\n+  // console.log(cycle);\r\n+  while (number !== cycle) {\r\n+    console.log(number, cycle);\r\n+    if (cycle < 10) {\r\n+      // cycle = Number(`${cycle}${cycle}`);\r\n+      cycle = cycle * 10 + cycle;\r\n+      cnt++;\r\n+    } else {\r\n+      // cycle = Number(`${cycle % 10}${(Math.floor(cycle / 10) + cycle % 10) % 10}`);\r\n+      cycle = (cycle % 10) * 10 + ((Math.floor(cycle / 10) + cycle % 10) % 10);\r\n+      cnt++;\r\n+    }\r\n+  }\r\n+  console.log(cnt);\r\n+};\r\n+answer(number);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638878964279,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n-  : `10`\r\n+  : `11`\r\n );\r\n \r\n const number = Number(stdin);\r\n // console.log(number);\r\n@@ -33,42 +33,5 @@\n     }\r\n   }\r\n   console.log(cnt);\r\n };\r\n-answer(number);\n-const fs = require('fs');\r\n-const stdin = (process.platform === 'linux'\r\n-  ? fs.readFileSync('/dev/stdin').toString()\r\n-  : `99`\r\n-);\r\n-\r\n-const number = Number(stdin);\r\n-// console.log(number);\r\n-\r\n-const answer = (n) => {\r\n-  let cycle;\r\n-  let cnt = 0;\r\n-  if (n < 10) {\r\n-    // cycle = Number(`${n}${n}`);\r\n-    cycle = n * 10 + n;\r\n-    cnt++;\r\n-  } else {\r\n-    // cycle = Number(`${n % 10}${Math.floor(n / 10) + n % 10}`);\r\n-    cycle = (n % 10) * 10 + (Math.floor(n / 10) + (n % 10));\r\n-    cnt++;\r\n-  }\r\n-  // console.log(cycle);\r\n-  while (number !== cycle) {\r\n-    console.log(number, cycle);\r\n-    if (cycle < 10) {\r\n-      // cycle = Number(`${cycle}${cycle}`);\r\n-      cycle = cycle * 10 + cycle;\r\n-      cnt++;\r\n-    } else {\r\n-      // cycle = Number(`${cycle % 10}${(Math.floor(cycle / 10) + cycle % 10) % 10}`);\r\n-      cycle = (cycle % 10) * 10 + ((Math.floor(cycle / 10) + cycle % 10) % 10);\r\n-      cnt++;\r\n-    }\r\n-  }\r\n-  console.log(cnt);\r\n-};\r\n answer(number);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638878974776,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n-  : `11`\r\n+  : `88`\r\n );\r\n \r\n const number = Number(stdin);\r\n // console.log(number);\r\n"
+                },
+                {
+                    "date": 1638879013888,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n-  : `88`\r\n+  : `77`\r\n );\r\n \r\n const number = Number(stdin);\r\n // console.log(number);\r\n"
+                },
+                {
+                    "date": 1638879120219,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n-  : `77`\r\n+  : `5`\r\n );\r\n \r\n const number = Number(stdin);\r\n // console.log(number);\r\n"
+                },
+                {
+                    "date": 1638879214086,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n-  : `5`\r\n+  : `84`\r\n );\r\n \r\n const number = Number(stdin);\r\n // console.log(number);\r\n"
+                },
+                {
+                    "date": 1638879340178,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,20 +18,20 @@\n     // cycle = Number(`${n % 10}${Math.floor(n / 10) + n % 10}`);\r\n     cycle = (n % 10) * 10 + (Math.floor(n / 10) + (n % 10));\r\n     cnt++;\r\n   }\r\n-  // console.log(cycle);\r\n-  while (number !== cycle) {\r\n-    console.log(number, cycle);\r\n-    if (cycle < 10) {\r\n-      // cycle = Number(`${cycle}${cycle}`);\r\n-      cycle = cycle * 10 + cycle;\r\n-      cnt++;\r\n-    } else {\r\n-      // cycle = Number(`${cycle % 10}${(Math.floor(cycle / 10) + cycle % 10) % 10}`);\r\n-      cycle = (cycle % 10) * 10 + ((Math.floor(cycle / 10) + cycle % 10) % 10);\r\n-      cnt++;\r\n-    }\r\n-  }\r\n+  console.log(cycle);\r\n+  // while (number !== cycle) {\r\n+  //   console.log(number, cycle);\r\n+  //   if (cycle < 10) {\r\n+  //     // cycle = Number(`${cycle}${cycle}`);\r\n+  //     cycle = cycle * 10 + cycle;\r\n+  //     cnt++;\r\n+  //   } else {\r\n+  //     // cycle = Number(`${cycle % 10}${(Math.floor(cycle / 10) + cycle % 10) % 10}`);\r\n+  //     cycle = (cycle % 10) * 10 + ((Math.floor(cycle / 10) + cycle % 10) % 10);\r\n+  //     cnt++;\r\n+  //   }\r\n+  // }\r\n   console.log(cnt);\r\n };\r\n answer(number);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638879466505,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n     cycle = n * 10 + n;\r\n     cnt++;\r\n   } else {\r\n     // cycle = Number(`${n % 10}${Math.floor(n / 10) + n % 10}`);\r\n-    cycle = (n % 10) * 10 + (Math.floor(n / 10) + (n % 10));\r\n+    cycle = ((n % 10) * 10) + ((Math.floor(n / 10) + n) % 10);\r\n     cnt++;\r\n   }\r\n   console.log(cycle);\r\n   // while (number !== cycle) {\r\n"
+                },
+                {
+                    "date": 1638879481155,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,19 +19,19 @@\n     cycle = ((n % 10) * 10) + ((Math.floor(n / 10) + n) % 10);\r\n     cnt++;\r\n   }\r\n   console.log(cycle);\r\n-  // while (number !== cycle) {\r\n-  //   console.log(number, cycle);\r\n-  //   if (cycle < 10) {\r\n-  //     // cycle = Number(`${cycle}${cycle}`);\r\n-  //     cycle = cycle * 10 + cycle;\r\n-  //     cnt++;\r\n-  //   } else {\r\n-  //     // cycle = Number(`${cycle % 10}${(Math.floor(cycle / 10) + cycle % 10) % 10}`);\r\n-  //     cycle = (cycle % 10) * 10 + ((Math.floor(cycle / 10) + cycle % 10) % 10);\r\n-  //     cnt++;\r\n-  //   }\r\n-  // }\r\n+  while (number !== cycle) {\r\n+    console.log(number, cycle);\r\n+    if (cycle < 10) {\r\n+      // cycle = Number(`${cycle}${cycle}`);\r\n+      cycle = cycle * 10 + cycle;\r\n+      cnt++;\r\n+    } else {\r\n+      // cycle = Number(`${cycle % 10}${(Math.floor(cycle / 10) + cycle % 10) % 10}`);\r\n+      cycle = (cycle % 10) * 10 + ((Math.floor(cycle / 10) + cycle % 10) % 10);\r\n+      cnt++;\r\n+    }\r\n+  }\r\n   console.log(cnt);\r\n };\r\n answer(number);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638879494051,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n-  : `84`\r\n+  : `99`\r\n );\r\n \r\n const number = Number(stdin);\r\n // console.log(number);\r\n@@ -18,9 +18,9 @@\n     // cycle = Number(`${n % 10}${Math.floor(n / 10) + n % 10}`);\r\n     cycle = ((n % 10) * 10) + ((Math.floor(n / 10) + n) % 10);\r\n     cnt++;\r\n   }\r\n-  console.log(cycle);\r\n+  // console.log(cycle);\r\n   while (number !== cycle) {\r\n     console.log(number, cycle);\r\n     if (cycle < 10) {\r\n       // cycle = Number(`${cycle}${cycle}`);\r\n"
+                },
+                {
+                    "date": 1638879531767,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,25 +10,21 @@\n const answer = (n) => {\r\n   let cycle;\r\n   let cnt = 0;\r\n   if (n < 10) {\r\n-    // cycle = Number(`${n}${n}`);\r\n     cycle = n * 10 + n;\r\n     cnt++;\r\n   } else {\r\n-    // cycle = Number(`${n % 10}${Math.floor(n / 10) + n % 10}`);\r\n     cycle = ((n % 10) * 10) + ((Math.floor(n / 10) + n) % 10);\r\n     cnt++;\r\n   }\r\n   // console.log(cycle);\r\n   while (number !== cycle) {\r\n-    console.log(number, cycle);\r\n+    // console.log(number, cycle);\r\n     if (cycle < 10) {\r\n-      // cycle = Number(`${cycle}${cycle}`);\r\n       cycle = cycle * 10 + cycle;\r\n       cnt++;\r\n     } else {\r\n-      // cycle = Number(`${cycle % 10}${(Math.floor(cycle / 10) + cycle % 10) % 10}`);\r\n       cycle = (cycle % 10) * 10 + ((Math.floor(cycle / 10) + cycle % 10) % 10);\r\n       cnt++;\r\n     }\r\n   }\r\n"
+                },
+                {
+                    "date": 1638879538323,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n-  : `99`\r\n+  : `88`\r\n );\r\n \r\n const number = Number(stdin);\r\n // console.log(number);\r\n"
+                },
+                {
+                    "date": 1638879545758,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n-  : `88`\r\n+  : `77`\r\n );\r\n \r\n const number = Number(stdin);\r\n // console.log(number);\r\n"
+                }
+            ],
+            "date": 1638876125748,
+            "name": "Commit-0",
+            "content": "const fs = require('fs');"
+        }
+    ]
+}

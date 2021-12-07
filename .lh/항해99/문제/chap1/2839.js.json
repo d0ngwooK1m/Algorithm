@@ -1,0 +1,198 @@
+{
+    "sourceFile": "항해99/문제/chap1/2839.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 45,
+            "patches": [
+                {
+                    "date": 1638837098223,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1638837151320,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,5 @@\n const fs = require('fs');\r\n-const stdin = ()\n\\ No newline at end of file\n+const stdin = (process.platform === 'linux'\r\n+  ? fs.readFileSync('/dev/stdin').toString()\r\n+  : ``\r\n+);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638837178300,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n-  : ``\r\n+  : `18`\r\n );\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638837193586,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n   : `18`\r\n-);\n\\ No newline at end of file\n+).split('\\n');\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638837200361,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,7 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n   : `18`\r\n-).split('\\n');\n\\ No newline at end of file\n+).split('\\n');\r\n+\r\n+console.log(stdin);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638837259063,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n   : `18`\r\n-).split('\\n');\r\n+);\r\n \r\n\\ No newline at end of file\n-console.log(stdin);\n+console.log(stdin);\r\n+const sugar = stdin.\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638837270771,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,5 +4,5 @@\n   : `18`\r\n );\r\n \r\n console.log(stdin);\r\n-const sugar = stdin.\n\\ No newline at end of file\n+const sugar = Number(stdin)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638837281199,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,5 +4,6 @@\n   : `18`\r\n );\r\n \r\n console.log(stdin);\r\n-const sugar = Number(stdin)\n\\ No newline at end of file\n+const sugar = Number(stdin);\r\n+console.log(sugar);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638837289295,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,7 +3,6 @@\n   ? fs.readFileSync('/dev/stdin').toString()\r\n   : `18`\r\n );\r\n \r\n-console.log(stdin);\r\n const sugar = Number(stdin);\r\n console.log(sugar);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638837443605,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,5 +4,10 @@\n   : `18`\r\n );\r\n \r\n const sugar = Number(stdin);\r\n-console.log(sugar);\n\\ No newline at end of file\n+\r\n+const answer = () => {\r\n+  if (sugar / 5 !== 0 && sugar % 5 === 0) {\r\n+\r\n+  }\r\n+};\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638837475340,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,7 +7,8 @@\n const sugar = Number(stdin);\r\n \r\n const answer = () => {\r\n   if (sugar / 5 !== 0 && sugar % 5 === 0) {\r\n-\r\n+    console.log(sugar / 5);\r\n+    return;\r\n   }\r\n };\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638837644888,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,6 +9,11 @@\n const answer = () => {\r\n   if (sugar / 5 !== 0 && sugar % 5 === 0) {\r\n     console.log(sugar / 5);\r\n     return;\r\n+  } else if (sugar / 5 !== 0 && sugar % 5 !== 0) {\r\n+    let answer = 0;\r\n+    let rest = sugar % 5;\r\n+    answer += Math.floor(sugar / 5);\r\n+    \r\n   }\r\n };\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638837685954,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,7 +13,7 @@\n   } else if (sugar / 5 !== 0 && sugar % 5 !== 0) {\r\n     let answer = 0;\r\n     let rest = sugar % 5;\r\n     answer += Math.floor(sugar / 5);\r\n-    \r\n+    if (rest )\r\n   }\r\n };\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638837966681,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,14 +6,13 @@\n \r\n const sugar = Number(stdin);\r\n \r\n const answer = () => {\r\n-  if (sugar / 5 !== 0 && sugar % 5 === 0) {\r\n-    console.log(sugar / 5);\r\n-    return;\r\n-  } else if (sugar / 5 !== 0 && sugar % 5 !== 0) {\r\n-    let answer = 0;\r\n-    let rest = sugar % 5;\r\n-    answer += Math.floor(sugar / 5);\r\n-    if (rest )\r\n+  if (sugar % 5 === 0) {\r\n+\r\n+  } else if (sugar % 5 !== 3) {\r\n+    if (sugar % 3 !== 0) {\r\n+      console.log(-1)\r\n+      return;\r\n+    }\r\n   }\r\n };\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638838052651,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,12 +7,15 @@\n const sugar = Number(stdin);\r\n \r\n const answer = () => {\r\n   if (sugar % 5 === 0) {\r\n-\r\n+    console.log(sugar / 5);\r\n+    return;\r\n   } else if (sugar % 5 !== 3) {\r\n     if (sugar % 3 !== 0) {\r\n-      console.log(-1)\r\n+      console.log(-1);\r\n       return;\r\n     }\r\n+    console.log(sugar / 3);\r\n+    return;\r\n   }\r\n };\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638838059692,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,5 +17,6 @@\n     }\r\n     console.log(sugar / 3);\r\n     return;\r\n   }\r\n-};\n\\ No newline at end of file\n+};\r\n+answer();\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638838142469,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,7 +16,10 @@\n       return;\r\n     }\r\n     console.log(sugar / 3);\r\n     return;\r\n+  } else if (sugar % 5 === 3) {\r\n+    console.log((sugar / 5) + 1);\r\n+    return;\r\n   }\r\n };\r\n answer();\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638838160478,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n     }\r\n     console.log(sugar / 3);\r\n     return;\r\n   } else if (sugar % 5 === 3) {\r\n-    console.log((sugar / 5) + 1);\r\n+    console.log(Math.floor(sugar / 5) + 1);\r\n     return;\r\n   }\r\n };\r\n answer();\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638838242538,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n     if (sugar % 3 !== 0) {\r\n       console.log(-1);\r\n       return;\r\n     }\r\n-    console.log(sugar / 3);\r\n+    console.log(Math.floor(sugar / 3));\r\n     return;\r\n   } else if (sugar % 5 === 3) {\r\n     console.log(Math.floor(sugar / 5) + 1);\r\n     return;\r\n"
+                },
+                {
+                    "date": 1638838250200,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n-  : `18`\r\n+  : `4`\r\n );\r\n \r\n const sugar = Number(stdin);\r\n \r\n"
+                },
+                {
+                    "date": 1638838258034,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n-  : `4`\r\n+  : `6`\r\n );\r\n \r\n const sugar = Number(stdin);\r\n \r\n"
+                },
+                {
+                    "date": 1638838272247,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n-  : `6`\r\n+  : `9`\r\n );\r\n \r\n const sugar = Number(stdin);\r\n \r\n"
+                },
+                {
+                    "date": 1638838295350,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n-  : `9`\r\n+  : `11`\r\n );\r\n \r\n const sugar = Number(stdin);\r\n \r\n"
+                },
+                {
+                    "date": 1638838416842,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n   if (sugar % 5 === 0) {\r\n     console.log(sugar / 5);\r\n     return;\r\n   } else if (sugar % 5 !== 3) {\r\n-    if (sugar % 3 !== 0) {\r\n+    if (sugar % 3 !== 0 && (sugar - 5) % 3 !== 0) {\r\n       console.log(-1);\r\n       return;\r\n     }\r\n     console.log(Math.floor(sugar / 3));\r\n"
+                },
+                {
+                    "date": 1638838717391,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,8 +14,11 @@\n     if (sugar % 3 !== 0 && (sugar - 5) % 3 !== 0) {\r\n       console.log(-1);\r\n       return;\r\n     }\r\n+    if (sugar % 3 !== 0 && (sugar - 5) % 3 === 0) {\r\n+      console.log(((sugar - 5) / 3) + 1)\r\n+    }\r\n     console.log(Math.floor(sugar / 3));\r\n     return;\r\n   } else if (sugar % 5 === 3) {\r\n     console.log(Math.floor(sugar / 5) + 1);\r\n"
+                },
+                {
+                    "date": 1638838913202,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n-  : `11`\r\n+  : `3`\r\n );\r\n \r\n const sugar = Number(stdin);\r\n \r\n@@ -15,9 +15,10 @@\n       console.log(-1);\r\n       return;\r\n     }\r\n     if (sugar % 3 !== 0 && (sugar - 5) % 3 === 0) {\r\n-      console.log(((sugar - 5) / 3) + 1)\r\n+      console.log(((sugar - 5) / 3) + 1);\r\n+      return;\r\n     }\r\n     console.log(Math.floor(sugar / 3));\r\n     return;\r\n   } else if (sugar % 5 === 3) {\r\n"
+                },
+                {
+                    "date": 1638838920118,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n-  : `3`\r\n+  : `20`\r\n );\r\n \r\n const sugar = Number(stdin);\r\n \r\n"
+                },
+                {
+                    "date": 1638838956421,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n-  : `20`\r\n+  : `8`\r\n );\r\n \r\n const sugar = Number(stdin);\r\n \r\n"
+                },
+                {
+                    "date": 1638838972608,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n-  : `8`\r\n+  : `23`\r\n );\r\n \r\n const sugar = Number(stdin);\r\n \r\n"
+                },
+                {
+                    "date": 1638838992622,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n-  : `23`\r\n+  : `5000`\r\n );\r\n \r\n const sugar = Number(stdin);\r\n \r\n"
+                },
+                {
+                    "date": 1638839002106,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n-  : `5000`\r\n+  : `4999`\r\n );\r\n \r\n const sugar = Number(stdin);\r\n \r\n"
+                },
+                {
+                    "date": 1638839188526,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n-  : `4999`\r\n+  : `19`\r\n );\r\n \r\n const sugar = Number(stdin);\r\n \r\n"
+                },
+                {
+                    "date": 1638839753795,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,18 +10,23 @@\n   if (sugar % 5 === 0) {\r\n     console.log(sugar / 5);\r\n     return;\r\n   } else if (sugar % 5 !== 3) {\r\n-    if (sugar % 3 !== 0 && (sugar - 5) % 3 !== 0) {\r\n-      console.log(-1);\r\n-      return;\r\n+    // if (sugar % 3 !== 0 && (sugar - 5) % 3 !== 0) {\r\n+    //   console.log(-1);\r\n+    //   return;\r\n+    // }\r\n+    // if (sugar % 3 !== 0 && (sugar - 5) % 3 === 0) {\r\n+    //   console.log(((sugar - 5) / 3) + 1);\r\n+    //   return;\r\n+    // }\r\n+    // console.log(Math.floor(sugar / 3));\r\n+    // return;\r\n+    let newSugar = sugar;\r\n+    let sugarThree = 0;\r\n+    while (newSugar % 5 === 0) {\r\n+      \r\n     }\r\n-    if (sugar % 3 !== 0 && (sugar - 5) % 3 === 0) {\r\n-      console.log(((sugar - 5) / 3) + 1);\r\n-      return;\r\n-    }\r\n-    console.log(Math.floor(sugar / 3));\r\n-    return;\r\n   } else if (sugar % 5 === 3) {\r\n     console.log(Math.floor(sugar / 5) + 1);\r\n     return;\r\n   }\r\n"
+                },
+                {
+                    "date": 1638839965730,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,11 @@\n     // return;\r\n     let newSugar = sugar;\r\n     let sugarThree = 0;\r\n     while (newSugar % 5 === 0) {\r\n-      \r\n+      newSugar - 3;\r\n+      if (newSugar < 0) break;\r\n+      sugarThree++;\r\n     }\r\n   } else if (sugar % 5 === 3) {\r\n     console.log(Math.floor(sugar / 5) + 1);\r\n     return;\r\n"
+                },
+                {
+                    "date": 1638840368425,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,11 +24,17 @@\n     let newSugar = sugar;\r\n     let sugarThree = 0;\r\n     while (newSugar % 5 === 0) {\r\n       newSugar - 3;\r\n-      if (newSugar < 0) break;\r\n+      if (newSugar < 3) break;\r\n       sugarThree++;\r\n     }\r\n+    if (newSugar < 3 && newSugar !== 0) {\r\n+      console.log(-1);\r\n+      return;\r\n+    }\r\n+    console.log(sugarThree + (newSugar / 5));\r\n+    return;\r\n   } else if (sugar % 5 === 3) {\r\n     console.log(Math.floor(sugar / 5) + 1);\r\n     return;\r\n   }\r\n"
+                },
+                {
+                    "date": 1638840473910,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,8 +26,9 @@\n     while (newSugar % 5 === 0) {\r\n       newSugar - 3;\r\n       if (newSugar < 3) break;\r\n       sugarThree++;\r\n+      console.log(sugarThree, newSugar);\r\n     }\r\n     if (newSugar < 3 && newSugar !== 0) {\r\n       console.log(-1);\r\n       return;\r\n"
+                },
+                {
+                    "date": 1638840532678,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,10 +32,10 @@\n     if (newSugar < 3 && newSugar !== 0) {\r\n       console.log(-1);\r\n       return;\r\n     }\r\n-    console.log(sugarThree + (newSugar / 5));\r\n-    return;\r\n+    // console.log(sugarThree + (newSugar / 5));\r\n+    // return;\r\n   } else if (sugar % 5 === 3) {\r\n     console.log(Math.floor(sugar / 5) + 1);\r\n     return;\r\n   }\r\n"
+                },
+                {
+                    "date": 1638840569414,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,8 +22,9 @@\n     // console.log(Math.floor(sugar / 3));\r\n     // return;\r\n     let newSugar = sugar;\r\n     let sugarThree = 0;\r\n+    console.log(newSugar);\r\n     while (newSugar % 5 === 0) {\r\n       newSugar - 3;\r\n       if (newSugar < 3) break;\r\n       sugarThree++;\r\n"
+                },
+                {
+                    "date": 1638840605320,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,11 +22,10 @@\n     // console.log(Math.floor(sugar / 3));\r\n     // return;\r\n     let newSugar = sugar;\r\n     let sugarThree = 0;\r\n-    console.log(newSugar);\r\n     while (newSugar % 5 === 0) {\r\n-      newSugar - 3;\r\n+      newSugar -= 3;\r\n       if (newSugar < 3) break;\r\n       sugarThree++;\r\n       console.log(sugarThree, newSugar);\r\n     }\r\n"
+                },
+                {
+                    "date": 1638840630164,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n     // console.log(Math.floor(sugar / 3));\r\n     // return;\r\n     let newSugar = sugar;\r\n     let sugarThree = 0;\r\n-    while (newSugar % 5 === 0) {\r\n+    while (newSugar % 5 !== 0) {\r\n       newSugar -= 3;\r\n       if (newSugar < 3) break;\r\n       sugarThree++;\r\n       console.log(sugarThree, newSugar);\r\n"
+                },
+                {
+                    "date": 1638840652108,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,16 +26,16 @@\n     while (newSugar % 5 !== 0) {\r\n       newSugar -= 3;\r\n       if (newSugar < 3) break;\r\n       sugarThree++;\r\n-      console.log(sugarThree, newSugar);\r\n+      // console.log(sugarThree, newSugar);\r\n     }\r\n     if (newSugar < 3 && newSugar !== 0) {\r\n       console.log(-1);\r\n       return;\r\n     }\r\n-    // console.log(sugarThree + (newSugar / 5));\r\n-    // return;\r\n+    console.log(sugarThree + (newSugar / 5));\r\n+    return;\r\n   } else if (sugar % 5 === 3) {\r\n     console.log(Math.floor(sugar / 5) + 1);\r\n     return;\r\n   }\r\n"
+                },
+                {
+                    "date": 1638840694007,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n-  : `19`\r\n+  : `18`\r\n );\r\n \r\n const sugar = Number(stdin);\r\n \r\n"
+                },
+                {
+                    "date": 1638840704914,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n-  : `18`\r\n+  : `4`\r\n );\r\n \r\n const sugar = Number(stdin);\r\n \r\n"
+                },
+                {
+                    "date": 1638840728229,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n-  : `4`\r\n+  : `9`\r\n );\r\n \r\n const sugar = Number(stdin);\r\n \r\n"
+                },
+                {
+                    "date": 1638840829626,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,10 +24,11 @@\n     let newSugar = sugar;\r\n     let sugarThree = 0;\r\n     while (newSugar % 5 !== 0) {\r\n       newSugar -= 3;\r\n+      sugarThree++;\r\n       if (newSugar < 3) break;\r\n-      sugarThree++;\r\n+      \r\n       // console.log(sugarThree, newSugar);\r\n     }\r\n     if (newSugar < 3 && newSugar !== 0) {\r\n       console.log(-1);\r\n"
+                },
+                {
+                    "date": 1638840843736,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n-  : `9`\r\n+  : `11`\r\n );\r\n \r\n const sugar = Number(stdin);\r\n \r\n@@ -26,9 +26,8 @@\n     while (newSugar % 5 !== 0) {\r\n       newSugar -= 3;\r\n       sugarThree++;\r\n       if (newSugar < 3) break;\r\n-      \r\n       // console.log(sugarThree, newSugar);\r\n     }\r\n     if (newSugar < 3 && newSugar !== 0) {\r\n       console.log(-1);\r\n"
+                }
+            ],
+            "date": 1638837098223,
+            "name": "Commit-0",
+            "content": "const fs = require('fs');\r\nconst stdin = ()"
+        }
+    ]
+}

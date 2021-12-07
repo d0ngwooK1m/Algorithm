@@ -1,0 +1,346 @@
+{
+    "sourceFile": "항해99/문제/chap1/1002.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 82,
+            "patches": [
+                {
+                    "date": 1638845204015,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1638845256284,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,5 @@\n-const fs = require('fs');\n\\ No newline at end of file\n+const fs = require('fs');\r\n+const stdin = (process.platform === 'linux'\r\n+  ? fs.readFileSync('/dev/stdin').toString()\r\n+  : ``\r\n+)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638845277569,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,8 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n-  : ``\r\n-)\n\\ No newline at end of file\n+  : `3\r\n+0 0 13 40 0 37\r\n+0 0 3 0 7 4\r\n+1 1 1 1 1 5`\r\n+).split('\\n');\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638845286911,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,5 +4,6 @@\n   : `3\r\n 0 0 13 40 0 37\r\n 0 0 3 0 7 4\r\n 1 1 1 1 1 5`\r\n-).split('\\n');\n\\ No newline at end of file\n+).split('\\n');\r\n+console.log(stdin);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638845330829,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,5 +5,5 @@\n 0 0 13 40 0 37\r\n 0 0 3 0 7 4\r\n 1 1 1 1 1 5`\r\n ).split('\\n');\r\n-console.log(stdin);\n\\ No newline at end of file\n+console.log(stdin);\r\n"
+                },
+                {
+                    "date": 1638845628799,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,5 +5,12 @@\n 0 0 13 40 0 37\r\n 0 0 3 0 7 4\r\n 1 1 1 1 1 5`\r\n ).split('\\n');\r\n-console.log(stdin);\r\n+\r\n+\r\n+const input = (() => {\r\n+  let line = 0;\r\n+  return () => stdin[line++];\r\n+})();\r\n+\r\n+console.log(input);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638845679029,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,5 +12,6 @@\n   let line = 0;\r\n   return () => stdin[line++];\r\n })();\r\n \r\n-console.log(input);\n\\ No newline at end of file\n+let t = input()\r\n+console.log(t);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638845692312,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,5 +13,5 @@\n   return () => stdin[line++];\r\n })();\r\n \r\n let t = input()\r\n-console.log(t);\n\\ No newline at end of file\n+console.log(t--);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638845737314,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,6 +12,6 @@\n   let line = 0;\r\n   return () => stdin[line++];\r\n })();\r\n \r\n-let t = input()\r\n+let t = input().split(' ').map(Number);\r\n console.log(t--);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638845767213,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,6 +12,7 @@\n   let line = 0;\r\n   return () => stdin[line++];\r\n })();\r\n \r\n-let t = input().split(' ').map(Number);\r\n-console.log(t--);\n\\ No newline at end of file\n+let t = input();\r\n+console.log(t--);\r\n+const [a, b] = input().split(' ').map(Number);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638845772713,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,5 +14,6 @@\n })();\r\n \r\n let t = input();\r\n console.log(t--);\r\n-const [a, b] = input().split(' ').map(Number);\n\\ No newline at end of file\n+const [a, b] = input().split(' ').map(Number);\r\n+console.log(a, b);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638845797402,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,6 +14,6 @@\n })();\r\n \r\n let t = input();\r\n console.log(t--);\r\n-const [a, b] = input().split(' ').map(Number);\r\n+const [a, b, c, d, e, f] = input().split(' ').map(Number);\r\n console.log(a, b);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638845805891,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,5 +15,5 @@\n \r\n let t = input();\r\n console.log(t--);\r\n const [a, b, c, d, e, f] = input().split(' ').map(Number);\r\n-console.log(a, b);\n\\ No newline at end of file\n+console.log(a, b, c, d, e, f);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638845814683,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,8 @@\n   let line = 0;\r\n   return () => stdin[line++];\r\n })();\r\n \r\n-let t = input();\r\n-console.log(t--);\r\n+// let t = input();\r\n+// console.log(t--);\r\n const [a, b, c, d, e, f] = input().split(' ').map(Number);\r\n console.log(a, b, c, d, e, f);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638845853648,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,8 @@\n   let line = 0;\r\n   return () => stdin[line++];\r\n })();\r\n \r\n-// let t = input();\r\n-// console.log(t--);\r\n+let t = input();\r\n+console.log(t--);\r\n const [a, b, c, d, e, f] = input().split(' ').map(Number);\r\n console.log(a, b, c, d, e, f);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638845871215,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,7 +13,7 @@\n   return () => stdin[line++];\r\n })();\r\n \r\n let t = input();\r\n-console.log(t--);\r\n+console.log(t);\r\n const [a, b, c, d, e, f] = input().split(' ').map(Number);\r\n console.log(a, b, c, d, e, f);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638845881935,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,7 +13,7 @@\n   return () => stdin[line++];\r\n })();\r\n \r\n let t = input();\r\n-console.log(t);\r\n+console.log(-t);\r\n const [a, b, c, d, e, f] = input().split(' ').map(Number);\r\n console.log(a, b, c, d, e, f);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638846043136,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,7 +13,7 @@\n   return () => stdin[line++];\r\n })();\r\n \r\n let t = input();\r\n-console.log(-t);\r\n+console.log(t--);\r\n const [a, b, c, d, e, f] = input().split(' ').map(Number);\r\n console.log(a, b, c, d, e, f);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638846597718,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,8 @@\n   let line = 0;\r\n   return () => stdin[line++];\r\n })();\r\n \r\n-let t = input();\r\n-console.log(t--);\r\n+// let t = input();\r\n+// console.log(t--);\r\n const [a, b, c, d, e, f] = input().split(' ').map(Number);\r\n console.log(a, b, c, d, e, f);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638846657885,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,8 @@\n   let line = 0;\r\n   return () => stdin[line++];\r\n })();\r\n \r\n-// let t = input();\r\n-// console.log(t--);\r\n+let t = input();\r\n+console.log(t--);\r\n const [a, b, c, d, e, f] = input().split(' ').map(Number);\r\n console.log(a, b, c, d, e, f);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638846665193,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,7 +13,7 @@\n   return () => stdin[line++];\r\n })();\r\n \r\n let t = input();\r\n-console.log(t--);\r\n+console.log(t);\r\n const [a, b, c, d, e, f] = input().split(' ').map(Number);\r\n console.log(a, b, c, d, e, f);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638846699307,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,7 +13,7 @@\n   return () => stdin[line++];\r\n })();\r\n \r\n let t = input();\r\n-console.log(t);\r\n+console.log(--t);\r\n const [a, b, c, d, e, f] = input().split(' ').map(Number);\r\n console.log(a, b, c, d, e, f);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638846710120,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,7 +13,7 @@\n   return () => stdin[line++];\r\n })();\r\n \r\n let t = input();\r\n-console.log(--t);\r\n+console.log(t--);\r\n const [a, b, c, d, e, f] = input().split(' ').map(Number);\r\n console.log(a, b, c, d, e, f);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638846735427,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,5 +15,6 @@\n \r\n let t = input();\r\n console.log(t--);\r\n const [a, b, c, d, e, f] = input().split(' ').map(Number);\r\n+console.log(t);\r\n console.log(a, b, c, d, e, f);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638846994400,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,12 +5,12 @@\n 0 0 13 40 0 37\r\n 0 0 3 0 7 4\r\n 1 1 1 1 1 5`\r\n ).split('\\n');\r\n+let line = 0;\r\n \r\n+const input = (() => {\r\n \r\n-const input = (() => {\r\n-  let line = 0;\r\n   return () => stdin[line++];\r\n })();\r\n \r\n let t = input();\r\n"
+                },
+                {
+                    "date": 1638847027409,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,12 +5,12 @@\n 0 0 13 40 0 37\r\n 0 0 3 0 7 4\r\n 1 1 1 1 1 5`\r\n ).split('\\n');\r\n-let line = 0;\r\n \r\n+\r\n const input = (() => {\r\n-\r\n+  let line = 0;\r\n   return () => stdin[line++];\r\n })();\r\n \r\n let t = input();\r\n"
+                },
+                {
+                    "date": 1638857647103,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,7 +14,9 @@\n })();\r\n \r\n let t = input();\r\n console.log(t--);\r\n-const [a, b, c, d, e, f] = input().split(' ').map(Number);\r\n+while (t--) {\r\n+  const [a, b, c, d, e, f] = input().split(' ').map(Number);\r\n\\ No newline at end of file\n+  console.log(a, b, c, d, e, f);\r\n+}\r\n console.log(t);\r\n-console.log(a, b, c, d, e, f);\n"
+                },
+                {
+                    "date": 1638857652755,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,10 +13,10 @@\n   return () => stdin[line++];\r\n })();\r\n \r\n let t = input();\r\n-console.log(t--);\r\n+// console.log(t--);\r\n while (t--) {\r\n   const [a, b, c, d, e, f] = input().split(' ').map(Number);\r\n   console.log(a, b, c, d, e, f);\r\n }\r\n\\ No newline at end of file\n-console.log(t);\n+// console.log(t);\r\n"
+                },
+                {
+                    "date": 1638857680509,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,6 +17,7 @@\n // console.log(t--);\r\n while (t--) {\r\n   const [a, b, c, d, e, f] = input().split(' ').map(Number);\r\n   console.log(a, b, c, d, e, f);\r\n+  console.log('test')\r\n }\r\n\\ No newline at end of file\n-// console.log(t);\n+// console.log(t);\r\n"
+                },
+                {
+                    "date": 1638857689733,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,7 +17,7 @@\n // console.log(t--);\r\n while (t--) {\r\n   const [a, b, c, d, e, f] = input().split(' ').map(Number);\r\n   console.log(a, b, c, d, e, f);\r\n-  console.log('test')\r\n+\r\n }\r\n\\ No newline at end of file\n-// console.log(t);\n+// console.log(t);\r\n"
+                },
+                {
+                    "date": 1638857817372,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,8 @@\n \r\n let t = input();\r\n // console.log(t--);\r\n while (t--) {\r\n-  const [a, b, c, d, e, f] = input().split(' ').map(Number);\r\n-  console.log(a, b, c, d, e, f);\r\n-\r\n+  const [x1, y1, r1, x2, y2, r2] = input().split(' ').map(Number);\r\n+  console.log(x1, y1, r1, x2, y2, r2);\r\n\\ No newline at end of file\n }\r\n-// console.log(t);\n+// console.log(t);\r\n"
+                },
+                {
+                    "date": 1638857830498,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,7 +16,8 @@\n let t = input();\r\n // console.log(t--);\r\n while (t--) {\r\n   const [x1, y1, r1, x2, y2, r2] = input().split(' ').map(Number);\r\n-  console.log(x1, y1, r1, x2, y2, r2);\r\n+  // console.log(x1, y1, r1, x2, y2, r2);\r\n+  \r\n\\ No newline at end of file\n }\r\n-// console.log(t);\n+// console.log(t);\r\n"
+                },
+                {
+                    "date": 1638858440315,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,7 +17,10 @@\n // console.log(t--);\r\n while (t--) {\r\n   const [x1, y1, r1, x2, y2, r2] = input().split(' ').map(Number);\r\n   // console.log(x1, y1, r1, x2, y2, r2);\r\n-  \r\n+  if (x1 === x2 && y1 === y2) {\r\n+    console.log(-1)\r\n\\ No newline at end of file\n+  }\r\n+\r\n }\r\n-// console.log(t);\n+// console.log(t);\r\n"
+                },
+                {
+                    "date": 1638858484365,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,10 +17,10 @@\n // console.log(t--);\r\n while (t--) {\r\n   const [x1, y1, r1, x2, y2, r2] = input().split(' ').map(Number);\r\n   // console.log(x1, y1, r1, x2, y2, r2);\r\n-  if (x1 === x2 && y1 === y2) {\r\n+  if (x1 === x2 && y1 === y2 && r1 === r2) {\r\n     console.log(-1)\r\n   }\r\n \r\n }\r\n\\ No newline at end of file\n-// console.log(t);\n+// console.log(t);\r\n"
+                },
+                {
+                    "date": 1638858491465,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n while (t--) {\r\n   const [x1, y1, r1, x2, y2, r2] = input().split(' ').map(Number);\r\n   // console.log(x1, y1, r1, x2, y2, r2);\r\n   if (x1 === x2 && y1 === y2 && r1 === r2) {\r\n-    console.log(-1)\r\n+    console.log(-1);\r\n   }\r\n \r\n }\r\n\\ No newline at end of file\n-// console.log(t);\n+// console.log(t);\r\n"
+                },
+                {
+                    "date": 1638858539444,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,7 +20,9 @@\n   // console.log(x1, y1, r1, x2, y2, r2);\r\n   if (x1 === x2 && y1 === y2 && r1 === r2) {\r\n     console.log(-1);\r\n   }\r\n-\r\n+  if (x1 === x2 && y1 === y2 && r1 !== r2) {\r\n+    console.log(-1);\r\n\\ No newline at end of file\n+  }\r\n }\r\n-// console.log(t);\n+// console.log(t);\r\n"
+                },
+                {
+                    "date": 1638859974677,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,8 +21,11 @@\n   if (x1 === x2 && y1 === y2 && r1 === r2) {\r\n     console.log(-1);\r\n   }\r\n   if (x1 === x2 && y1 === y2 && r1 !== r2) {\r\n-    console.log(-1);\r\n+    console.log(0);\r\n   }\r\n+  if (x1 === x2 && y1 === y2 && r1 !== r2) {\r\n\\ No newline at end of file\n+    console.log(0);\r\n+  }\r\n }\r\n-// console.log(t);\n+// console.log(t);\r\n"
+                },
+                {
+                    "date": 1638860017442,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n   }\r\n   if (x1 === x2 && y1 === y2 && r1 !== r2) {\r\n     console.log(0);\r\n   }\r\n-  if (x1 === x2 && y1 === y2 && r1 !== r2) {\r\n+  if (Math.abs(x1 - x2) && y1 === y2 && r1 !== r2) {\r\n     console.log(0);\r\n   }\r\n }\r\n\\ No newline at end of file\n-// console.log(t);\n+// console.log(t);\r\n"
+                },
+                {
+                    "date": 1638860088867,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n   }\r\n   if (x1 === x2 && y1 === y2 && r1 !== r2) {\r\n     console.log(0);\r\n   }\r\n-  if (Math.abs(x1 - x2) && y1 === y2 && r1 !== r2) {\r\n+  if (Math.abs(x1 - x2)**2 + Math.abs(y1 - y2) && r1 !== r2) {\r\n     console.log(0);\r\n   }\r\n }\r\n\\ No newline at end of file\n-// console.log(t);\n+// console.log(t);\r\n"
+                },
+                {
+                    "date": 1638860149873,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n   }\r\n   if (x1 === x2 && y1 === y2 && r1 !== r2) {\r\n     console.log(0);\r\n   }\r\n-  if (Math.abs(x1 - x2)**2 + Math.abs(y1 - y2) && r1 !== r2) {\r\n+  if ((x1 - x2)**2 + (y1 - y2)**2 && (r1 - r2)**2) {\r\n     console.log(0);\r\n   }\r\n }\r\n\\ No newline at end of file\n-// console.log(t);\n+// console.log(t);\r\n"
+                },
+                {
+                    "date": 1638860158923,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n   }\r\n   if (x1 === x2 && y1 === y2 && r1 !== r2) {\r\n     console.log(0);\r\n   }\r\n-  if ((x1 - x2)**2 + (y1 - y2)**2 && (r1 - r2)**2) {\r\n+  if ((x1 - x2)**2 + (y1 - y2)**2 === (r1 - r2)**2) {\r\n     console.log(0);\r\n   }\r\n }\r\n\\ No newline at end of file\n-// console.log(t);\n+// console.log(t);\r\n"
+                },
+                {
+                    "date": 1638860225963,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n   }\r\n   if (x1 === x2 && y1 === y2 && r1 !== r2) {\r\n     console.log(0);\r\n   }\r\n-  if ((x1 - x2)**2 + (y1 - y2)**2 === (r1 - r2)**2) {\r\n+  if ((x1 - x2)**2 + (y1 - y2)**2 === r1 + r2) {\r\n     console.log(0);\r\n   }\r\n }\r\n\\ No newline at end of file\n-// console.log(t);\n+// console.log(t);\r\n"
+                },
+                {
+                    "date": 1638860235684,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,8 +24,8 @@\n   if (x1 === x2 && y1 === y2 && r1 !== r2) {\r\n     console.log(0);\r\n   }\r\n   if ((x1 - x2)**2 + (y1 - y2)**2 === r1 + r2) {\r\n-    console.log(0);\r\n+    console.log(1);\r\n   }\r\n }\r\n\\ No newline at end of file\n-// console.log(t);\n+// console.log(t);\r\n"
+                },
+                {
+                    "date": 1638860321158,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,13 @@\n   }\r\n   if (x1 === x2 && y1 === y2 && r1 !== r2) {\r\n     console.log(0);\r\n   }\r\n+  if ((x1 - x2)**2 + (y1 - y2)**2 > r1 + r2) {\r\n+    console.log(0);\r\n+  }\r\n   if ((x1 - x2)**2 + (y1 - y2)**2 === r1 + r2) {\r\n     console.log(1);\r\n\\ No newline at end of file\n   }\r\n+\r\n }\r\n-// console.log(t);\n+// console.log(t);\r\n"
+                },
+                {
+                    "date": 1638860331701,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,7 +29,10 @@\n   }\r\n   if ((x1 - x2)**2 + (y1 - y2)**2 === r1 + r2) {\r\n     console.log(1);\r\n   }\r\n+  if ((x1 - x2)**2 + (y1 - y2)**2 === r1 + r2) {\r\n+    console.log(1);\r\n+  }\r\n\\ No newline at end of file\n \r\n }\r\n-// console.log(t);\n+// console.log(t);\r\n"
+                },
+                {
+                    "date": 1638860340275,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,10 +29,10 @@\n   }\r\n   if ((x1 - x2)**2 + (y1 - y2)**2 === r1 + r2) {\r\n     console.log(1);\r\n   }\r\n-  if ((x1 - x2)**2 + (y1 - y2)**2 === r1 + r2) {\r\n+  if ((x1 - x2)**2 + (y1 - y2)**2 < r1 + r2) {\r\n     console.log(1);\r\n   }\r\n \r\n }\r\n\\ No newline at end of file\n-// console.log(t);\n+// console.log(t);\r\n"
+                },
+                {
+                    "date": 1638860366085,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,20 +19,24 @@\n   const [x1, y1, r1, x2, y2, r2] = input().split(' ').map(Number);\r\n   // console.log(x1, y1, r1, x2, y2, r2);\r\n   if (x1 === x2 && y1 === y2 && r1 === r2) {\r\n     console.log(-1);\r\n+    return;\r\n   }\r\n   if (x1 === x2 && y1 === y2 && r1 !== r2) {\r\n     console.log(0);\r\n+    return;\r\n   }\r\n   if ((x1 - x2)**2 + (y1 - y2)**2 > r1 + r2) {\r\n     console.log(0);\r\n+    return;\r\n   }\r\n   if ((x1 - x2)**2 + (y1 - y2)**2 === r1 + r2) {\r\n     console.log(1);\r\n+    return;\r\n   }\r\n   if ((x1 - x2)**2 + (y1 - y2)**2 < r1 + r2) {\r\n     console.log(1);\r\n\\ No newline at end of file\n+    return;\r\n   }\r\n-\r\n }\r\n-// console.log(t);\n+// console.log(t);\r\n"
+                },
+                {
+                    "date": 1638860413597,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,24 +19,20 @@\n   const [x1, y1, r1, x2, y2, r2] = input().split(' ').map(Number);\r\n   // console.log(x1, y1, r1, x2, y2, r2);\r\n   if (x1 === x2 && y1 === y2 && r1 === r2) {\r\n     console.log(-1);\r\n-    return;\r\n   }\r\n   if (x1 === x2 && y1 === y2 && r1 !== r2) {\r\n     console.log(0);\r\n-    return;\r\n   }\r\n   if ((x1 - x2)**2 + (y1 - y2)**2 > r1 + r2) {\r\n     console.log(0);\r\n-    return;\r\n   }\r\n   if ((x1 - x2)**2 + (y1 - y2)**2 === r1 + r2) {\r\n     console.log(1);\r\n-    return;\r\n   }\r\n   if ((x1 - x2)**2 + (y1 - y2)**2 < r1 + r2) {\r\n     console.log(1);\r\n     return;\r\n   }\r\n }\r\n-// console.log(t);\n\\ No newline at end of file\n+// console.log(t);\r\n"
+                },
+                {
+                    "date": 1638860433912,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n let t = input();\r\n // console.log(t--);\r\n while (t--) {\r\n   const [x1, y1, r1, x2, y2, r2] = input().split(' ').map(Number);\r\n-  // console.log(x1, y1, r1, x2, y2, r2);\r\n+  console.log(x1, y1, r1, x2, y2, r2);\r\n   if (x1 === x2 && y1 === y2 && r1 === r2) {\r\n     console.log(-1);\r\n   }\r\n   if (x1 === x2 && y1 === y2 && r1 !== r2) {\r\n@@ -31,8 +31,7 @@\n     console.log(1);\r\n   }\r\n   if ((x1 - x2)**2 + (y1 - y2)**2 < r1 + r2) {\r\n     console.log(1);\r\n-    return;\r\n   }\r\n }\r\n // console.log(t);\r\n"
+                },
+                {
+                    "date": 1638860457707,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,8 +30,8 @@\n   if ((x1 - x2)**2 + (y1 - y2)**2 === r1 + r2) {\r\n     console.log(1);\r\n   }\r\n   if ((x1 - x2)**2 + (y1 - y2)**2 < r1 + r2) {\r\n-    console.log(1);\r\n+    console.log(2);\r\n   }\r\n }\r\n // console.log(t);\r\n"
+                },
+                {
+                    "date": 1638860555535,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n   if (x1 === x2 && y1 === y2 && r1 === r2) {\r\n     console.log(-1);\r\n   }\r\n   if (x1 === x2 && y1 === y2 && r1 !== r2) {\r\n-    console.log(0);\r\n+    console.log(0, 'qwerqwer');\r\n   }\r\n   if ((x1 - x2)**2 + (y1 - y2)**2 > r1 + r2) {\r\n     console.log(0);\r\n   }\r\n"
+                },
+                {
+                    "date": 1638860562008,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n   if (x1 === x2 && y1 === y2 && r1 !== r2) {\r\n     console.log(0, 'qwerqwer');\r\n   }\r\n   if ((x1 - x2)**2 + (y1 - y2)**2 > r1 + r2) {\r\n-    console.log(0);\r\n+    console.log(0, 'asdfasdf');\r\n   }\r\n   if ((x1 - x2)**2 + (y1 - y2)**2 === r1 + r2) {\r\n     console.log(1);\r\n   }\r\n"
+                },
+                {
+                    "date": 1638860688734,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,12 +21,12 @@\n   if (x1 === x2 && y1 === y2 && r1 === r2) {\r\n     console.log(-1);\r\n   }\r\n   if (x1 === x2 && y1 === y2 && r1 !== r2) {\r\n-    console.log(0, 'qwerqwer');\r\n+    console.log(0);\r\n   }\r\n-  if ((x1 - x2)**2 + (y1 - y2)**2 > r1 + r2) {\r\n-    console.log(0, 'asdfasdf');\r\n+  if (Math.sqrt((x1 - x2)**2 + (y1 - y2)**2) > r1 + r2) {\r\n+    console.log(0);\r\n   }\r\n   if ((x1 - x2)**2 + (y1 - y2)**2 === r1 + r2) {\r\n     console.log(1);\r\n   }\r\n"
+                },
+                {
+                    "date": 1638860700964,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n   }\r\n   if (Math.sqrt((x1 - x2)**2 + (y1 - y2)**2) > r1 + r2) {\r\n     console.log(0);\r\n   }\r\n-  if ((x1 - x2)**2 + (y1 - y2)**2 === r1 + r2) {\r\n+  if (Math.sqrt((x1 - x2)**2 + (y1 - y2)**2) === r1 + r2) {\r\n     console.log(1);\r\n   }\r\n   if ((x1 - x2)**2 + (y1 - y2)**2 < r1 + r2) {\r\n     console.log(2);\r\n"
+                },
+                {
+                    "date": 1638860709708,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n   }\r\n   if (Math.sqrt((x1 - x2)**2 + (y1 - y2)**2) === r1 + r2) {\r\n     console.log(1);\r\n   }\r\n-  if ((x1 - x2)**2 + (y1 - y2)**2 < r1 + r2) {\r\n+  if (Math.sqrt((x1 - x2)**2 + (y1 - y2)**2) < r1 + r2) {\r\n     console.log(2);\r\n   }\r\n }\r\n // console.log(t);\r\n"
+                },
+                {
+                    "date": 1638860757287,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n let t = input();\r\n // console.log(t--);\r\n while (t--) {\r\n   const [x1, y1, r1, x2, y2, r2] = input().split(' ').map(Number);\r\n-  console.log(x1, y1, r1, x2, y2, r2);\r\n+  // console.log(x1, y1, r1, x2, y2, r2);\r\n   if (x1 === x2 && y1 === y2 && r1 === r2) {\r\n     console.log(-1);\r\n   }\r\n   if (x1 === x2 && y1 === y2 && r1 !== r2) {\r\n"
+                },
+                {
+                    "date": 1638860801908,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n let t = input();\r\n // console.log(t--);\r\n while (t--) {\r\n   const [x1, y1, r1, x2, y2, r2] = input().split(' ').map(Number);\r\n-  // console.log(x1, y1, r1, x2, y2, r2);\r\n+  console.log(x1, y1, r1, x2, y2, r2);\r\n   if (x1 === x2 && y1 === y2 && r1 === r2) {\r\n     console.log(-1);\r\n   }\r\n   if (x1 === x2 && y1 === y2 && r1 !== r2) {\r\n"
+                },
+                {
+                    "date": 1638860848090,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,6 +32,7 @@\n   }\r\n   if (Math.sqrt((x1 - x2)**2 + (y1 - y2)**2) < r1 + r2) {\r\n     console.log(2);\r\n   }\r\n+  if (t === 0) break;\r\n }\r\n // console.log(t);\r\n"
+                },
+                {
+                    "date": 1638860859687,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,7 +32,7 @@\n   }\r\n   if (Math.sqrt((x1 - x2)**2 + (y1 - y2)**2) < r1 + r2) {\r\n     console.log(2);\r\n   }\r\n-  if (t === 0) break;\r\n+  if (t === 1) break;\r\n }\r\n // console.log(t);\r\n"
+                },
+                {
+                    "date": 1638860867870,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,7 +32,6 @@\n   }\r\n   if (Math.sqrt((x1 - x2)**2 + (y1 - y2)**2) < r1 + r2) {\r\n     console.log(2);\r\n   }\r\n-  if (t === 1) break;\r\n }\r\n // console.log(t);\r\n"
+                },
+                {
+                    "date": 1638860914023,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,19 +19,24 @@\n   const [x1, y1, r1, x2, y2, r2] = input().split(' ').map(Number);\r\n   console.log(x1, y1, r1, x2, y2, r2);\r\n   if (x1 === x2 && y1 === y2 && r1 === r2) {\r\n     console.log(-1);\r\n+    break;\r\n   }\r\n   if (x1 === x2 && y1 === y2 && r1 !== r2) {\r\n     console.log(0);\r\n+    break;\r\n   }\r\n   if (Math.sqrt((x1 - x2)**2 + (y1 - y2)**2) > r1 + r2) {\r\n     console.log(0);\r\n+    break;\r\n   }\r\n   if (Math.sqrt((x1 - x2)**2 + (y1 - y2)**2) === r1 + r2) {\r\n     console.log(1);\r\n+    break;\r\n   }\r\n   if (Math.sqrt((x1 - x2)**2 + (y1 - y2)**2) < r1 + r2) {\r\n     console.log(2);\r\n+    break;\r\n   }\r\n }\r\n // console.log(t);\r\n"
+                },
+                {
+                    "date": 1638860961972,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,24 +19,20 @@\n   const [x1, y1, r1, x2, y2, r2] = input().split(' ').map(Number);\r\n   console.log(x1, y1, r1, x2, y2, r2);\r\n   if (x1 === x2 && y1 === y2 && r1 === r2) {\r\n     console.log(-1);\r\n-    break;\r\n+\r\n   }\r\n-  if (x1 === x2 && y1 === y2 && r1 !== r2) {\r\n+  else if (x1 === x2 && y1 === y2 && r1 !== r2) {\r\n     console.log(0);\r\n-    break;\r\n   }\r\n-  if (Math.sqrt((x1 - x2)**2 + (y1 - y2)**2) > r1 + r2) {\r\n+  else if (Math.sqrt((x1 - x2)**2 + (y1 - y2)**2) > r1 + r2) {\r\n     console.log(0);\r\n-    break;\r\n   }\r\n-  if (Math.sqrt((x1 - x2)**2 + (y1 - y2)**2) === r1 + r2) {\r\n+  else if (Math.sqrt((x1 - x2)**2 + (y1 - y2)**2) === r1 + r2) {\r\n     console.log(1);\r\n-    break;\r\n   }\r\n-  if (Math.sqrt((x1 - x2)**2 + (y1 - y2)**2) < r1 + r2) {\r\n+  else if (Math.sqrt((x1 - x2)**2 + (y1 - y2)**2) < r1 + r2) {\r\n     console.log(2);\r\n-    break;\r\n   }\r\n }\r\n // console.log(t);\r\n"
+                },
+                {
+                    "date": 1638860974035,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n let t = input();\r\n // console.log(t--);\r\n while (t--) {\r\n   const [x1, y1, r1, x2, y2, r2] = input().split(' ').map(Number);\r\n-  console.log(x1, y1, r1, x2, y2, r2);\r\n+  // console.log(x1, y1, r1, x2, y2, r2);\r\n   if (x1 === x2 && y1 === y2 && r1 === r2) {\r\n     console.log(-1);\r\n \r\n   }\r\n"
+                },
+                {
+                    "date": 1638861730130,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n   }\r\n   else if (Math.sqrt((x1 - x2)**2 + (y1 - y2)**2) > r1 + r2) {\r\n     console.log(0);\r\n   }\r\n-  else if (Math.sqrt((x1 - x2)**2 + (y1 - y2)**2) === r1 + r2) {\r\n+  else if (Math.sqrt((x1 - x2)**2 + (y1 - y2)**2) == r1 + r2) {\r\n     console.log(1);\r\n   }\r\n   else if (Math.sqrt((x1 - x2)**2 + (y1 - y2)**2) < r1 + r2) {\r\n     console.log(2);\r\n"
+                },
+                {
+                    "date": 1638862061196,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,22 +17,26 @@\n // console.log(t--);\r\n while (t--) {\r\n   const [x1, y1, r1, x2, y2, r2] = input().split(' ').map(Number);\r\n   // console.log(x1, y1, r1, x2, y2, r2);\r\n+  const distance = Math.sqrt((x1 - x2) ** 2 + (y1 - y2) ** 2);\r\n   if (x1 === x2 && y1 === y2 && r1 === r2) {\r\n     console.log(-1);\r\n \r\n   }\r\n   else if (x1 === x2 && y1 === y2 && r1 !== r2) {\r\n     console.log(0);\r\n   }\r\n-  else if (Math.sqrt((x1 - x2)**2 + (y1 - y2)**2) > r1 + r2) {\r\n+  else if (distance > r1 + r2) {\r\n     console.log(0);\r\n   }\r\n-  else if (Math.sqrt((x1 - x2)**2 + (y1 - y2)**2) == r1 + r2) {\r\n+  else if (distance == r1 + r2 && (distance <= r1 || distance <= r2)) {\r\n     console.log(1);\r\n   }\r\n-  else if (Math.sqrt((x1 - x2)**2 + (y1 - y2)**2) < r1 + r2) {\r\n+  else if (distance == r1 + r2 && (distance > r1 && distance > r2)) {\r\n+    console.log(1);\r\n+  }\r\n+  else if (distance < r1 + r2) {\r\n     console.log(2);\r\n   }\r\n }\r\n // console.log(t);\r\n"
+                },
+                {
+                    "date": 1638862069550,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,8 @@\n   // console.log(x1, y1, r1, x2, y2, r2);\r\n   const distance = Math.sqrt((x1 - x2) ** 2 + (y1 - y2) ** 2);\r\n   if (x1 === x2 && y1 === y2 && r1 === r2) {\r\n     console.log(-1);\r\n-\r\n   }\r\n   else if (x1 === x2 && y1 === y2 && r1 !== r2) {\r\n     console.log(0);\r\n   }\r\n"
+                },
+                {
+                    "date": 1638862257152,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,10 @@\n   ? fs.readFileSync('/dev/stdin').toString()\r\n   : `3\r\n 0 0 13 40 0 37\r\n 0 0 3 0 7 4\r\n-1 1 1 1 1 5`\r\n+1 1 1 1 1 5\r\n+0 0 5 0 3 2`\r\n ).split('\\n');\r\n \r\n \r\n const input = (() => {\r\n"
+                },
+                {
+                    "date": 1638862267589,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n-  : `3\r\n+  : `4\r\n 0 0 13 40 0 37\r\n 0 0 3 0 7 4\r\n 1 1 1 1 1 5\r\n 0 0 5 0 3 2`\r\n"
+                },
+                {
+                    "date": 1638862386797,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n   : `4\r\n 0 0 13 40 0 37\r\n 0 0 3 0 7 4\r\n 1 1 1 1 1 5\r\n-0 0 5 0 3 2`\r\n+0 0 1 0 1 5`\r\n ).split('\\n');\r\n \r\n \r\n const input = (() => {\r\n"
+                },
+                {
+                    "date": 1638862525120,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,8 +19,9 @@\n while (t--) {\r\n   const [x1, y1, r1, x2, y2, r2] = input().split(' ').map(Number);\r\n   // console.log(x1, y1, r1, x2, y2, r2);\r\n   const distance = Math.sqrt((x1 - x2) ** 2 + (y1 - y2) ** 2);\r\n+  console.log('거리', distance);\r\n   if (x1 === x2 && y1 === y2 && r1 === r2) {\r\n     console.log(-1);\r\n   }\r\n   else if (x1 === x2 && y1 === y2 && r1 !== r2) {\r\n"
+                },
+                {
+                    "date": 1638863830075,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n   }\r\n   else if (distance == r1 + r2 && (distance > r1 && distance > r2)) {\r\n     console.log(1);\r\n   }\r\n-  else if (distance < r1 + r2) {\r\n+  else {\r\n     console.log(2);\r\n   }\r\n }\r\n // console.log(t);\r\n"
+                },
+                {
+                    "date": 1638863841018,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n   }\r\n   else if (distance == r1 + r2 && (distance > r1 && distance > r2)) {\r\n     console.log(1);\r\n   }\r\n-  else {\r\n+  else if (distance < r1 + r2) {\r\n     console.log(2);\r\n   }\r\n }\r\n // console.log(t);\r\n"
+                },
+                {
+                    "date": 1638863908211,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n   }\r\n   else if (x1 === x2 && y1 === y2 && r1 !== r2) {\r\n     console.log(0);\r\n   }\r\n-  else if (distance > r1 + r2) {\r\n+  else if (distance > r1 + r2 || distance) {\r\n     console.log(0);\r\n   }\r\n   else if (distance == r1 + r2 && (distance <= r1 || distance <= r2)) {\r\n     console.log(1);\r\n"
+                },
+                {
+                    "date": 1638863972394,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n   }\r\n   else if (x1 === x2 && y1 === y2 && r1 !== r2) {\r\n     console.log(0);\r\n   }\r\n-  else if (distance > r1 + r2 || distance) {\r\n+  else if (distance >= r1 + r2) {\r\n     console.log(0);\r\n   }\r\n   else if (distance == r1 + r2 && (distance <= r1 || distance <= r2)) {\r\n     console.log(1);\r\n"
+                },
+                {
+                    "date": 1638863982741,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n   }\r\n   else if (x1 === x2 && y1 === y2 && r1 !== r2) {\r\n     console.log(0);\r\n   }\r\n-  else if (distance >= r1 + r2) {\r\n+  else if (distance > r1 + r2) {\r\n     console.log(0);\r\n   }\r\n   else if (distance == r1 + r2 && (distance <= r1 || distance <= r2)) {\r\n     console.log(1);\r\n"
+                },
+                {
+                    "date": 1638863992051,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n let t = input();\r\n // console.log(t--);\r\n while (t--) {\r\n   const [x1, y1, r1, x2, y2, r2] = input().split(' ').map(Number);\r\n-  // console.log(x1, y1, r1, x2, y2, r2);\r\n+  console.log(x1, y1, r1, x2, y2, r2);\r\n   const distance = Math.sqrt((x1 - x2) ** 2 + (y1 - y2) ** 2);\r\n   console.log('거리', distance);\r\n   if (x1 === x2 && y1 === y2 && r1 === r2) {\r\n     console.log(-1);\r\n"
+                },
+                {
+                    "date": 1638864081223,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n   }\r\n   else if (x1 === x2 && y1 === y2 && r1 !== r2) {\r\n     console.log(0);\r\n   }\r\n-  else if (distance > r1 + r2) {\r\n+  else if (distance + r1 >=  r2) {\r\n     console.log(0);\r\n   }\r\n   else if (distance == r1 + r2 && (distance <= r1 || distance <= r2)) {\r\n     console.log(1);\r\n"
+                },
+                {
+                    "date": 1638864210782,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n   }\r\n   else if (distance + r1 >=  r2) {\r\n     console.log(0);\r\n   }\r\n-  else if (distance == r1 + r2 && (distance <= r1 || distance <= r2)) {\r\n+  else if (distance + r1 ==  + r2 && (distance <= r1 || distance <= r2)) {\r\n     console.log(1);\r\n   }\r\n   else if (distance == r1 + r2 && (distance > r1 && distance > r2)) {\r\n     console.log(1);\r\n"
+                },
+                {
+                    "date": 1638864225159,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,12 @@\n   }\r\n   else if (distance + r1 >=  r2) {\r\n     console.log(0);\r\n   }\r\n-  else if (distance + r1 ==  + r2 && (distance <= r1 || distance <= r2)) {\r\n+  else if (distance + r1 >=  r2) {\r\n+    console.log(0);\r\n+  }\r\n+  else if (distance + r1 ==  r2 && (distance <= r1 || distance <= r2)) {\r\n     console.log(1);\r\n   }\r\n   else if (distance == r1 + r2 && (distance > r1 && distance > r2)) {\r\n     console.log(1);\r\n"
+                },
+                {
+                    "date": 1638864234041,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n   }\r\n   else if (distance + r1 >=  r2) {\r\n     console.log(0);\r\n   }\r\n-  else if (distance + r1 >=  r2) {\r\n+  else if (distance  >=  r2 + r1) {\r\n     console.log(0);\r\n   }\r\n   else if (distance + r1 ==  r2 && (distance <= r1 || distance <= r2)) {\r\n     console.log(1);\r\n"
+                },
+                {
+                    "date": 1638864241994,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n   }\r\n   else if (distance + r1 >=  r2) {\r\n     console.log(0);\r\n   }\r\n-  else if (distance  >=  r2 + r1) {\r\n+  else if (distance  >=  r1 + r2) {\r\n     console.log(0);\r\n   }\r\n   else if (distance + r1 ==  r2 && (distance <= r1 || distance <= r2)) {\r\n     console.log(1);\r\n"
+                },
+                {
+                    "date": 1638864414308,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,11 +29,11 @@\n   }\r\n   else if (distance + r1 >=  r2) {\r\n     console.log(0);\r\n   }\r\n-  else if (distance  >=  r1 + r2) {\r\n-    console.log(0);\r\n-  }\r\n+  // else if (distance  >=  r1 + r2) {\r\n+  //   console.log(0);\r\n+  // }\r\n   else if (distance + r1 ==  r2 && (distance <= r1 || distance <= r2)) {\r\n     console.log(1);\r\n   }\r\n   else if (distance == r1 + r2 && (distance > r1 && distance > r2)) {\r\n"
+                },
+                {
+                    "date": 1638864431910,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,11 +29,11 @@\n   }\r\n   else if (distance + r1 >=  r2) {\r\n     console.log(0);\r\n   }\r\n-  // else if (distance  >=  r1 + r2) {\r\n-  //   console.log(0);\r\n-  // }\r\n+  else if (distance  >=  r1 + r2) {\r\n+    console.log(0);\r\n+  }\r\n   else if (distance + r1 ==  r2 && (distance <= r1 || distance <= r2)) {\r\n     console.log(1);\r\n   }\r\n   else if (distance == r1 + r2 && (distance > r1 && distance > r2)) {\r\n"
+                }
+            ],
+            "date": 1638845204015,
+            "name": "Commit-0",
+            "content": "const fs = require('fs');"
+        }
+    ]
+}

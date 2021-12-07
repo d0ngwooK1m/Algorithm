@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 99,
+            "activePatchIndex": 112,
             "patches": [
                 {
                     "date": 1638788960886,
@@ -404,6 +404,58 @@
                 {
                     "date": 1638800421253,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,9 +48,11 @@\n     if (winRate <= rate) {\r\n       winRate = rate;\r\n       winName = string;\r\n     }\r\n+    console.log(winRate);\r\n   }\r\n+  \r\n   console.log(winName.substr(0, (winName.length) - name.length));\r\n   return;\r\n };\r\n answer();\r\n"
+                },
+                {
+                    "date": 1638802044334,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,10 +2,10 @@\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n   : `LOVE\r\n 2\r\n-LOVE\r\n-LOVELOVE`\r\n+LOVEA\r\n+LOVEB`\r\n ).split('\\n');\r\n \r\n // console.log(stdin);\r\n \r\n"
+                },
+                {
+                    "date": 1638802072916,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,10 +2,10 @@\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n   : `LOVE\r\n 2\r\n-LOVEA\r\n-LOVEB`\r\n+LOVEB\r\n+LOVEA`\r\n ).split('\\n');\r\n \r\n // console.log(stdin);\r\n \r\n"
+                },
+                {
+                    "date": 1638802099514,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n   ? fs.readFileSync('/dev/stdin').toString()\r\n   : `LOVE\r\n 2\r\n LOVEB\r\n+LOVEC\r\n LOVEA`\r\n ).split('\\n');\r\n \r\n // console.log(stdin);\r\n"
+                },
+                {
+                    "date": 1638802206643,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,10 +2,10 @@\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n   : `LOVE\r\n 2\r\n-LOVEB\r\n-LOVEC\r\n+LOVEAA\r\n+LOVEAAAA\r\n LOVEA`\r\n ).split('\\n');\r\n \r\n // console.log(stdin);\r\n"
+                },
+                {
+                    "date": 1638802293985,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n   : `LOVE\r\n 2\r\n-LOVEAA\r\n+LOVE\r\n LOVEAAAA\r\n LOVEA`\r\n ).split('\\n');\r\n \r\n@@ -18,9 +18,10 @@\n   for (let i = 2; i < stdin.length; i++) {\r\n     nameArr.push(stdin[i] + name);\r\n   }\r\n   // console.log(nameArr);\r\n-  nameArr.sort().reverse();\r\n+  // nameArr.sort().reverse();\r\n+  nameArr.sort((a, b) => b.length - a.length).reverse();\r\n   console.log(nameArr);\r\n   for (let j = 0; j < nameArr.length; j++) {\r\n     let cntL = 0;\r\n     let cntO = 0;\r\n"
+                },
+                {
+                    "date": 1638802339595,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,10 +2,10 @@\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n   : `LOVE\r\n 2\r\n-LOVE\r\n-LOVEAAAA\r\n+LOVEAA\r\n+AAAALOVE\r\n LOVEA`\r\n ).split('\\n');\r\n \r\n // console.log(stdin);\r\n"
+                },
+                {
+                    "date": 1638802375864,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n     nameArr.push(stdin[i] + name);\r\n   }\r\n   // console.log(nameArr);\r\n   // nameArr.sort().reverse();\r\n-  nameArr.sort((a, b) => b.length - a.length).reverse();\r\n+  nameArr.sort((a, b) => b.length - a.length || 0).reverse();\r\n   console.log(nameArr);\r\n   for (let j = 0; j < nameArr.length; j++) {\r\n     let cntL = 0;\r\n     let cntO = 0;\r\n"
+                },
+                {
+                    "date": 1638802402235,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n   ? fs.readFileSync('/dev/stdin').toString()\r\n   : `LOVE\r\n 2\r\n LOVEAA\r\n-AAAALOVE\r\n+ALOVEAAAA\r\n LOVEA`\r\n ).split('\\n');\r\n \r\n // console.log(stdin);\r\n"
+                },
+                {
+                    "date": 1638802523755,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n   for (let i = 2; i < stdin.length; i++) {\r\n     nameArr.push(stdin[i] + name);\r\n   }\r\n   // console.log(nameArr);\r\n-  // nameArr.sort().reverse();\r\n+  nameArr.sort().;\r\n   nameArr.sort((a, b) => b.length - a.length || 0).reverse();\r\n   console.log(nameArr);\r\n   for (let j = 0; j < nameArr.length; j++) {\r\n     let cntL = 0;\r\n"
+                },
+                {
+                    "date": 1638802564713,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n   : `LOVE\r\n 2\r\n LOVEAA\r\n ALOVEAAAA\r\n-LOVEA`\r\n+LOVEABBBBBBBBBB`\r\n ).split('\\n');\r\n \r\n // console.log(stdin);\r\n \r\n@@ -18,10 +18,10 @@\n   for (let i = 2; i < stdin.length; i++) {\r\n     nameArr.push(stdin[i] + name);\r\n   }\r\n   // console.log(nameArr);\r\n-  nameArr.sort().;\r\n-  nameArr.sort((a, b) => b.length - a.length || 0).reverse();\r\n+  nameArr.sort();\r\n+  // nameArr.sort((a, b) => b.length - a.length || 0).reverse();\r\n   console.log(nameArr);\r\n   for (let j = 0; j < nameArr.length; j++) {\r\n     let cntL = 0;\r\n     let cntO = 0;\r\n"
+                },
+                {
+                    "date": 1638802634635,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n   : `LOVE\r\n 2\r\n LOVEAA\r\n ALOVEAAAA\r\n-LOVEABBBBBBBBBB`\r\n+BLOVEABBBBBBBBBB`\r\n ).split('\\n');\r\n \r\n // console.log(stdin);\r\n \r\n"
+                },
+                {
+                    "date": 1638802652929,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n   for (let i = 2; i < stdin.length; i++) {\r\n     nameArr.push(stdin[i] + name);\r\n   }\r\n   // console.log(nameArr);\r\n-  nameArr.sort();\r\n+  nameArr.sort().reverse();\r\n   // nameArr.sort((a, b) => b.length - a.length || 0).reverse();\r\n   console.log(nameArr);\r\n   for (let j = 0; j < nameArr.length; j++) {\r\n     let cntL = 0;\r\n"
+                },
+                {
+                    "date": 1638802726655,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n   }\r\n   // console.log(nameArr);\r\n   nameArr.sort().reverse();\r\n   // nameArr.sort((a, b) => b.length - a.length || 0).reverse();\r\n-  console.log(nameArr);\r\n+  // console.log(nameArr);\r\n   for (let j = 0; j < nameArr.length; j++) {\r\n     let cntL = 0;\r\n     let cntO = 0;\r\n     let cntV = 0;\r\n@@ -43,16 +43,16 @@\n         // console.log('passE');\r\n         cntE++;\r\n       }\r\n     }\r\n-    console.log(cntL, cntO, cntV, cntE);\r\n+    // console.log(cntL, cntO, cntV, cntE);\r\n     const rate = ((cntL + cntO) * (cntL + cntV) * (cntL + cntE) * (cntO + cntV) * (cntO + cntE) * (cntV + cntE)) % 100;\r\n     // console.log(rate);\r\n     if (winRate <= rate) {\r\n       winRate = rate;\r\n       winName = string;\r\n     }\r\n-    console.log(winRate);\r\n+    // console.log(winRate);\r\n   }\r\n   \r\n   console.log(winName.substr(0, (winName.length) - name.length));\r\n   return;\r\n"
                 }
             ],
             "date": 1638788960886,

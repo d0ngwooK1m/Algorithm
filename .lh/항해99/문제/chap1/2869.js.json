@@ -1,0 +1,102 @@
+{
+    "sourceFile": "항해99/문제/chap1/2869.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 21,
+            "patches": [
+                {
+                    "date": 1638842373033,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1638842386169,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n-  : ``\r\n-)\n\\ No newline at end of file\n+  : `2 1 5`\r\n+)\r\n+console.log(stdin);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638842450577,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,8 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n   : `2 1 5`\r\n-)\r\n-console.log(stdin);\n\\ No newline at end of file\n+);\r\n+console.log(stdin);\r\n+const numbers = stdin.split(' ').map(Number);\r\n+console.log(numbers);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638842530367,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,5 +4,7 @@\n   : `2 1 5`\r\n );\r\n console.log(stdin);\r\n const numbers = stdin.split(' ').map(Number);\r\n-console.log(numbers);\n\\ No newline at end of file\n+const up = numbers[0];\r\n+const slip = numbers[1];\r\n+const height = numbers[2];\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638842556336,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,5 +6,9 @@\n console.log(stdin);\r\n const numbers = stdin.split(' ').map(Number);\r\n const up = numbers[0];\r\n const slip = numbers[1];\r\n-const height = numbers[2];\n\\ No newline at end of file\n+const height = numbers[2];\r\n+\r\n+const answer = () => {\r\n+  \r\n+};\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638842691566,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,6 +9,6 @@\n const slip = numbers[1];\r\n const height = numbers[2];\r\n \r\n const answer = () => {\r\n-  \r\n+  const time = Math.floor((height - up) / (up - slip)) + 1\r\n };\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638842702580,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,5 +10,6 @@\n const height = numbers[2];\r\n \r\n const answer = () => {\r\n   const time = Math.floor((height - up) / (up - slip)) + 1\r\n+  console.log(time);\r\n };\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638842709610,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,5 +11,7 @@\n \r\n const answer = () => {\r\n   const time = Math.floor((height - up) / (up - slip)) + 1\r\n   console.log(time);\r\n-};\n\\ No newline at end of file\n+  return;\r\n+};\r\n+answer();\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638842717990,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n   : `2 1 5`\r\n );\r\n-console.log(stdin);\r\n+// console.log(stdin);\r\n const numbers = stdin.split(' ').map(Number);\r\n const up = numbers[0];\r\n const slip = numbers[1];\r\n const height = numbers[2];\r\n"
+                },
+                {
+                    "date": 1638842724312,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n-  : `2 1 5`\r\n+  : `5 1 6`\r\n );\r\n // console.log(stdin);\r\n const numbers = stdin.split(' ').map(Number);\r\n const up = numbers[0];\r\n"
+                },
+                {
+                    "date": 1638842862332,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n-  : `5 1 6`\r\n+  : `100 99 1000000000`\r\n );\r\n // console.log(stdin);\r\n const numbers = stdin.split(' ').map(Number);\r\n const up = numbers[0];\r\n"
+                },
+                {
+                    "date": 1638842944635,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,12 @@\n const slip = numbers[1];\r\n const height = numbers[2];\r\n \r\n const answer = () => {\r\n-  const time = Math.floor((height - up) / (up - slip)) + 1\r\n+  let timeBeforeArrive = Math.floor((height - up) / (up - slip));\r\n+  if (timeBeforeArrive === 0) {\r\n+    timeBeforeArrive = 1;\r\n+  }\r\n   console.log(time);\r\n   return;\r\n };\r\n answer();\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638842955219,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,9 @@\n   let timeBeforeArrive = Math.floor((height - up) / (up - slip));\r\n   if (timeBeforeArrive === 0) {\r\n     timeBeforeArrive = 1;\r\n   }\r\n+  const = timeBeforeArrive + 1;\r\n   console.log(time);\r\n   return;\r\n };\r\n answer();\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638842967168,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n-  : `100 99 1000000000`\r\n+  : `2 1 5`\r\n );\r\n // console.log(stdin);\r\n const numbers = stdin.split(' ').map(Number);\r\n const up = numbers[0];\r\n@@ -13,9 +13,9 @@\n   let timeBeforeArrive = Math.floor((height - up) / (up - slip));\r\n   if (timeBeforeArrive === 0) {\r\n     timeBeforeArrive = 1;\r\n   }\r\n-  const = timeBeforeArrive + 1;\r\n+  const time = timeBeforeArrive + 1;\r\n   console.log(time);\r\n   return;\r\n };\r\n answer();\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638842975747,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n-  : `2 1 5`\r\n+  : `5 1 6`\r\n );\r\n // console.log(stdin);\r\n const numbers = stdin.split(' ').map(Number);\r\n const up = numbers[0];\r\n"
+                },
+                {
+                    "date": 1638842983622,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n-  : `5 1 6`\r\n+  : `100 99 1000000000`\r\n );\r\n // console.log(stdin);\r\n const numbers = stdin.split(' ').map(Number);\r\n const up = numbers[0];\r\n"
+                },
+                {
+                    "date": 1638843217595,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n const slip = numbers[1];\r\n const height = numbers[2];\r\n \r\n const answer = () => {\r\n-  let timeBeforeArrive = Math.floor((height - up) / (up - slip));\r\n+  let timeBeforeArrive = Math.ceil((height - up) / (up - slip));\r\n   if (timeBeforeArrive === 0) {\r\n     timeBeforeArrive = 1;\r\n   }\r\n   const time = timeBeforeArrive + 1;\r\n"
+                },
+                {
+                    "date": 1638843227864,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,12 +9,9 @@\n const slip = numbers[1];\r\n const height = numbers[2];\r\n \r\n const answer = () => {\r\n-  let timeBeforeArrive = Math.ceil((height - up) / (up - slip));\r\n-  if (timeBeforeArrive === 0) {\r\n-    timeBeforeArrive = 1;\r\n-  }\r\n+  let timeBeforeArrive = Math.ceil((height - up) / (up - slip)) + 1;\r\n   const time = timeBeforeArrive + 1;\r\n   console.log(time);\r\n   return;\r\n };\r\n"
+                },
+                {
+                    "date": 1638843241368,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,10 +9,10 @@\n const slip = numbers[1];\r\n const height = numbers[2];\r\n \r\n const answer = () => {\r\n-  let timeBeforeArrive = Math.ceil((height - up) / (up - slip)) + 1;\r\n-  const time = timeBeforeArrive + 1;\r\n+  let time = Math.ceil((height - up) / (up - slip)) + 1;\r\n+  // const time = timeBeforeArrive + 1;\r\n   console.log(time);\r\n   return;\r\n };\r\n answer();\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638843262460,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n-  : `100 99 1000000000`\r\n+  : `2 1 5`\r\n );\r\n // console.log(stdin);\r\n const numbers = stdin.split(' ').map(Number);\r\n const up = numbers[0];\r\n"
+                },
+                {
+                    "date": 1638843270905,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n-  : `2 1 5`\r\n+  : `5 1 6`\r\n );\r\n // console.log(stdin);\r\n const numbers = stdin.split(' ').map(Number);\r\n const up = numbers[0];\r\n"
+                },
+                {
+                    "date": 1638843279208,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n-  : `5 1 6`\r\n+  : `100 99 1000000000`\r\n );\r\n // console.log(stdin);\r\n const numbers = stdin.split(' ').map(Number);\r\n const up = numbers[0];\r\n"
+                }
+            ],
+            "date": 1638842373033,
+            "name": "Commit-0",
+            "content": "const fs = require('fs');\r\nconst stdin = (process.platform === 'linux'\r\n  ? fs.readFileSync('/dev/stdin').toString()\r\n  : ``\r\n)"
+        }
+    ]
+}

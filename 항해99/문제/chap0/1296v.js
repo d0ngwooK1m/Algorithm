@@ -3,8 +3,9 @@ const stdin = (process.platform === 'linux'
   ? fs.readFileSync('/dev/stdin').toString()
   : `LOVE
 2
-LOVE
-LOVELOVE`
+LOVEAA
+ALOVEAAAA
+BLOVEABBBBBBBBBB`
 ).split('\n');
 
 // console.log(stdin);
@@ -19,7 +20,8 @@ const answer = () => {
   }
   // console.log(nameArr);
   nameArr.sort().reverse();
-  console.log(nameArr);
+  // nameArr.sort((a, b) => b.length - a.length || 0).reverse();
+  // console.log(nameArr);
   for (let j = 0; j < nameArr.length; j++) {
     let cntL = 0;
     let cntO = 0;
@@ -42,14 +44,14 @@ const answer = () => {
         cntE++;
       }
     }
-    console.log(cntL, cntO, cntV, cntE);
+    // console.log(cntL, cntO, cntV, cntE);
     const rate = ((cntL + cntO) * (cntL + cntV) * (cntL + cntE) * (cntO + cntV) * (cntO + cntE) * (cntV + cntE)) % 100;
     // console.log(rate);
     if (winRate <= rate) {
       winRate = rate;
       winName = string;
     }
-    console.log(winRate);
+    // console.log(winRate);
   }
   
   console.log(winName.substr(0, (winName.length) - name.length));

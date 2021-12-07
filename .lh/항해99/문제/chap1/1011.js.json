@@ -1,0 +1,74 @@
+{
+    "sourceFile": "항해99/문제/chap1/1011.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 14,
+            "patches": [
+                {
+                    "date": 1638880086679,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1638880493366,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,8 @@\n-const fs = \n\\ No newline at end of file\n+const fs = require('fs');\r\n+const stdin = (process.platform === 'linux'\r\n+  ? fs.readFileSync('/dev/stdin')\r\n+  : `3\r\n+0 3\r\n+1 5\r\n+45 50`\r\n+).split('\\n');\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638880508317,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,5 +4,7 @@\n   : `3\r\n 0 3\r\n 1 5\r\n 45 50`\r\n-).split('\\n');\n\\ No newline at end of file\n+).split('\\n');\r\n+\r\n+console.log(stdin);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638880604092,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,5 +6,11 @@\n 1 5\r\n 45 50`\r\n ).split('\\n');\r\n \r\n-console.log(stdin);\n\\ No newline at end of file\n+// console.log(stdin);\r\n+const input = (() => {\r\n+  let line = 0;\r\n+  return () => stdin[line++];\r\n+})();\r\n+\r\n+const t = input();\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638880609548,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,5 +12,6 @@\n   let line = 0;\r\n   return () => stdin[line++];\r\n })();\r\n \r\n-const t = input();\n\\ No newline at end of file\n+const t = input();\r\n+console.log(t);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638880619306,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,5 +13,5 @@\n   return () => stdin[line++];\r\n })();\r\n \r\n const t = input();\r\n-console.log(t);\n\\ No newline at end of file\n+// console.log(t);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638880682326,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,5 +13,9 @@\n   return () => stdin[line++];\r\n })();\r\n \r\n const t = input();\r\n-// console.log(t);\n\\ No newline at end of file\n+// console.log(t);\r\n+while (t--) {\r\n+  const [x, y] = input().split(' ').map(number);\r\n+  console.log(x, y);\r\n+};\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638880744687,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n   let line = 0;\r\n   return () => stdin[line++];\r\n })();\r\n \r\n-const t = input();\r\n+let t = input();\r\n // console.log(t);\r\n while (t--) {\r\n   const [x, y] = input().split(' ').map(number);\r\n   console.log(x, y);\r\n"
+                },
+                {
+                    "date": 1638880754462,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,7 +15,7 @@\n \r\n let t = input();\r\n // console.log(t);\r\n while (t--) {\r\n-  const [x, y] = input().split(' ').map(number);\r\n+  const [x, y] = input().split(' ').map(Number);\r\n   console.log(x, y);\r\n };\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638880768375,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,6 +16,6 @@\n let t = input();\r\n // console.log(t);\r\n while (t--) {\r\n   const [x, y] = input().split(' ').map(Number);\r\n-  console.log(x, y);\r\n+  // console.log(x, y);\r\n };\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638880794643,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,5 +17,6 @@\n // console.log(t);\r\n while (t--) {\r\n   const [x, y] = input().split(' ').map(Number);\r\n   // console.log(x, y);\r\n+  const distance = y - x;\r\n };\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638880801271,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,5 +18,6 @@\n while (t--) {\r\n   const [x, y] = input().split(' ').map(Number);\r\n   // console.log(x, y);\r\n   const distance = y - x;\r\n+  console.log(distance);\r\n };\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638880820581,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,7 +17,7 @@\n // console.log(t);\r\n while (t--) {\r\n   const [x, y] = input().split(' ').map(Number);\r\n   // console.log(x, y);\r\n-  const distance = y - x;\r\n+  const distance = y - x - 2;\r\n   console.log(distance);\r\n };\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638887122103,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,8 +16,16 @@\n let t = input();\r\n // console.log(t);\r\n while (t--) {\r\n   const [x, y] = input().split(' ').map(Number);\r\n-  // console.log(x, y);\r\n-  const distance = y - x - 2;\r\n-  console.log(distance);\r\n+  const answer = (distance) => {\r\n+    let i = 0;\r\n+    while (i <= distance) {\r\n+      if (distance > i * i && distance <= i * i + i) {\r\n+        return 2 * i;\r\n+      } else if (distance <= (i + 1) * (i + 1)) {\r\n+        return i * 2 + 1;\r\n+      }\r\n+      i += 1;\r\n+    }\r\n+  };\r\n };\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638887165907,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,5 +27,6 @@\n       }\r\n       i += 1;\r\n     }\r\n   };\r\n+  console.log(answer(y - x));\r\n };\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1638880086679,
+            "name": "Commit-0",
+            "content": "const fs = "
+        }
+    ]
+}
