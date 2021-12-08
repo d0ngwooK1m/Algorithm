@@ -1,0 +1,94 @@
+{
+    "sourceFile": "항해99/문제/chap2/9012.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 19,
+            "patches": [
+                {
+                    "date": 1638957661311,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1638957686357,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n   : ``\r\n-)\n\\ No newline at end of file\n+).split('\\n');\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638957696880,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,11 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n-  : ``\r\n+  : `6\r\n+(())())\r\n+(((()())()\r\n+(()())((()))\r\n+((()()(()))(((())))()\r\n+()()()()(()()())()\r\n+(()((())()(`\r\n ).split('\\n');\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638957705760,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,5 +7,7 @@\n (()())((()))\r\n ((()()(()))(((())))()\r\n ()()()()(()()())()\r\n (()((())()(`\r\n-).split('\\n');\n\\ No newline at end of file\n+).split('\\n');\r\n+\r\n+console.log(stdin);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638957774714,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,5 +9,8 @@\n ()()()()(()()())()\r\n (()((())()(`\r\n ).split('\\n');\r\n \r\n-console.log(stdin);\n\\ No newline at end of file\n+const input = (() => {\r\n+  let line = 0;\r\n+  return () => stdin[line++];\r\n+})();\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638957785518,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,5 +12,7 @@\n \r\n const input = (() => {\r\n   let line = 0;\r\n   return () => stdin[line++];\r\n-})();\n\\ No newline at end of file\n+})();\r\n+\r\n+let t = input();\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638957838950,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,5 +14,8 @@\n   let line = 0;\r\n   return () => stdin[line++];\r\n })();\r\n \r\n-let t = input();\n\\ No newline at end of file\n+let t = input();\r\n+while (t--) {\r\n+  const arr = input().split('')\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638957844285,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,6 +16,7 @@\n })();\r\n \r\n let t = input();\r\n while (t--) {\r\n-  const arr = input().split('')\r\n+  const arr = input().split('');\r\n+  console.log(arr);\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638957875958,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,6 +17,6 @@\n \r\n let t = input();\r\n while (t--) {\r\n   const arr = input().split('');\r\n-  console.log(arr);\r\n+  const stack = [];\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638957968095,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,5 +18,11 @@\n let t = input();\r\n while (t--) {\r\n   const arr = input().split('');\r\n   const stack = [];\r\n+\r\n+  for (let i = 0; i < arr.length; i++) {\r\n+    if (arr[i] === '(' && stack[stack.length - 1]) {\r\n+      stack.push(arr[i]);\r\n+    }\r\n+  }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638957981277,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n   const arr = input().split('');\r\n   const stack = [];\r\n \r\n   for (let i = 0; i < arr.length; i++) {\r\n-    if (arr[i] === '(' && stack[stack.length - 1]) {\r\n+    if (arr[i] === '(' && stack[stack.length - 1] !== ')') {\r\n       stack.push(arr[i]);\r\n     }\r\n   }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638958059816,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,7 +22,9 @@\n \r\n   for (let i = 0; i < arr.length; i++) {\r\n     if (arr[i] === '(' && stack[stack.length - 1] !== ')') {\r\n       stack.push(arr[i]);\r\n+    } else if (arr[i] === ')' && stack[stack.length - 1] === '(') {\r\n+      stack.pop();\r\n     }\r\n   }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638958074351,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,5 +26,6 @@\n     } else if (arr[i] === ')' && stack[stack.length - 1] === '(') {\r\n       stack.pop();\r\n     }\r\n   }\r\n+  console.log(stack);\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638958205597,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,8 +24,10 @@\n     if (arr[i] === '(' && stack[stack.length - 1] !== ')') {\r\n       stack.push(arr[i]);\r\n     } else if (arr[i] === ')' && stack[stack.length - 1] === '(') {\r\n       stack.pop();\r\n+    } else {\r\n+      console.log('NO')\r\n     }\r\n   }\r\n   console.log(stack);\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638958249597,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,8 +18,9 @@\n let t = input();\r\n while (t--) {\r\n   const arr = input().split('');\r\n   const stack = [];\r\n+  const check = true;\r\n \r\n   for (let i = 0; i < arr.length; i++) {\r\n     if (arr[i] === '(' && stack[stack.length - 1] !== ')') {\r\n       stack.push(arr[i]);\r\n"
+                },
+                {
+                    "date": 1638958288825,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,17 +18,17 @@\n let t = input();\r\n while (t--) {\r\n   const arr = input().split('');\r\n   const stack = [];\r\n-  const check = true;\r\n+  let check = true;\r\n \r\n   for (let i = 0; i < arr.length; i++) {\r\n     if (arr[i] === '(' && stack[stack.length - 1] !== ')') {\r\n       stack.push(arr[i]);\r\n     } else if (arr[i] === ')' && stack[stack.length - 1] === '(') {\r\n       stack.pop();\r\n     } else {\r\n-      console.log('NO')\r\n+      check = false;\r\n     }\r\n   }\r\n   console.log(stack);\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638958325868,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,6 +29,9 @@\n     } else {\r\n       check = false;\r\n     }\r\n   }\r\n+  if (check === false || stack.length !== 0) {\r\n+    console.log()\r\n+  }\r\n   console.log(stack);\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638958334063,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,8 +30,8 @@\n       check = false;\r\n     }\r\n   }\r\n   if (check === false || stack.length !== 0) {\r\n-    console.log()\r\n+    console.log(\"NO\");\r\n   }\r\n   console.log(stack);\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638958342075,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,7 +31,9 @@\n     }\r\n   }\r\n   if (check === false || stack.length !== 0) {\r\n     console.log(\"NO\");\r\n+  } else {\r\n+    console.log(\"YES\");\r\n   }\r\n   console.log(stack);\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638958365530,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,11 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n-  : `6\r\n-(())())\r\n-(((()())()\r\n-(()())((()))\r\n-((()()(()))(((())))()\r\n-()()()()(()()())()\r\n-(()((())()(`\r\n+  : `3\r\n+((\r\n+))\r\n+())(()`\r\n ).split('\\n');\r\n \r\n const input = (() => {\r\n   let line = 0;\r\n@@ -34,6 +31,5 @@\n     console.log(\"NO\");\r\n   } else {\r\n     console.log(\"YES\");\r\n   }\r\n-  console.log(stack);\r\n }\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1638957661311,
+            "name": "Commit-0",
+            "content": "const fs = require('fs');\r\nconst stdin = (process.platform === 'linux'\r\n  ? fs.readFileSync('/dev/stdin').toString()\r\n  : ``\r\n)"
+        }
+    ]
+}

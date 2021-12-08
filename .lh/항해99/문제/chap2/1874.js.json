@@ -1,0 +1,234 @@
+{
+    "sourceFile": "항해99/문제/chap2/1874.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 54,
+            "patches": [
+                {
+                    "date": 1638958847952,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1638960402656,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,5 @@\n-const fs = require('fs');\n\\ No newline at end of file\n+const fs = require('fs');\r\n+const stdin = (process.platform === 'linux'\r\n+  ? fs.readFileSync('/dev/stdin')\r\n+  : ``\r\n+).split('\\n');\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638960408298,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin')\r\n   : ``\r\n-).split('\\n');\n\\ No newline at end of file\n+).split('\\n');\r\n+console.log(stdin);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638960442990,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,14 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin')\r\n-  : ``\r\n+  : `8\r\n+4\r\n+3\r\n+6\r\n+8\r\n+7\r\n+5\r\n+2\r\n+1`\r\n ).split('\\n');\r\n console.log(stdin);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638960493010,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,6 +9,8 @@\n 7\r\n 5\r\n 2\r\n 1`\r\n-).split('\\n');\r\n-console.log(stdin);\n\\ No newline at end of file\n+).split('\\n').map(Number);\r\n+\r\n+const ran\r\n+const input =  \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638960558539,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,6 +11,8 @@\n 2\r\n 1`\r\n ).split('\\n').map(Number);\r\n \r\n-const ran\r\n-const input =  \n\\ No newline at end of file\n+const length = stdin[0];\r\n+stdin.shift();\r\n+const input = stdin;\r\n+console.log(length, input);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638960585053,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,5 +14,10 @@\n \r\n const length = stdin[0];\r\n stdin.shift();\r\n const input = stdin;\r\n-console.log(length, input);\n\\ No newline at end of file\n+console.log(length, input);\r\n+\r\n+const answer = () => {\r\n+\r\n+};\r\n+answer();\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638960628176,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,7 +17,7 @@\n const input = stdin;\r\n console.log(length, input);\r\n \r\n const answer = () => {\r\n-\r\n+  for (let i = 0; i < length; )\r\n };\r\n answer();\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638960665286,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,7 +17,9 @@\n const input = stdin;\r\n console.log(length, input);\r\n \r\n const answer = () => {\r\n-  for (let i = 0; i < length; )\r\n+  for (let i = 0; i < length;) {\r\n+    \r\n+  }\r\n };\r\n answer();\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638960940170,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,8 +18,8 @@\n console.log(length, input);\r\n \r\n const answer = () => {\r\n   for (let i = 0; i < length;) {\r\n-    \r\n+    const number = input[0];\r\n   }\r\n };\r\n answer();\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638960985668,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,7 +19,8 @@\n \r\n const answer = () => {\r\n   for (let i = 0; i < length;) {\r\n     const number = input[0];\r\n+    while ()\r\n   }\r\n };\r\n answer();\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638961155920,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,10 +17,16 @@\n const input = stdin;\r\n console.log(length, input);\r\n \r\n const answer = () => {\r\n+  const stack = [];\r\n+  const result = [];\r\n   for (let i = 0; i < length;) {\r\n     const number = input[0];\r\n+    let count;\r\n+    if (stack.length === 0) {\r\n+\r\n+    }\r\n     while ()\r\n   }\r\n };\r\n answer();\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638961520750,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n   for (let i = 0; i < length;) {\r\n     const number = input[0];\r\n     let count;\r\n     if (stack.length === 0) {\r\n-\r\n+      \r\n     }\r\n     while ()\r\n   }\r\n };\r\n"
+                },
+                {
+                    "date": 1638963075129,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,13 +19,14 @@\n \r\n const answer = () => {\r\n   const stack = [];\r\n   const result = [];\r\n+  let max = 0;\r\n   for (let i = 0; i < length;) {\r\n-    const number = input[0];\r\n-    let count;\r\n+    const number = input[i];\r\n+\r\n     if (stack.length === 0) {\r\n-      \r\n+\r\n     }\r\n     while ()\r\n   }\r\n };\r\n"
+                },
+                {
+                    "date": 1638963092504,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n   const result = [];\r\n   let max = 0;\r\n   for (let i = 0; i < length;) {\r\n     const number = input[i];\r\n-\r\n+    if (max < number) max = number;\r\n     if (stack.length === 0) {\r\n \r\n     }\r\n     while ()\r\n"
+                },
+                {
+                    "date": 1638963129852,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,12 +22,14 @@\n   const result = [];\r\n   let max = 0;\r\n   for (let i = 0; i < length;) {\r\n     const number = input[i];\r\n-    if (max < number) max = number;\r\n     if (stack.length === 0) {\r\n \r\n     }\r\n-    while ()\r\n+    while () {\r\n+\r\n+    }\r\n+    if (max < number) max = number;\r\n   }\r\n };\r\n answer();\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638963203610,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,14 +22,11 @@\n   const result = [];\r\n   let max = 0;\r\n   for (let i = 0; i < length;) {\r\n     const number = input[i];\r\n-    if (stack.length === 0) {\r\n+    while (stack[stack.length - 1]) {\r\n \r\n     }\r\n-    while () {\r\n-\r\n-    }\r\n     if (max < number) max = number;\r\n   }\r\n };\r\n answer();\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638963307637,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,11 +22,12 @@\n   const result = [];\r\n   let max = 0;\r\n   for (let i = 0; i < length;) {\r\n     const number = input[i];\r\n-    while (stack[stack.length - 1]) {\r\n-\r\n+    while (stack[stack.length - 1] === number) {\r\n+      stack.push(max);\r\n+      max++;\r\n     }\r\n-    if (max < number) max = number;\r\n+    // if (max < number) max = number;\r\n   }\r\n };\r\n answer();\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638963335118,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,8 +26,9 @@\n     while (stack[stack.length - 1] === number) {\r\n       stack.push(max);\r\n       max++;\r\n     }\r\n+    result.push()\r\n     // if (max < number) max = number;\r\n   }\r\n };\r\n answer();\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638963384638,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,10 +25,12 @@\n     const number = input[i];\r\n     while (stack[stack.length - 1] === number) {\r\n       stack.push(max);\r\n       max++;\r\n+      console.log('+');\r\n     }\r\n-    result.push()\r\n+    result.push(stack.pop());\r\n+    console.log('-');\r\n     // if (max < number) max = number;\r\n   }\r\n };\r\n answer();\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638963448424,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n   const result = [];\r\n   let max = 0;\r\n   for (let i = 0; i < length;) {\r\n     const number = input[i];\r\n-    while (stack[stack.length - 1] === number) {\r\n+    while (stack[stack.length - 1] !== number) {\r\n       stack.push(max);\r\n       max++;\r\n       console.log('+');\r\n     }\r\n"
+                },
+                {
+                    "date": 1638963477329,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n \r\n const answer = () => {\r\n   const stack = [];\r\n   const result = [];\r\n-  let max = 0;\r\n+  let max = 1;\r\n   for (let i = 0; i < length;) {\r\n     const number = input[i];\r\n     while (stack[stack.length - 1] !== number) {\r\n       stack.push(max);\r\n"
+                },
+                {
+                    "date": 1638963494206,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,8 +25,9 @@\n     const number = input[i];\r\n     while (stack[stack.length - 1] !== number) {\r\n       stack.push(max);\r\n       max++;\r\n+      // console.log('+');\r\n       console.log('+');\r\n     }\r\n     result.push(stack.pop());\r\n     console.log('-');\r\n"
+                },
+                {
+                    "date": 1638963500278,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n     while (stack[stack.length - 1] !== number) {\r\n       stack.push(max);\r\n       max++;\r\n       // console.log('+');\r\n-      console.log('+');\r\n+      console.log(stack);\r\n     }\r\n     result.push(stack.pop());\r\n     console.log('-');\r\n     // if (max < number) max = number;\r\n"
+                },
+                {
+                    "date": 1638963540266,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n const answer = () => {\r\n   const stack = [];\r\n   const result = [];\r\n   let max = 1;\r\n-  for (let i = 0; i < length;) {\r\n+  for (let i = 0; i < length; i++) {\r\n     const number = input[i];\r\n     while (stack[stack.length - 1] !== number) {\r\n       stack.push(max);\r\n       max++;\r\n"
+                },
+                {
+                    "date": 1638963586956,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,8 +30,9 @@\n       console.log(stack);\r\n     }\r\n     result.push(stack.pop());\r\n     console.log('-');\r\n+    console.log(result);\r\n     // if (max < number) max = number;\r\n   }\r\n };\r\n answer();\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638963598913,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n \r\n const length = stdin[0];\r\n stdin.shift();\r\n const input = stdin;\r\n-console.log(length, input);\r\n+// console.log(length, input);\r\n \r\n const answer = () => {\r\n   const stack = [];\r\n   const result = [];\r\n@@ -26,12 +26,12 @@\n     while (stack[stack.length - 1] !== number) {\r\n       stack.push(max);\r\n       max++;\r\n       // console.log('+');\r\n-      console.log(stack);\r\n+      // console.log(stack);\r\n     }\r\n-    result.push(stack.pop());\r\n-    console.log('-');\r\n+    // result.push(stack.pop());\r\n+    // console.log('-');\r\n     console.log(result);\r\n     // if (max < number) max = number;\r\n   }\r\n };\r\n"
+                },
+                {
+                    "date": 1638963608643,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n       max++;\r\n       // console.log('+');\r\n       // console.log(stack);\r\n     }\r\n-    // result.push(stack.pop());\r\n+    result.push(stack.pop());\r\n     // console.log('-');\r\n     console.log(result);\r\n     // if (max < number) max = number;\r\n   }\r\n"
+                },
+                {
+                    "date": 1638963637216,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,14 +25,14 @@\n     const number = input[i];\r\n     while (stack[stack.length - 1] !== number) {\r\n       stack.push(max);\r\n       max++;\r\n-      // console.log('+');\r\n+      console.log('+');\r\n       // console.log(stack);\r\n     }\r\n     result.push(stack.pop());\r\n-    // console.log('-');\r\n-    console.log(result);\r\n+    console.log('-');\r\n+    // console.log(result);\r\n     // if (max < number) max = number;\r\n   }\r\n };\r\n answer();\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638963660905,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,16 +1,13 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin')\r\n-  : `8\r\n-4\r\n+  : `5\r\n+1\r\n+2\r\n+5\r\n 3\r\n-6\r\n-8\r\n-7\r\n-5\r\n-2\r\n-1`\r\n+4`\r\n ).split('\\n').map(Number);\r\n \r\n const length = stdin[0];\r\n stdin.shift();\r\n"
+                },
+                {
+                    "date": 1638963719234,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,14 +22,14 @@\n     const number = input[i];\r\n     while (stack[stack.length - 1] !== number) {\r\n       stack.push(max);\r\n       max++;\r\n-      console.log('+');\r\n+      // console.log('+');\r\n       // console.log(stack);\r\n     }\r\n     result.push(stack.pop());\r\n-    console.log('-');\r\n-    // console.log(result);\r\n+    // console.log('-');\r\n+    console.log(result);\r\n     // if (max < number) max = number;\r\n   }\r\n };\r\n answer();\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638963744480,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,13 +23,13 @@\n     while (stack[stack.length - 1] !== number) {\r\n       stack.push(max);\r\n       max++;\r\n       // console.log('+');\r\n-      // console.log(stack);\r\n+      console.log(stack);\r\n     }\r\n     result.push(stack.pop());\r\n     // console.log('-');\r\n-    console.log(result);\r\n+    // console.log(result);\r\n     // if (max < number) max = number;\r\n   }\r\n };\r\n answer();\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638963887633,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,14 +16,16 @@\n \r\n const answer = () => {\r\n   const stack = [];\r\n   const result = [];\r\n+  let break = false;\r\n   let max = 1;\r\n   for (let i = 0; i < length; i++) {\r\n     const number = input[i];\r\n     while (stack[stack.length - 1] !== number) {\r\n       stack.push(max);\r\n       max++;\r\n+      if (max > length)\r\n       // console.log('+');\r\n       console.log(stack);\r\n     }\r\n     result.push(stack.pop());\r\n"
+                },
+                {
+                    "date": 1638963910732,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,10 +16,10 @@\n \r\n const answer = () => {\r\n   const stack = [];\r\n   const result = [];\r\n-  let break = false;\r\n   let max = 1;\r\n+  let stop = false;\r\n   for (let i = 0; i < length; i++) {\r\n     const number = input[i];\r\n     while (stack[stack.length - 1] !== number) {\r\n       stack.push(max);\r\n"
+                },
+                {
+                    "date": 1638963930057,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,12 @@\n     const number = input[i];\r\n     while (stack[stack.length - 1] !== number) {\r\n       stack.push(max);\r\n       max++;\r\n-      if (max > length)\r\n+      if (max > length) {\r\n+        stop = true;\r\n+        break;\r\n+      }\r\n       // console.log('+');\r\n       console.log(stack);\r\n     }\r\n     result.push(stack.pop());\r\n"
+                },
+                {
+                    "date": 1638963996059,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,10 +28,13 @@\n         stop = true;\r\n         break;\r\n       }\r\n       // console.log('+');\r\n-      console.log(stack);\r\n+      // console.log(stack);\r\n     }\r\n+    if (stop) {\r\n+      console.log('NO');\r\n+    }\r\n     result.push(stack.pop());\r\n     // console.log('-');\r\n     // console.log(result);\r\n     // if (max < number) max = number;\r\n"
+                },
+                {
+                    "date": 1638964352196,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,8 +32,9 @@\n       // console.log(stack);\r\n     }\r\n     if (stop) {\r\n       console.log('NO');\r\n+      return;\r\n     }\r\n     result.push(stack.pop());\r\n     // console.log('-');\r\n     // console.log(result);\r\n"
+                },
+                {
+                    "date": 1638964382129,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n       console.log('NO');\r\n       return;\r\n     }\r\n     result.push(stack.pop());\r\n-    // console.log('-');\r\n+    console.log('-');\r\n     // console.log(result);\r\n     // if (max < number) max = number;\r\n   }\r\n };\r\n"
+                },
+                {
+                    "date": 1638964436154,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,8 +14,9 @@\n const input = stdin;\r\n // console.log(length, input);\r\n \r\n const answer = () => {\r\n+  const string = '';\r\n   const stack = [];\r\n   const result = [];\r\n   let max = 1;\r\n   let stop = false;\r\n@@ -35,9 +36,9 @@\n       console.log('NO');\r\n       return;\r\n     }\r\n     result.push(stack.pop());\r\n-    console.log('-');\r\n+    console.log('-\\n');\r\n     // console.log(result);\r\n     // if (max < number) max = number;\r\n   }\r\n };\r\n"
+                },
+                {
+                    "date": 1638964487846,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,8 +29,9 @@\n         stop = true;\r\n         break;\r\n       }\r\n       // console.log('+');\r\n+      string += '+\\n'\r\n       // console.log(stack);\r\n     }\r\n     if (stop) {\r\n       console.log('NO');\r\n@@ -40,6 +41,8 @@\n     console.log('-\\n');\r\n     // console.log(result);\r\n     // if (max < number) max = number;\r\n   }\r\n+  console.log(string);\r\n+  return;\r\n };\r\n answer();\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638964515133,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,17 +29,18 @@\n         stop = true;\r\n         break;\r\n       }\r\n       // console.log('+');\r\n-      string += '+\\n'\r\n+      string += '+\\n';\r\n       // console.log(stack);\r\n     }\r\n     if (stop) {\r\n       console.log('NO');\r\n       return;\r\n     }\r\n     result.push(stack.pop());\r\n-    console.log('-\\n');\r\n+    // console.log('-');\r\n+    string += '-\\n';\r\n     // console.log(result);\r\n     // if (max < number) max = number;\r\n   }\r\n   console.log(string);\r\n"
+                },
+                {
+                    "date": 1638964530179,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n const input = stdin;\r\n // console.log(length, input);\r\n \r\n const answer = () => {\r\n-  const string = '';\r\n+  let string = '';\r\n   const stack = [];\r\n   const result = [];\r\n   let max = 1;\r\n   let stop = false;\r\n"
+                },
+                {
+                    "date": 1638964557281,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,16 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin')\r\n-  : `5\r\n-1\r\n+  : `8\r\n+4\r\n+3\r\n+6\r\n+8\r\n+7\r\n+5\r\n 2\r\n-5\r\n-3\r\n-4`\r\n+1`\r\n ).split('\\n').map(Number);\r\n \r\n const length = stdin[0];\r\n stdin.shift();\r\n"
+                },
+                {
+                    "date": 1638964579854,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,12 +35,12 @@\n       // console.log('+');\r\n       string += '+\\n';\r\n       // console.log(stack);\r\n     }\r\n-    if (stop) {\r\n-      console.log('NO');\r\n-      return;\r\n-    }\r\n+    // if (stop) {\r\n+    //   console.log('NO');\r\n+    //   return;\r\n+    // }\r\n     result.push(stack.pop());\r\n     // console.log('-');\r\n     string += '-\\n';\r\n     // console.log(result);\r\n"
+                },
+                {
+                    "date": 1638964661580,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n         break;\r\n       }\r\n       // console.log('+');\r\n       string += '+\\n';\r\n-      // console.log(stack);\r\n+      console.log(stack);\r\n     }\r\n     // if (stop) {\r\n     //   console.log('NO');\r\n     //   return;\r\n"
+                },
+                {
+                    "date": 1638964668058,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,18 +33,18 @@\n         break;\r\n       }\r\n       // console.log('+');\r\n       string += '+\\n';\r\n-      console.log(stack);\r\n+      // console.log(stack);\r\n     }\r\n     // if (stop) {\r\n     //   console.log('NO');\r\n     //   return;\r\n     // }\r\n     result.push(stack.pop());\r\n     // console.log('-');\r\n     string += '-\\n';\r\n-    // console.log(result);\r\n+    console.log(result);\r\n     // if (max < number) max = number;\r\n   }\r\n   console.log(string);\r\n   return;\r\n"
+                },
+                {
+                    "date": 1638964800485,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,20 +33,20 @@\n         break;\r\n       }\r\n       // console.log('+');\r\n       string += '+\\n';\r\n-      // console.log(stack);\r\n+      console.log(stack);\r\n     }\r\n     // if (stop) {\r\n     //   console.log('NO');\r\n     //   return;\r\n     // }\r\n     result.push(stack.pop());\r\n     // console.log('-');\r\n     string += '-\\n';\r\n-    console.log(result);\r\n+    // console.log(result);\r\n     // if (max < number) max = number;\r\n   }\r\n-  console.log(string);\r\n+  // console.log(string);\r\n   return;\r\n };\r\n answer();\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638964837829,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,9 +42,9 @@\n     // }\r\n     result.push(stack.pop());\r\n     // console.log('-');\r\n     string += '-\\n';\r\n-    // console.log(result);\r\n+    console.log(result);\r\n     // if (max < number) max = number;\r\n   }\r\n   // console.log(string);\r\n   return;\r\n"
+                },
+                {
+                    "date": 1638964927139,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,8 +27,9 @@\n     const number = input[i];\r\n     while (stack[stack.length - 1] !== number) {\r\n       stack.push(max);\r\n       max++;\r\n+      console.log('max', max);\r\n       if (max > length) {\r\n         stop = true;\r\n         break;\r\n       }\r\n"
+                },
+                {
+                    "date": 1638964943856,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,18 +34,18 @@\n         break;\r\n       }\r\n       // console.log('+');\r\n       string += '+\\n';\r\n-      console.log(stack);\r\n+      // console.log(stack);\r\n     }\r\n     // if (stop) {\r\n     //   console.log('NO');\r\n     //   return;\r\n     // }\r\n     result.push(stack.pop());\r\n     // console.log('-');\r\n     string += '-\\n';\r\n-    console.log(result);\r\n+    // console.log(result);\r\n     // if (max < number) max = number;\r\n   }\r\n   // console.log(string);\r\n   return;\r\n"
+                },
+                {
+                    "date": 1638964953998,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n     while (stack[stack.length - 1] !== number) {\r\n       stack.push(max);\r\n       max++;\r\n       console.log('max', max);\r\n-      if (max > length) {\r\n+      if (max > length + 1) {\r\n         stop = true;\r\n         break;\r\n       }\r\n       // console.log('+');\r\n"
+                },
+                {
+                    "date": 1638964982675,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,16 +27,16 @@\n     const number = input[i];\r\n     while (stack[stack.length - 1] !== number) {\r\n       stack.push(max);\r\n       max++;\r\n-      console.log('max', max);\r\n+      // console.log('max', max);\r\n       if (max > length + 1) {\r\n         stop = true;\r\n         break;\r\n       }\r\n       // console.log('+');\r\n       string += '+\\n';\r\n-      // console.log(stack);\r\n+      console.log(stack);\r\n     }\r\n     // if (stop) {\r\n     //   console.log('NO');\r\n     //   return;\r\n@@ -46,8 +46,8 @@\n     string += '-\\n';\r\n     // console.log(result);\r\n     // if (max < number) max = number;\r\n   }\r\n-  // console.log(string);\r\n+  console.log(string);\r\n   return;\r\n };\r\n answer();\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638965019305,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,14 +34,14 @@\n         break;\r\n       }\r\n       // console.log('+');\r\n       string += '+\\n';\r\n-      console.log(stack);\r\n+      // console.log(stack);\r\n     }\r\n-    // if (stop) {\r\n-    //   console.log('NO');\r\n-    //   return;\r\n-    // }\r\n+    if (stop) {\r\n+      console.log('NO');\r\n+      return;\r\n+    }\r\n     result.push(stack.pop());\r\n     // console.log('-');\r\n     string += '-\\n';\r\n     // console.log(result);\r\n"
+                },
+                {
+                    "date": 1638965050932,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,16 +1,13 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin')\r\n-  : `8\r\n-4\r\n+  : `5\r\n+1\r\n+2\r\n+5\r\n 3\r\n-6\r\n-8\r\n-7\r\n-5\r\n-2\r\n-1`\r\n+4`\r\n ).split('\\n').map(Number);\r\n \r\n const length = stdin[0];\r\n stdin.shift();\r\n"
+                },
+                {
+                    "date": 1638965257077,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n-  ? fs.readFileSync('/dev/stdin')\r\n+  ? fs.readFileSync('/dev/stdin').toString()\r\n   : `5\r\n 1\r\n 2\r\n 5\r\n"
+                }
+            ],
+            "date": 1638958847952,
+            "name": "Commit-0",
+            "content": "const fs = require('fs');"
+        }
+    ]
+}

@@ -1,0 +1,154 @@
+{
+    "sourceFile": "항해99/문제/chap2/10773.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 34,
+            "patches": [
+                {
+                    "date": 1638951164096,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1638951174927,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,9 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n-  : ``\r\n+  : `4\r\n+  3\r\n+  0\r\n+  4\r\n+  0`\r\n ).split('\\n');\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638951209148,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,10 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n   : `4\r\n-  3\r\n-  0\r\n-  4\r\n-  0`\r\n-).split('\\n');\n\\ No newline at end of file\n+3\r\n+0\r\n+4\r\n+0`\r\n+).split('\\n');\r\n+console.log(stdin);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638951242766,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,5 +6,6 @@\n 0\r\n 4\r\n 0`\r\n ).split('\\n');\r\n-console.log(stdin);\n\\ No newline at end of file\n+\r\n+const stack = []''\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638951266728,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,5 +7,8 @@\n 4\r\n 0`\r\n ).split('\\n');\r\n \r\n-const stack = []''\n\\ No newline at end of file\n+const input = stdin.map(Number);\r\n+const stack = [];\r\n+\r\n+for ()\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638951282732,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,7 +8,8 @@\n 0`\r\n ).split('\\n');\r\n \r\n const input = stdin.map(Number);\r\n-const stack = [];\r\n+console.log(input);\r\n+// const stack = [];\r\n\\ No newline at end of file\n \r\n-for ()\n+// for ()\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638951350250,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,7 +9,11 @@\n ).split('\\n');\r\n \r\n const input = stdin.map(Number);\r\n console.log(input);\r\n-// const stack = [];\r\n+const stack = [];\r\n \r\n\\ No newline at end of file\n-// for ()\n+for (let i = 0; i < input.length; i++) {\r\n+  if (input[i] !== 0) {\r\n+    stack.push(input[i]);\r\n+  }\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638951378327,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,6 +14,8 @@\n \r\n for (let i = 0; i < input.length; i++) {\r\n   if (input[i] !== 0) {\r\n     stack.push(input[i]);\r\n+  } else if (input[i] === 0) {\r\n+    stack.pop();\r\n   }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638951426258,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,13 +9,16 @@\n ).split('\\n');\r\n \r\n const input = stdin.map(Number);\r\n console.log(input);\r\n-const stack = [];\r\n \r\n-for (let i = 0; i < input.length; i++) {\r\n-  if (input[i] !== 0) {\r\n-    stack.push(input[i]);\r\n-  } else if (input[i] === 0) {\r\n-    stack.pop();\r\n+const answer = () => {\r\n+  const stack = [];\r\n\\ No newline at end of file\n+  for (let i = 0; i < input.length; i++) {\r\n+    if (input[i] !== 0) {\r\n+      stack.push(input[i]);\r\n+    } else if (input[i] === 0) {\r\n+      stack.pop();\r\n+    }\r\n   }\r\n-}\n+\r\n+};\r\n"
+                },
+                {
+                    "date": 1638951432268,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,6 +19,6 @@\n     } else if (input[i] === 0) {\r\n       stack.pop();\r\n     }\r\n   }\r\n-\r\n-};\n\\ No newline at end of file\n+  \r\n+};\r\n"
+                },
+                {
+                    "date": 1638951517908,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,6 +19,7 @@\n     } else if (input[i] === 0) {\r\n       stack.pop();\r\n     }\r\n   }\r\n-  \r\n+\r\n+  stack.reduce((sum, initialValue), 0)\r\n };\r\n"
+                },
+                {
+                    "date": 1638951542439,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,6 +20,6 @@\n       stack.pop();\r\n     }\r\n   }\r\n \r\n-  stack.reduce((sum, initialValue), 0)\r\n+  stack.reduce((sum, initialValue) => sum + initialValue, 0)\r\n };\r\n"
+                },
+                {
+                    "date": 1638951554599,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,6 +20,6 @@\n       stack.pop();\r\n     }\r\n   }\r\n \r\n-  stack.reduce((sum, initialValue) => sum + initialValue, 0)\r\n+  stack.reduce((sum, currentValue) => sum + currentValue, 0)\r\n };\r\n"
+                },
+                {
+                    "date": 1638951563602,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,6 +20,7 @@\n       stack.pop();\r\n     }\r\n   }\r\n \r\n-  stack.reduce((sum, currentValue) => sum + currentValue, 0)\r\n+  stack.reduce((sum, currentValue) => sum + currentValue, 0);\r\n+  console.log()\r\n };\r\n"
+                },
+                {
+                    "date": 1638951577879,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,7 +20,7 @@\n       stack.pop();\r\n     }\r\n   }\r\n \r\n-  stack.reduce((sum, currentValue) => sum + currentValue, 0);\r\n-  console.log()\r\n+  const result = stack.reduce((sum, currentValue) => sum + currentValue, 0);\r\n+  console.log(result);\r\n };\r\n"
+                },
+                {
+                    "date": 1638951590617,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,4 +23,5 @@\n \r\n   const result = stack.reduce((sum, currentValue) => sum + currentValue, 0);\r\n   console.log(result);\r\n };\r\n+answer();\r\n"
+                },
+                {
+                    "date": 1638951606417,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,18 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n-  : `4\r\n+  : `10\r\n+1\r\n 3\r\n+5\r\n+4\r\n 0\r\n-4\r\n-0`\r\n+0\r\n+7\r\n+0\r\n+0\r\n+6`\r\n ).split('\\n');\r\n \r\n const input = stdin.map(Number);\r\n console.log(input);\r\n"
+                },
+                {
+                    "date": 1638951651891,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n console.log(input);\r\n \r\n const answer = () => {\r\n   const stack = [];\r\n-  for (let i = 0; i < input.length; i++) {\r\n+  for (let i = 1; i < input.length; i++) {\r\n     if (input[i] !== 0) {\r\n       stack.push(input[i]);\r\n     } else if (input[i] === 0) {\r\n       stack.pop();\r\n"
+                },
+                {
+                    "date": 1638951752354,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,18 +1,12 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n-  : `10\r\n-1\r\n-3\r\n-5\r\n-4\r\n-0\r\n-0\r\n-7\r\n-0\r\n-0\r\n-6`\r\n+  : `4\r\n+  3\r\n+  0\r\n+  4\r\n+  0`\r\n ).split('\\n');\r\n \r\n const input = stdin.map(Number);\r\n console.log(input);\r\n"
+                },
+                {
+                    "date": 1638951757648,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,12 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n   : `4\r\n-  3\r\n-  0\r\n-  4\r\n-  0`\r\n+3\r\n+0\r\n+4\r\n+0`\r\n ).split('\\n');\r\n \r\n const input = stdin.map(Number);\r\n console.log(input);\r\n"
+                },
+                {
+                    "date": 1638969804246,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,16 +12,20 @@\n console.log(input);\r\n \r\n const answer = () => {\r\n   const stack = [];\r\n+  let sum = 0;\r\n   for (let i = 1; i < input.length; i++) {\r\n     if (input[i] !== 0) {\r\n       stack.push(input[i]);\r\n     } else if (input[i] === 0) {\r\n       stack.pop();\r\n     }\r\n   }\r\n \r\n-  const result = stack.reduce((sum, currentValue) => sum + currentValue, 0);\r\n+  // const result = stack.reduce((sum, currentValue) => sum + currentValue, 0);\r\n+  for (let j = 0; j < stack.length; j++) {\r\n+    sum += stack[j];\r\n+  }\r\n   console.log(result);\r\n };\r\n answer();\r\n"
+                },
+                {
+                    "date": 1638969836649,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,18 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n-  : `4\r\n-3\r\n-0\r\n-4\r\n-0`\r\n+  : `10\r\n+  1\r\n+  3\r\n+  5\r\n+  4\r\n+  0\r\n+  0\r\n+  7\r\n+  0\r\n+  0\r\n+  6`\r\n ).split('\\n');\r\n \r\n const input = stdin.map(Number);\r\n console.log(input);\r\n@@ -25,7 +31,7 @@\n   // const result = stack.reduce((sum, currentValue) => sum + currentValue, 0);\r\n   for (let j = 0; j < stack.length; j++) {\r\n     sum += stack[j];\r\n   }\r\n-  console.log(result);\r\n+  console.log(sum);\r\n };\r\n answer();\r\n"
+                },
+                {
+                    "date": 1638969846159,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,22 +1,22 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n   : `10\r\n-  1\r\n-  3\r\n-  5\r\n-  4\r\n-  0\r\n-  0\r\n-  7\r\n-  0\r\n-  0\r\n-  6`\r\n+1\r\n+3\r\n+5\r\n+4\r\n+0\r\n+0\r\n+7\r\n+0\r\n+0\r\n+6`\r\n ).split('\\n');\r\n \r\n const input = stdin.map(Number);\r\n-console.log(input);\r\n+// console.log(input);\r\n \r\n const answer = () => {\r\n   const stack = [];\r\n   let sum = 0;\r\n"
+                },
+                {
+                    "date": 1638969972042,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n     } else if (input[i] === 0) {\r\n       stack.pop();\r\n     }\r\n   }\r\n-\r\n+  console.log('result', stack);\r\n   // const result = stack.reduce((sum, currentValue) => sum + currentValue, 0);\r\n   for (let j = 0; j < stack.length; j++) {\r\n     sum += stack[j];\r\n   }\r\n"
+                },
+                {
+                    "date": 1638970071571,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,6 +32,7 @@\n   for (let j = 0; j < stack.length; j++) {\r\n     sum += stack[j];\r\n   }\r\n   console.log(sum);\r\n+  return;\r\n };\r\n answer();\r\n"
+                },
+                {
+                    "date": 1638970132368,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,8 +28,12 @@\n     }\r\n   }\r\n   console.log('result', stack);\r\n   // const result = stack.reduce((sum, currentValue) => sum + currentValue, 0);\r\n+  if (stack.length === 0) {\r\n+    console.log(0);\r\n+    return;\r\n+  }\r\n   for (let j = 0; j < stack.length; j++) {\r\n     sum += stack[j];\r\n   }\r\n   console.log(sum);\r\n"
+                },
+                {
+                    "date": 1638970143967,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n     } else if (input[i] === 0) {\r\n       stack.pop();\r\n     }\r\n   }\r\n-  console.log('result', stack);\r\n+  // console.log('result', stack);\r\n   // const result = stack.reduce((sum, currentValue) => sum + currentValue, 0);\r\n   if (stack.length === 0) {\r\n     console.log(0);\r\n     return;\r\n"
+                },
+                {
+                    "date": 1638970168581,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,18 +1,12 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n-  : `10\r\n-1\r\n+  : `4\r\n 3\r\n-5\r\n+0\r\n 4\r\n-0\r\n-0\r\n-7\r\n-0\r\n-0\r\n-6`\r\n+0`\r\n ).split('\\n');\r\n \r\n const input = stdin.map(Number);\r\n // console.log(input);\r\n"
+                },
+                {
+                    "date": 1638970488349,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n \r\n const answer = () => {\r\n   const stack = [];\r\n   let sum = 0;\r\n-  for (let i = 1; i < input.length; i++) {\r\n+  for (let i = 1; i < input.length - 1; i++) {\r\n     if (input[i] !== 0) {\r\n       stack.push(input[i]);\r\n     } else if (input[i] === 0) {\r\n       stack.pop();\r\n"
+                },
+                {
+                    "date": 1638970537174,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n \r\n const answer = () => {\r\n   const stack = [];\r\n   let sum = 0;\r\n-  for (let i = 1; i < input.length - 1; i++) {\r\n+  for (let i = 1; i < input.length; i++) {\r\n     if (input[i] !== 0) {\r\n       stack.push(input[i]);\r\n     } else if (input[i] === 0) {\r\n       stack.pop();\r\n"
+                },
+                {
+                    "date": 1638970804766,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n 0`\r\n ).split('\\n');\r\n \r\n const input = stdin.map(Number);\r\n-// console.log(input);\r\n+console.log(input);\r\n \r\n const answer = () => {\r\n   const stack = [];\r\n   let sum = 0;\r\n@@ -22,12 +22,12 @@\n     }\r\n   }\r\n   // console.log('result', stack);\r\n   // const result = stack.reduce((sum, currentValue) => sum + currentValue, 0);\r\n-  if (stack.length === 0) {\r\n-    console.log(0);\r\n-    return;\r\n-  }\r\n+  // if (stack.length === 0) {\r\n+  //   console.log(0);\r\n+  //   return;\r\n+  // }\r\n   for (let j = 0; j < stack.length; j++) {\r\n     sum += stack[j];\r\n   }\r\n   console.log(sum);\r\n"
+                },
+                {
+                    "date": 1638970822206,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n     } else if (input[i] === 0) {\r\n       stack.pop();\r\n     }\r\n   }\r\n-  // console.log('result', stack);\r\n+  console.log('result', stack);\r\n   // const result = stack.reduce((sum, currentValue) => sum + currentValue, 0);\r\n   // if (stack.length === 0) {\r\n   //   console.log(0);\r\n   //   return;\r\n"
+                },
+                {
+                    "date": 1638970840349,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n 0`\r\n ).split('\\n');\r\n \r\n const input = stdin.map(Number);\r\n-console.log(input);\r\n+// console.log(input);\r\n \r\n const answer = () => {\r\n   const stack = [];\r\n   let sum = 0;\r\n@@ -20,9 +20,9 @@\n     } else if (input[i] === 0) {\r\n       stack.pop();\r\n     }\r\n   }\r\n-  console.log('result', stack);\r\n+  // console.log('result', stack);\r\n   // const result = stack.reduce((sum, currentValue) => sum + currentValue, 0);\r\n   // if (stack.length === 0) {\r\n   //   console.log(0);\r\n   //   return;\r\n"
+                },
+                {
+                    "date": 1638970985124,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,10 +10,33 @@\n \r\n const input = stdin.map(Number);\r\n // console.log(input);\r\n \r\n-const answer = () => {\r\n-  const stack = [];\r\n+// const answer = () => {\r\n+//   const stack = [];\r\n+//   let sum = 0;\r\n+//   for (let i = 1; i < input.length; i++) {\r\n+//     if (input[i] !== 0) {\r\n+//       stack.push(input[i]);\r\n+//     } else if (input[i] === 0) {\r\n+//       stack.pop();\r\n+//     }\r\n+//   }\r\n+//   // console.log('result', stack);\r\n+//   // const result = stack.reduce((sum, currentValue) => sum + currentValue, 0);\r\n+//   // if (stack.length === 0) {\r\n+//   //   console.log(0);\r\n+//   //   return;\r\n+//   // }\r\n+//   for (let j = 0; j < stack.length; j++) {\r\n+//     sum += stack[j];\r\n+//   }\r\n+//   console.log(sum);\r\n+//   return;\r\n+// };\r\n+// answer();\r\n+\r\n+const stack = [];\r\n   let sum = 0;\r\n   for (let i = 1; i < input.length; i++) {\r\n     if (input[i] !== 0) {\r\n       stack.push(input[i]);\r\n@@ -29,8 +52,5 @@\n   // }\r\n   for (let j = 0; j < stack.length; j++) {\r\n     sum += stack[j];\r\n   }\r\n-  console.log(sum);\r\n-  return;\r\n-};\r\n-answer();\r\n+  console.log(sum);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638971004546,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,22 +35,22 @@\n // };\r\n // answer();\r\n \r\n const stack = [];\r\n-  let sum = 0;\r\n-  for (let i = 1; i < input.length; i++) {\r\n-    if (input[i] !== 0) {\r\n-      stack.push(input[i]);\r\n-    } else if (input[i] === 0) {\r\n-      stack.pop();\r\n-    }\r\n+let sum = 0;\r\n+for (let i = 1; i < input.length; i++) {\r\n+  if (input[i] !== 0) {\r\n+    stack.push(input[i]);\r\n+  } else if (input[i] === 0) {\r\n+    stack.pop();\r\n   }\r\n-  // console.log('result', stack);\r\n-  // const result = stack.reduce((sum, currentValue) => sum + currentValue, 0);\r\n-  // if (stack.length === 0) {\r\n-  //   console.log(0);\r\n\\ No newline at end of file\n-  //   return;\r\n-  // }\r\n-  for (let j = 0; j < stack.length; j++) {\r\n-    sum += stack[j];\r\n-  }\r\n-  console.log(sum);\n+}\r\n+// console.log('result', stack);\r\n+// const result = stack.reduce((sum, currentValue) => sum + currentValue, 0);\r\n+// if (stack.length === 0) {\r\n+//   console.log(0);\r\n+//   return;\r\n+// }\r\n+for (let j = 0; j < stack.length; j++) {\r\n+  sum += stack[j];\r\n+}\r\n+console.log(sum);\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1638951164096,
+            "name": "Commit-0",
+            "content": "const fs = require('fs');\r\nconst stdin = (process.platform === 'linux'\r\n  ? fs.readFileSync('/dev/stdin').toString()\r\n  : ``\r\n).split('\\n');"
+        }
+    ]
+}
