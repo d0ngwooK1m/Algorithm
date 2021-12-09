@@ -1,0 +1,182 @@
+{
+    "sourceFile": "항해99/문제/chap2/1021.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 41,
+            "patches": [
+                {
+                    "date": 1639035578059,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1639035599448,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n-  : ``\r\n-)\n\\ No newline at end of file\n+  : `10 3\r\n+1 2 3`\r\n+).split('\\n');\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639035607638,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,5 +2,6 @@\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n   : `10 3\r\n 1 2 3`\r\n-).split('\\n');\n\\ No newline at end of file\n+).split('\\n');\r\n+console.log(stdin);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639035625674,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,5 +3,5 @@\n   ? fs.readFileSync('/dev/stdin').toString()\r\n   : `10 3\r\n 1 2 3`\r\n ).split('\\n');\r\n-console.log(stdin);\n\\ No newline at end of file\n+console.log(stdin);\r\n"
+                },
+                {
+                    "date": 1639035702092,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,4 +4,5 @@\n   : `10 3\r\n 1 2 3`\r\n ).split('\\n');\r\n console.log(stdin);\r\n+const firstArr = stdin[0].split(' ').map(Number);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639035719617,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,5 +4,6 @@\n   : `10 3\r\n 1 2 3`\r\n ).split('\\n');\r\n console.log(stdin);\r\n-const firstArr = stdin[0].split(' ').map(Number);\n\\ No newline at end of file\n+const firstArr = stdin[0].split(' ').map(Number);\r\n+const secondArr = stdin[1].split(' ').map(Number);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639035726059,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,5 +5,6 @@\n 1 2 3`\r\n ).split('\\n');\r\n console.log(stdin);\r\n const firstArr = stdin[0].split(' ').map(Number);\r\n-const secondArr = stdin[1].split(' ').map(Number);\n\\ No newline at end of file\n+const secondArr = stdin[1].split(' ').map(Number);\r\n+console.log(firstArr, secondArr);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639035779332,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,5 +6,6 @@\n ).split('\\n');\r\n console.log(stdin);\r\n const firstArr = stdin[0].split(' ').map(Number);\r\n const secondArr = stdin[1].split(' ').map(Number);\r\n-console.log(firstArr, secondArr);\n\\ No newline at end of file\n+const fullNum = firstArr[0];\r\n+const targetNum = firstArr[1];\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639035800770,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,7 +5,7 @@\n 1 2 3`\r\n ).split('\\n');\r\n console.log(stdin);\r\n const firstArr = stdin[0].split(' ').map(Number);\r\n-const secondArr = stdin[1].split(' ').map(Number);\r\n+const targeArr = stdin[1].split(' ').map(Number);\r\n const fullNum = firstArr[0];\r\n\\ No newline at end of file\n-const targetNum = firstArr[1];\n+const targetNum = firstArr[1];\r\n"
+                },
+                {
+                    "date": 1639035837223,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,7 +5,9 @@\n 1 2 3`\r\n ).split('\\n');\r\n console.log(stdin);\r\n const firstArr = stdin[0].split(' ').map(Number);\r\n-const targeArr = stdin[1].split(' ').map(Number);\r\n+const targetArr = stdin[1].split(' ').map(Number);\r\n const fullNum = firstArr[0];\r\n\\ No newline at end of file\n-const targetNum = firstArr[1];\n+const targetNum = firstArr[1];\r\n+\r\n+const answer = () => {}\r\n"
+                },
+                {
+                    "date": 1639036001028,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,13 @@\n ).split('\\n');\r\n console.log(stdin);\r\n const firstArr = stdin[0].split(' ').map(Number);\r\n const targetArr = stdin[1].split(' ').map(Number);\r\n+const answer = [];\r\n const fullNum = firstArr[0];\r\n const targetNum = firstArr[1];\r\n \r\n\\ No newline at end of file\n-const answer = () => {}\n+const answer = () => {\r\n+  for (let i = 0; i < targetArr.length;) {\r\n+    if (targetArr)\r\n+  }\r\n+};\r\n"
+                },
+                {
+                    "date": 1639036013994,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,10 +9,11 @@\n const targetArr = stdin[1].split(' ').map(Number);\r\n const answer = [];\r\n const fullNum = firstArr[0];\r\n const targetNum = firstArr[1];\r\n+let cnt = 0;\r\n \r\n const answer = () => {\r\n   for (let i = 0; i < targetArr.length;) {\r\n     if (targetArr)\r\n   }\r\n\\ No newline at end of file\n-};\n+};\r\n"
+                },
+                {
+                    "date": 1639036133716,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,7 +13,7 @@\n let cnt = 0;\r\n \r\n const answer = () => {\r\n   for (let i = 0; i < targetArr.length;) {\r\n-    if (targetArr)\r\n+    if (targetArr[i] === answer[i]) i++\r\n   }\r\n\\ No newline at end of file\n-};\n+};\r\n"
+                },
+                {
+                    "date": 1639036225082,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,12 +8,15 @@\n const firstArr = stdin[0].split(' ').map(Number);\r\n const targetArr = stdin[1].split(' ').map(Number);\r\n const answer = [];\r\n const fullNum = firstArr[0];\r\n+const emptyArr = Array(fullNum).fill(0);\r\n+const fullArr = emptyArr((val, idx) => val = idx + 1);\r\n const targetNum = firstArr[1];\r\n let cnt = 0;\r\n \r\n const answer = () => {\r\n   for (let i = 0; i < targetArr.length;) {\r\n+\r\n\\ No newline at end of file\n     if (targetArr[i] === answer[i]) i++\r\n   }\r\n-};\n+};\r\n"
+                },
+                {
+                    "date": 1639036246343,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,13 +10,14 @@\n const answer = [];\r\n const fullNum = firstArr[0];\r\n const emptyArr = Array(fullNum).fill(0);\r\n const fullArr = emptyArr((val, idx) => val = idx + 1);\r\n+console.log(fullArr);\r\n const targetNum = firstArr[1];\r\n let cnt = 0;\r\n \r\n const answer = () => {\r\n   for (let i = 0; i < targetArr.length;) {\r\n \r\n     if (targetArr[i] === answer[i]) i++\r\n   }\r\n\\ No newline at end of file\n-};\n+};\r\n"
+                },
+                {
+                    "date": 1639036257553,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,10 +14,10 @@\n console.log(fullArr);\r\n const targetNum = firstArr[1];\r\n let cnt = 0;\r\n \r\n-const answer = () => {\r\n-  for (let i = 0; i < targetArr.length;) {\r\n+// const answer = () => {\r\n+//   for (let i = 0; i < targetArr.length;) {\r\n \r\n-    if (targetArr[i] === answer[i]) i++\r\n\\ No newline at end of file\n-  }\r\n-};\n+//     if (targetArr[i] === answer[i]) i++\r\n+//   }\r\n+// };\r\n"
+                },
+                {
+                    "date": 1639047819814,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n const targetArr = stdin[1].split(' ').map(Number);\r\n const answer = [];\r\n const fullNum = firstArr[0];\r\n const emptyArr = Array(fullNum).fill(0);\r\n-const fullArr = emptyArr((val, idx) => val = idx + 1);\r\n+const fullArr = emptyArr.map((val, idx) => val = idx + 1);\r\n console.log(fullArr);\r\n const targetNum = firstArr[1];\r\n let cnt = 0;\r\n \r\n"
+                },
+                {
+                    "date": 1639048667008,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,10 +14,10 @@\n console.log(fullArr);\r\n const targetNum = firstArr[1];\r\n let cnt = 0;\r\n \r\n-// const answer = () => {\r\n-//   for (let i = 0; i < targetArr.length;) {\r\n+const answer = () => {\r\n+  for (let i = 0; i < targetArr.length;) {\r\n \r\n-//     if (targetArr[i] === answer[i]) i++\r\n-//   }\r\n-// };\r\n+    if (targetArr[i] === answer[i]) i++\r\n+  }\r\n+};\r\n"
+                },
+                {
+                    "date": 1639048735808,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,12 @@\n const targetNum = firstArr[1];\r\n let cnt = 0;\r\n \r\n const answer = () => {\r\n+  const right = () => {\r\n+    fullArr.push(fullArr.shift());\r\n+  }\r\n   for (let i = 0; i < targetArr.length;) {\r\n-\r\n+    \r\n     if (targetArr[i] === answer[i]) i++\r\n   }\r\n };\r\n"
+                },
+                {
+                    "date": 1639048742359,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,8 +17,9 @@\n \r\n const answer = () => {\r\n   const right = () => {\r\n     fullArr.push(fullArr.shift());\r\n+    cnt++;\r\n   }\r\n   for (let i = 0; i < targetArr.length;) {\r\n     \r\n     if (targetArr[i] === answer[i]) i++\r\n"
+                },
+                {
+                    "date": 1639048847694,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,13 +15,19 @@\n const targetNum = firstArr[1];\r\n let cnt = 0;\r\n \r\n const answer = () => {\r\n+  const left = () => {\r\n+    fullArr.unshift(fullArr.pop());\r\n+    cnt++;\r\n+  }\r\n   const right = () => {\r\n     fullArr.push(fullArr.shift());\r\n     cnt++;\r\n   }\r\n   for (let i = 0; i < targetArr.length;) {\r\n-    \r\n+    while (targetArr[i] !== fullArr[0]) {\r\n+\r\n+    }\r\n     if (targetArr[i] === answer[i]) i++\r\n   }\r\n };\r\n"
+                },
+                {
+                    "date": 1639048870585,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n     cnt++;\r\n   }\r\n   for (let i = 0; i < targetArr.length;) {\r\n     while (targetArr[i] !== fullArr[0]) {\r\n-\r\n+      if ()\r\n     }\r\n     if (targetArr[i] === answer[i]) i++\r\n   }\r\n };\r\n"
+                },
+                {
+                    "date": 1639048936206,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,12 @@\n     cnt++;\r\n   }\r\n   for (let i = 0; i < targetArr.length;) {\r\n     while (targetArr[i] !== fullArr[0]) {\r\n-      if ()\r\n+      if () {\r\n+        \r\n+      }\r\n     }\r\n+    answer.push(fullArr.pop());\r\n     if (targetArr[i] === answer[i]) i++\r\n   }\r\n };\r\n"
+                },
+                {
+                    "date": 1639049012301,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,4 +33,6 @@\n     answer.push(fullArr.pop());\r\n     if (targetArr[i] === answer[i]) i++\r\n   }\r\n };\r\n+answer();\r\n+console.log(cnt);\r\n"
+                },
+                {
+                    "date": 1639049395068,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,10 +25,10 @@\n     cnt++;\r\n   }\r\n   for (let i = 0; i < targetArr.length;) {\r\n     while (targetArr[i] !== fullArr[0]) {\r\n-      if () {\r\n-        \r\n+      if (fullArr.indexOf(targetArr[i]) < fullArr.length / 2) {\r\n+\r\n       }\r\n     }\r\n     answer.push(fullArr.pop());\r\n     if (targetArr[i] === answer[i]) i++\r\n"
+                },
+                {
+                    "date": 1639049421915,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,11 @@\n   }\r\n   for (let i = 0; i < targetArr.length;) {\r\n     while (targetArr[i] !== fullArr[0]) {\r\n       if (fullArr.indexOf(targetArr[i]) < fullArr.length / 2) {\r\n-\r\n+        right();\r\n+      } else {\r\n+        left();\r\n       }\r\n     }\r\n     answer.push(fullArr.pop());\r\n     if (targetArr[i] === answer[i]) i++\r\n"
+                },
+                {
+                    "date": 1639049454503,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n console.log(fullArr);\r\n const targetNum = firstArr[1];\r\n let cnt = 0;\r\n \r\n-const answer = () => {\r\n+const solution = () => {\r\n   const left = () => {\r\n     fullArr.unshift(fullArr.pop());\r\n     cnt++;\r\n   }\r\n@@ -35,6 +35,6 @@\n     answer.push(fullArr.pop());\r\n     if (targetArr[i] === answer[i]) i++\r\n   }\r\n };\r\n-answer();\r\n+solution();\r\n console.log(cnt);\r\n"
+                },
+                {
+                    "date": 1639049483052,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,7 +34,8 @@\n     }\r\n     answer.push(fullArr.pop());\r\n     if (targetArr[i] === answer[i]) i++\r\n   }\r\n+  console.log(fullArr);\r\n };\r\n solution();\r\n console.log(cnt);\r\n"
+                },
+                {
+                    "date": 1639049521255,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,12 +11,13 @@\n const fullNum = firstArr[0];\r\n const emptyArr = Array(fullNum).fill(0);\r\n const fullArr = emptyArr.map((val, idx) => val = idx + 1);\r\n console.log(fullArr);\r\n-const targetNum = firstArr[1];\r\n-let cnt = 0;\r\n+// const targetNum = firstArr[1];\r\n \r\n+\r\n const solution = () => {\r\n+  let cnt = 0;\r\n   const left = () => {\r\n     fullArr.unshift(fullArr.pop());\r\n     cnt++;\r\n   }\r\n@@ -37,5 +38,5 @@\n   }\r\n   console.log(fullArr);\r\n };\r\n solution();\r\n-console.log(cnt);\r\n+// console.log(cnt);\r\n"
+                },
+                {
+                    "date": 1639049534383,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,8 +35,8 @@\n     }\r\n     answer.push(fullArr.pop());\r\n     if (targetArr[i] === answer[i]) i++\r\n   }\r\n-  console.log(fullArr);\r\n+  console.log(cnt);\r\n };\r\n solution();\r\n // console.log(cnt);\r\n"
+                },
+                {
+                    "date": 1639049558275,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,8 +35,8 @@\n     }\r\n     answer.push(fullArr.pop());\r\n     if (targetArr[i] === answer[i]) i++\r\n   }\r\n-  console.log(cnt);\r\n+  console.log(fullArr);\r\n };\r\n solution();\r\n // console.log(cnt);\r\n"
+                },
+                {
+                    "date": 1639049579801,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,10 @@\n       }\r\n     }\r\n     answer.push(fullArr.pop());\r\n     if (targetArr[i] === answer[i]) i++\r\n+    console.log(fullArr);\r\n   }\r\n-  console.log(fullArr);\r\n+\r\n };\r\n solution();\r\n // console.log(cnt);\r\n"
+                },
+                {
+                    "date": 1639049624570,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,8 +25,9 @@\n     fullArr.push(fullArr.shift());\r\n     cnt++;\r\n   }\r\n   for (let i = 0; i < targetArr.length;) {\r\n+    console.log(targetArr[i]);\r\n     while (targetArr[i] !== fullArr[0]) {\r\n       if (fullArr.indexOf(targetArr[i]) < fullArr.length / 2) {\r\n         right();\r\n       } else {\r\n@@ -34,9 +35,9 @@\n       }\r\n     }\r\n     answer.push(fullArr.pop());\r\n     if (targetArr[i] === answer[i]) i++\r\n-    console.log(fullArr);\r\n+    // console.log(fullArr);\r\n   }\r\n \r\n };\r\n solution();\r\n"
+                },
+                {
+                    "date": 1639049706867,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,17 +25,18 @@\n     fullArr.push(fullArr.shift());\r\n     cnt++;\r\n   }\r\n   for (let i = 0; i < targetArr.length;) {\r\n-    console.log(targetArr[i]);\r\n+    // console.log(targetArr[i]);\r\n     while (targetArr[i] !== fullArr[0]) {\r\n       if (fullArr.indexOf(targetArr[i]) < fullArr.length / 2) {\r\n         right();\r\n       } else {\r\n         left();\r\n       }\r\n     }\r\n     answer.push(fullArr.pop());\r\n+    console.log(targetArr[i], answer[i]);\r\n     if (targetArr[i] === answer[i]) i++\r\n     // console.log(fullArr);\r\n   }\r\n \r\n"
+                },
+                {
+                    "date": 1639049738750,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,9 @@\n         left();\r\n       }\r\n     }\r\n     answer.push(fullArr.pop());\r\n-    console.log(targetArr[i], answer[i]);\r\n+    // console.log(targetArr[i], answer[i]);\r\n     if (targetArr[i] === answer[i]) i++\r\n     // console.log(fullArr);\r\n   }\r\n \r\n"
+                },
+                {
+                    "date": 1639049784666,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n       } else {\r\n         left();\r\n       }\r\n     }\r\n-    answer.push(fullArr.pop());\r\n+    answer.push(fullArr.shift());\r\n     // console.log(targetArr[i], answer[i]);\r\n     if (targetArr[i] === answer[i]) i++\r\n     // console.log(fullArr);\r\n   }\r\n"
+                },
+                {
+                    "date": 1639049796470,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n     }\r\n     answer.push(fullArr.shift());\r\n     // console.log(targetArr[i], answer[i]);\r\n     if (targetArr[i] === answer[i]) i++\r\n-    // console.log(fullArr);\r\n+    console.log(fullArr);\r\n   }\r\n \r\n };\r\n solution();\r\n"
+                },
+                {
+                    "date": 1639049805650,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n     }\r\n     answer.push(fullArr.shift());\r\n     // console.log(targetArr[i], answer[i]);\r\n     if (targetArr[i] === answer[i]) i++\r\n-    console.log(fullArr);\r\n+    console.log(fullArr, answer);\r\n   }\r\n \r\n };\r\n solution();\r\n"
+                },
+                {
+                    "date": 1639049822186,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,10 +36,10 @@\n     }\r\n     answer.push(fullArr.shift());\r\n     // console.log(targetArr[i], answer[i]);\r\n     if (targetArr[i] === answer[i]) i++\r\n-    console.log(fullArr, answer);\r\n+    // console.log(fullArr, answer);\r\n   }\r\n-\r\n+  console.log(cnt);\r\n };\r\n solution();\r\n // console.log(cnt);\r\n"
+                },
+                {
+                    "date": 1639049855018,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,18 +1,18 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n   : `10 3\r\n-1 2 3`\r\n+2 9 5`\r\n ).split('\\n');\r\n-console.log(stdin);\r\n+// console.log(stdin);\r\n const firstArr = stdin[0].split(' ').map(Number);\r\n const targetArr = stdin[1].split(' ').map(Number);\r\n const answer = [];\r\n const fullNum = firstArr[0];\r\n const emptyArr = Array(fullNum).fill(0);\r\n const fullArr = emptyArr.map((val, idx) => val = idx + 1);\r\n-console.log(fullArr);\r\n+// console.log(fullArr);\r\n // const targetNum = firstArr[1];\r\n \r\n \r\n const solution = () => {\r\n"
+                },
+                {
+                    "date": 1639049869496,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n-  : `10 3\r\n-2 9 5`\r\n+  : `32 6\r\n+27 16 30 11 6 23`\r\n ).split('\\n');\r\n // console.log(stdin);\r\n const firstArr = stdin[0].split(' ').map(Number);\r\n const targetArr = stdin[1].split(' ').map(Number);\r\n"
+                },
+                {
+                    "date": 1639049883174,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n-  : `32 6\r\n-27 16 30 11 6 23`\r\n+  : `10 10\r\n+1 6 3 2 7 9 8 4 10 5`\r\n ).split('\\n');\r\n // console.log(stdin);\r\n const firstArr = stdin[0].split(' ').map(Number);\r\n const targetArr = stdin[1].split(' ').map(Number);\r\n"
+                }
+            ],
+            "date": 1639035578059,
+            "name": "Commit-0",
+            "content": "const fs = require('fs');\r\nconst stdin = (process.platform === 'linux'\r\n  ? fs.readFileSync('/dev/stdin').toString()\r\n  : ``\r\n)"
+        }
+    ]
+}

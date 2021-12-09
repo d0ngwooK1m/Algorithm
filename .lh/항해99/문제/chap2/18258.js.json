@@ -1,0 +1,162 @@
+{
+    "sourceFile": "항해99/문제/chap2/18258.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 36,
+            "patches": [
+                {
+                    "date": 1639020108812,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1639020166542,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,5 @@\n-const fs = require('fs');\n\\ No newline at end of file\n+const fs = require('fs');\r\n+const stdin = (process.platform === 'linux'\r\n+  ? fs.readFileSync('/dev/stdin').toString()\r\n+  : ``\r\n+).split('\\n');\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639020193254,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,20 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n-  : ``\r\n+  : `15\r\n+push 1\r\n+push 2\r\n+front\r\n+back\r\n+size\r\n+empty\r\n+pop\r\n+pop\r\n+pop\r\n+size\r\n+empty\r\n+pop\r\n+push 3\r\n+empty\r\n+front`\r\n ).split('\\n');\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639020201120,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,5 +16,7 @@\n pop\r\n push 3\r\n empty\r\n front`\r\n-).split('\\n');\n\\ No newline at end of file\n+).split('\\n');\r\n+\r\n+console.log(stdin)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639020269391,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,5 +18,10 @@\n empty\r\n front`\r\n ).split('\\n');\r\n \r\n-console.log(stdin)\n\\ No newline at end of file\n+const input = (() => {\r\n+  let line = 0;\r\n+  return () => stdin[line++];\r\n+});\r\n+\r\n+let t = input();\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639020278373,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,5 +23,6 @@\n   let line = 0;\r\n   return () => stdin[line++];\r\n });\r\n \r\n-let t = input();\n\\ No newline at end of file\n+let t = input();\r\n+console.log(t);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639020298527,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,5 +24,5 @@\n   return () => stdin[line++];\r\n });\r\n \r\n let t = input();\r\n-console.log(t);\n\\ No newline at end of file\n+console.log(t--);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639020739855,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,8 +21,8 @@\n \r\n const input = (() => {\r\n   let line = 0;\r\n   return () => stdin[line++];\r\n-});\r\n+})();\r\n \r\n let t = input();\r\n console.log(t--);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639020806556,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,5 +24,7 @@\n   return () => stdin[line++];\r\n })();\r\n \r\n let t = input();\r\n-console.log(t--);\n\\ No newline at end of file\n+while (t--) {\r\n+  const [command, numberString] = input().split(' ');\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639020818610,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,5 +26,6 @@\n \r\n let t = input();\r\n while (t--) {\r\n   const [command, numberString] = input().split(' ');\r\n+  console.log(command, numberString);\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639020844754,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,6 +26,6 @@\n \r\n let t = input();\r\n while (t--) {\r\n   const [command, numberString] = input().split(' ');\r\n-  console.log(command, numberString);\r\n+  if\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639021065669,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,7 +25,8 @@\n })();\r\n \r\n let t = input();\r\n while (t--) {\r\n+  const queue = [];\r\n   const [command, numberString] = input().split(' ');\r\n-  if\r\n+  if (command === push)\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639021076394,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,11 +22,11 @@\n const input = (() => {\r\n   let line = 0;\r\n   return () => stdin[line++];\r\n })();\r\n+const queue = [];\r\n \r\n let t = input();\r\n while (t--) {\r\n-  const queue = [];\r\n   const [command, numberString] = input().split(' ');\r\n   if (command === push)\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639021121221,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,6 +27,9 @@\n \r\n let t = input();\r\n while (t--) {\r\n   const [command, numberString] = input().split(' ');\r\n-  if (command === push)\r\n+  if (command === 'push') {\r\n+    const number = Number(numberString);\r\n+    queue.push(number);\r\n+  }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639021243126,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,13 +23,19 @@\n   let line = 0;\r\n   return () => stdin[line++];\r\n })();\r\n const queue = [];\r\n+let answer = '';\r\n \r\n let t = input();\r\n while (t--) {\r\n   const [command, numberString] = input().split(' ');\r\n   if (command === 'push') {\r\n     const number = Number(numberString);\r\n     queue.push(number);\r\n+  } else if (command === 'pop') {\r\n+    if (queue.length !== 0) {\r\n+      const poppedNum = queue.shift();\r\n+      answer += `${poppedNum}\\n`;\r\n+    }\r\n   }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639021258946,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,7 +35,9 @@\n   } else if (command === 'pop') {\r\n     if (queue.length !== 0) {\r\n       const poppedNum = queue.shift();\r\n       answer += `${poppedNum}\\n`;\r\n+    } else {\r\n+      answer += '-1\\n';\r\n     }\r\n   }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639021299890,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,6 +38,8 @@\n       answer += `${poppedNum}\\n`;\r\n     } else {\r\n       answer += '-1\\n';\r\n     }\r\n+  } else if (command === size) {\r\n+    answer += `${queue.length}\\n`;\r\n   }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639021351905,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,6 +40,10 @@\n       answer += '-1\\n';\r\n     }\r\n   } else if (command === size) {\r\n     answer += `${queue.length}\\n`;\r\n+  } else if (command === 'empty') {\r\n+    if (queue.length === 0) {\r\n+      answer += '1\\n';\r\n+    }\r\n   }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639021366631,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,7 +43,9 @@\n     answer += `${queue.length}\\n`;\r\n   } else if (command === 'empty') {\r\n     if (queue.length === 0) {\r\n       answer += '1\\n';\r\n+    } else {\r\n+      answer += '0\\n';\r\n     }\r\n   }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639021486017,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,6 +46,12 @@\n       answer += '1\\n';\r\n     } else {\r\n       answer += '0\\n';\r\n     }\r\n+  } else if (command === 'front') {\r\n+    if (queue.length !== 0) {\r\n+      answer += `${queue[0]}\\n`\r\n+    } else {\r\n+      answer += '-1\\n';\r\n+    }\r\n   }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639021536174,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -52,6 +52,12 @@\n       answer += `${queue[0]}\\n`\r\n     } else {\r\n       answer += '-1\\n';\r\n     }\r\n+  } else if (command === 'back') {\r\n+    if (queue.length !== 0) {\r\n+      answer += `${queue[queue.length - 1]}\\n`\r\n+    } else {\r\n+      answer += '-1\\n';\r\n+    }\r\n   }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639021554533,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,5 +59,7 @@\n     } else {\r\n       answer += '-1\\n';\r\n     }\r\n   }\r\n-}\n\\ No newline at end of file\n+};\r\n+\r\n+console.log(answer);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639021566368,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n       answer += `${poppedNum}\\n`;\r\n     } else {\r\n       answer += '-1\\n';\r\n     }\r\n-  } else if (command === size) {\r\n+  } else if (command === 'size') {\r\n     answer += `${queue.length}\\n`;\r\n   } else if (command === 'empty') {\r\n     if (queue.length === 0) {\r\n       answer += '1\\n';\r\n"
+                },
+                {
+                    "date": 1639021792829,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,25 +41,28 @@\n     }\r\n   } else if (command === 'size') {\r\n     answer += `${queue.length}\\n`;\r\n   } else if (command === 'empty') {\r\n-    if (queue.length === 0) {\r\n-      answer += '1\\n';\r\n-    } else {\r\n-      answer += '0\\n';\r\n-    }\r\n+    // if (queue.length === 0) {\r\n+    //   answer += '1\\n';\r\n+    // } else {\r\n+    //   answer += '0\\n';\r\n+    // }\r\n+    queue.length === 0 ? answer += '1\\n' : answer += '0\\n'\r\n   } else if (command === 'front') {\r\n-    if (queue.length !== 0) {\r\n-      answer += `${queue[0]}\\n`\r\n-    } else {\r\n-      answer += '-1\\n';\r\n-    }\r\n+    // if (queue.length !== 0) {\r\n+    //   answer += `${queue[0]}\\n`\r\n+    // } else {\r\n+    //   answer += '-1\\n';\r\n+    // }\r\n+    queue.length !== 0 ? answer += `${queue[0]}\\n` : answer += '-1\\n'\r\n   } else if (command === 'back') {\r\n-    if (queue.length !== 0) {\r\n-      answer += `${queue[queue.length - 1]}\\n`\r\n-    } else {\r\n-      answer += '-1\\n';\r\n-    }\r\n-  }\r\n+    // if (queue.length !== 0) {\r\n+    //   answer += `${queue[queue.length - 1]}\\n`\r\n+    // } else {\r\n+    //   answer += '-1\\n';\r\n+    // }\r\n+    queue.length !== 0 ? answer += `${queue[queue.length - 1]}\\n` : answer += '-1\\n'\r\n+  };\r\n };\r\n \r\n console.log(answer);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639026674005,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n   let line = 0;\r\n   return () => stdin[line++];\r\n })();\r\n const queue = [];\r\n-let answer = '';\r\n+// let answer = '';\r\n \r\n let t = input();\r\n while (t--) {\r\n   const [command, numberString] = input().split(' ');\r\n@@ -64,5 +64,5 @@\n     queue.length !== 0 ? answer += `${queue[queue.length - 1]}\\n` : answer += '-1\\n'\r\n   };\r\n };\r\n \r\n-console.log(answer);\n\\ No newline at end of file\n+// console.log(answer);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639026747930,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -55,14 +55,15 @@\n     //   answer += '-1\\n';\r\n     // }\r\n     queue.length !== 0 ? answer += `${queue[0]}\\n` : answer += '-1\\n'\r\n   } else if (command === 'back') {\r\n-    // if (queue.length !== 0) {\r\n-    //   answer += `${queue[queue.length - 1]}\\n`\r\n-    // } else {\r\n-    //   answer += '-1\\n';\r\n-    // }\r\n-    queue.length !== 0 ? answer += `${queue[queue.length - 1]}\\n` : answer += '-1\\n'\r\n+    if (queue.length !== 0) {\r\n+      // answer += `${queue[queue.length - 1]}\\n`\r\n+      console.log()\r\n+    } else {\r\n+      answer += '-1\\n';\r\n+    }\r\n+    // queue.length !== 0 ? answer += `${queue[queue.length - 1]}\\n` : answer += '-1\\n'\r\n   };\r\n };\r\n \r\n // console.log(answer);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639029955365,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,11 +57,12 @@\n     queue.length !== 0 ? answer += `${queue[0]}\\n` : answer += '-1\\n'\r\n   } else if (command === 'back') {\r\n     if (queue.length !== 0) {\r\n       // answer += `${queue[queue.length - 1]}\\n`\r\n-      console.log()\r\n+      console.log(queue[queue.length - 1]);\r\n     } else {\r\n-      answer += '-1\\n';\r\n+      // answer += '-1\\n';\r\n+      console.log(-1);\r\n     }\r\n     // queue.length !== 0 ? answer += `${queue[queue.length - 1]}\\n` : answer += '-1\\n'\r\n   };\r\n };\r\n"
+                },
+                {
+                    "date": 1639029983677,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -53,9 +53,9 @@\n     //   answer += `${queue[0]}\\n`\r\n     // } else {\r\n     //   answer += '-1\\n';\r\n     // }\r\n-    queue.length !== 0 ? answer += `${queue[0]}\\n` : answer += '-1\\n'\r\n+    // queue.length !== 0 ? answer += `${queue[0]}\\n` : answer += '-1\\n'\r\n   } else if (command === 'back') {\r\n     if (queue.length !== 0) {\r\n       // answer += `${queue[queue.length - 1]}\\n`\r\n       console.log(queue[queue.length - 1]);\r\n"
+                },
+                {
+                    "date": 1639029997340,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,13 +48,14 @@\n     //   answer += '0\\n';\r\n     // }\r\n     queue.length === 0 ? answer += '1\\n' : answer += '0\\n'\r\n   } else if (command === 'front') {\r\n-    // if (queue.length !== 0) {\r\n-    //   answer += `${queue[0]}\\n`\r\n-    // } else {\r\n-    //   answer += '-1\\n';\r\n-    // }\r\n+    if (queue.length !== 0) {\r\n+      // answer += `${queue[0]}\\n`\r\n+      console.log(queue[0]);\r\n+    } else {\r\n+      answer += '-1\\n';\r\n+    }\r\n     // queue.length !== 0 ? answer += `${queue[0]}\\n` : answer += '-1\\n'\r\n   } else if (command === 'back') {\r\n     if (queue.length !== 0) {\r\n       // answer += `${queue[queue.length - 1]}\\n`\r\n"
+                },
+                {
+                    "date": 1639030007697,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -52,9 +52,10 @@\n     if (queue.length !== 0) {\r\n       // answer += `${queue[0]}\\n`\r\n       console.log(queue[0]);\r\n     } else {\r\n-      answer += '-1\\n';\r\n+      // answer += '-1\\n';\r\n+      console.log(-1);\r\n     }\r\n     // queue.length !== 0 ? answer += `${queue[0]}\\n` : answer += '-1\\n'\r\n   } else if (command === 'back') {\r\n     if (queue.length !== 0) {\r\n"
+                },
+                {
+                    "date": 1639030026672,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,14 +41,15 @@\n     }\r\n   } else if (command === 'size') {\r\n     answer += `${queue.length}\\n`;\r\n   } else if (command === 'empty') {\r\n-    // if (queue.length === 0) {\r\n-    //   answer += '1\\n';\r\n-    // } else {\r\n-    //   answer += '0\\n';\r\n-    // }\r\n-    queue.length === 0 ? answer += '1\\n' : answer += '0\\n'\r\n+    if (queue.length === 0) {\r\n+      // answer += '1\\n';\r\n+      console.log(1);\r\n+    } else {\r\n+      answer += '0\\n';\r\n+    }\r\n+    // queue.length === 0 ? answer += '1\\n' : answer += '0\\n'\r\n   } else if (command === 'front') {\r\n     if (queue.length !== 0) {\r\n       // answer += `${queue[0]}\\n`\r\n       console.log(queue[0]);\r\n"
+                },
+                {
+                    "date": 1639030035151,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,9 +45,10 @@\n     if (queue.length === 0) {\r\n       // answer += '1\\n';\r\n       console.log(1);\r\n     } else {\r\n-      answer += '0\\n';\r\n+      // answer += '0\\n';\r\n+      console.log(0);\r\n     }\r\n     // queue.length === 0 ? answer += '1\\n' : answer += '0\\n'\r\n   } else if (command === 'front') {\r\n     if (queue.length !== 0) {\r\n"
+                },
+                {
+                    "date": 1639030044817,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,10 @@\n     if (queue.length !== 0) {\r\n       const poppedNum = queue.shift();\r\n       answer += `${poppedNum}\\n`;\r\n     } else {\r\n-      answer += '-1\\n';\r\n+      // answer += '-1\\n';\r\n+      console.log(-1);\r\n     }\r\n   } else if (command === 'size') {\r\n     answer += `${queue.length}\\n`;\r\n   } else if (command === 'empty') {\r\n"
+                },
+                {
+                    "date": 1639030059633,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,10 @@\n     queue.push(number);\r\n   } else if (command === 'pop') {\r\n     if (queue.length !== 0) {\r\n       const poppedNum = queue.shift();\r\n-      answer += `${poppedNum}\\n`;\r\n+      // answer += `${poppedNum}\\n`;\r\n+      console.log(poppedNum);\r\n     } else {\r\n       // answer += '-1\\n';\r\n       console.log(-1);\r\n     }\r\n"
+                },
+                {
+                    "date": 1639030426341,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,9 +41,10 @@\n       // answer += '-1\\n';\r\n       console.log(-1);\r\n     }\r\n   } else if (command === 'size') {\r\n-    answer += `${queue.length}\\n`;\r\n+    // answer += `${queue.length}\\n`;\r\n+    console.log(queue.length);\r\n   } else if (command === 'empty') {\r\n     if (queue.length === 0) {\r\n       // answer += '1\\n';\r\n       console.log(1);\r\n"
+                },
+                {
+                    "date": 1639030608781,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,18 +31,20 @@\n   const [command, numberString] = input().split(' ');\r\n   if (command === 'push') {\r\n     const number = Number(numberString);\r\n     queue.push(number);\r\n-  } else if (command === 'pop') {\r\n+  }\r\n+  if (command === 'pop') {\r\n     if (queue.length !== 0) {\r\n       const poppedNum = queue.shift();\r\n       // answer += `${poppedNum}\\n`;\r\n       console.log(poppedNum);\r\n     } else {\r\n       // answer += '-1\\n';\r\n       console.log(-1);\r\n     }\r\n-  } else if (command === 'size') {\r\n+  }\r\n+  if (command === 'size') {\r\n     // answer += `${queue.length}\\n`;\r\n     console.log(queue.length);\r\n   } else if (command === 'empty') {\r\n     if (queue.length === 0) {\r\n@@ -52,18 +54,20 @@\n       // answer += '0\\n';\r\n       console.log(0);\r\n     }\r\n     // queue.length === 0 ? answer += '1\\n' : answer += '0\\n'\r\n-  } else if (command === 'front') {\r\n+  }\r\n+  if (command === 'front') {\r\n     if (queue.length !== 0) {\r\n       // answer += `${queue[0]}\\n`\r\n       console.log(queue[0]);\r\n     } else {\r\n       // answer += '-1\\n';\r\n       console.log(-1);\r\n     }\r\n     // queue.length !== 0 ? answer += `${queue[0]}\\n` : answer += '-1\\n'\r\n-  } else if (command === 'back') {\r\n+  }\r\n+  if (command === 'back') {\r\n     if (queue.length !== 0) {\r\n       // answer += `${queue[queue.length - 1]}\\n`\r\n       console.log(queue[queue.length - 1]);\r\n     } else {\r\n"
+                },
+                {
+                    "date": 1639030995385,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,54 +28,55 @@\n \r\n let t = input();\r\n while (t--) {\r\n   const [command, numberString] = input().split(' ');\r\n-  if (command === 'push') {\r\n-    const number = Number(numberString);\r\n-    queue.push(number);\r\n-  }\r\n-  if (command === 'pop') {\r\n-    if (queue.length !== 0) {\r\n-      const poppedNum = queue.shift();\r\n-      // answer += `${poppedNum}\\n`;\r\n-      console.log(poppedNum);\r\n-    } else {\r\n-      // answer += '-1\\n';\r\n-      console.log(-1);\r\n+  if (numberString === undefined) {\r\n+    if (command === 'pop') {\r\n+      if (queue.length !== 0) {\r\n+        const poppedNum = queue.shift();\r\n+        // answer += `${poppedNum}\\n`;\r\n+        console.log(poppedNum);\r\n+      } else {\r\n+        // answer += '-1\\n';\r\n+        console.log(-1);\r\n+      }\r\n     }\r\n-  }\r\n-  if (command === 'size') {\r\n-    // answer += `${queue.length}\\n`;\r\n-    console.log(queue.length);\r\n-  } else if (command === 'empty') {\r\n-    if (queue.length === 0) {\r\n-      // answer += '1\\n';\r\n-      console.log(1);\r\n-    } else {\r\n-      // answer += '0\\n';\r\n-      console.log(0);\r\n+    if (command === 'size') {\r\n+      // answer += `${queue.length}\\n`;\r\n+      console.log(queue.length);\r\n+    } else if (command === 'empty') {\r\n+      if (queue.length === 0) {\r\n+        // answer += '1\\n';\r\n+        console.log(1);\r\n+      } else {\r\n+        // answer += '0\\n';\r\n+        console.log(0);\r\n+      }\r\n+      // queue.length === 0 ? answer += '1\\n' : answer += '0\\n'\r\n     }\r\n-    // queue.length === 0 ? answer += '1\\n' : answer += '0\\n'\r\n-  }\r\n-  if (command === 'front') {\r\n-    if (queue.length !== 0) {\r\n-      // answer += `${queue[0]}\\n`\r\n-      console.log(queue[0]);\r\n-    } else {\r\n-      // answer += '-1\\n';\r\n-      console.log(-1);\r\n+    if (command === 'front') {\r\n+      if (queue.length !== 0) {\r\n+        // answer += `${queue[0]}\\n`\r\n+        console.log(queue[0]);\r\n+      } else {\r\n+        // answer += '-1\\n';\r\n+        console.log(-1);\r\n+      }\r\n+      // queue.length !== 0 ? answer += `${queue[0]}\\n` : answer += '-1\\n'\r\n     }\r\n-    // queue.length !== 0 ? answer += `${queue[0]}\\n` : answer += '-1\\n'\r\n+    if (command === 'back') {\r\n+      if (queue.length !== 0) {\r\n+        // answer += `${queue[queue.length - 1]}\\n`\r\n+        console.log(queue[queue.length - 1]);\r\n+      } else {\r\n+        // answer += '-1\\n';\r\n+        console.log(-1);\r\n+      }\r\n+      // queue.length !== 0 ? answer += `${queue[queue.length - 1]}\\n` : answer += '-1\\n'\r\n+    };\r\n+  } else {\r\n+    const number = Number(numberString);\r\n+    queue.push(number);\r\n   }\r\n-  if (command === 'back') {\r\n-    if (queue.length !== 0) {\r\n-      // answer += `${queue[queue.length - 1]}\\n`\r\n-      console.log(queue[queue.length - 1]);\r\n-    } else {\r\n-      // answer += '-1\\n';\r\n-      console.log(-1);\r\n-    }\r\n-    // queue.length !== 0 ? answer += `${queue[queue.length - 1]}\\n` : answer += '-1\\n'\r\n-  };\r\n };\r\n \r\n // console.log(answer);\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1639020108812,
+            "name": "Commit-0",
+            "content": "const fs = require('fs');"
+        }
+    ]
+}

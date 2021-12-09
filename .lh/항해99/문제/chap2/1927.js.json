@@ -1,0 +1,118 @@
+{
+    "sourceFile": "항해99/문제/chap2/1927.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 25,
+            "patches": [
+                {
+                    "date": 1639060476472,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1639060804206,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,5 @@\n-const fs = require('fs');\n\\ No newline at end of file\n+const fs = require('fs');\r\n+const stdin = (process.platform === 'linux'\r\n+  ? fs.readFileSync('/dev/stdin').toString()\r\n+  : ``\r\n+).split('\\n');\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639060955513,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,7 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n   : ``\r\n-).split('\\n');\n\\ No newline at end of file\n+).split('\\n');\r\n+\r\n+console.log(stdin);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639060974413,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,16 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n-  : ``\r\n+  : `9\r\n+0\r\n+12345678\r\n+1\r\n+2\r\n+0\r\n+0\r\n+0\r\n+0\r\n+32`\r\n ).split('\\n');\r\n \r\n console.log(stdin);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639061046190,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,6 +11,5 @@\n 0\r\n 0\r\n 32`\r\n ).split('\\n');\r\n-\r\n-console.log(stdin);\n\\ No newline at end of file\n+const heap = ['None'];\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639061081429,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,5 +11,10 @@\n 0\r\n 0\r\n 32`\r\n ).split('\\n');\r\n-const heap = ['None'];\n\\ No newline at end of file\n+const heap = ['None'];\r\n+\r\n+const input = (() => {\r\n+  let line = 0;\r\n+  return () => stdin[line++];\r\n+})();\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639061404679,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,5 +16,6 @@\n \r\n const input = (() => {\r\n   let line = 0;\r\n   return () => stdin[line++];\r\n-})();\n\\ No newline at end of file\n+})();\r\n+\r\n"
+                },
+                {
+                    "date": 1639061518217,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,5 +17,5 @@\n const input = (() => {\r\n   let line = 0;\r\n   return () => stdin[line++];\r\n })();\r\n-\r\n+let answerString = '';\r\n"
+                },
+                {
+                    "date": 1639061554077,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,4 +18,9 @@\n   let line = 0;\r\n   return () => stdin[line++];\r\n })();\r\n let answerString = '';\r\n+\r\n+let t = input();\r\n+while (t--) {\r\n+  const number = Number(input());\r\n+}\r\n"
+                },
+                {
+                    "date": 1639061603483,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,5 +22,10 @@\n \r\n let t = input();\r\n while (t--) {\r\n   const number = Number(input());\r\n+\r\n+  const insert = (val) => {\r\n+    heap.push(val);\r\n+    let currentIdx = heap.length - 1;\r\n+  };\r\n }\r\n"
+                },
+                {
+                    "date": 1639061679119,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,6 +26,12 @@\n \r\n   const insert = (val) => {\r\n     heap.push(val);\r\n     let currentIdx = heap.length - 1;\r\n+    while (currentIdx > 1) {\r\n+      const parentIdx = Math.floor(currentIdx / 2);\r\n+      if (heap[parentIdx] > heap[currentIdx]) {\r\n+        let temp = heap[parentIdx];\r\n+      }\r\n+    }\r\n   };\r\n }\r\n"
+                },
+                {
+                    "date": 1639061712410,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,8 +30,10 @@\n     while (currentIdx > 1) {\r\n       const parentIdx = Math.floor(currentIdx / 2);\r\n       if (heap[parentIdx] > heap[currentIdx]) {\r\n         let temp = heap[parentIdx];\r\n+        heap[parentIdx] = heap[currentIdx];\r\n+        heap[currentIdx] = temp;\r\n       }\r\n     }\r\n   };\r\n }\r\n"
+                },
+                {
+                    "date": 1639061729967,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,8 +32,9 @@\n       if (heap[parentIdx] > heap[currentIdx]) {\r\n         let temp = heap[parentIdx];\r\n         heap[parentIdx] = heap[currentIdx];\r\n         heap[currentIdx] = temp;\r\n+        currentIdx = parentIdx\r\n       }\r\n     }\r\n   };\r\n }\r\n"
+                },
+                {
+                    "date": 1639061744727,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,9 @@\n       if (heap[parentIdx] > heap[currentIdx]) {\r\n         let temp = heap[parentIdx];\r\n         heap[parentIdx] = heap[currentIdx];\r\n         heap[currentIdx] = temp;\r\n-        currentIdx = parentIdx\r\n+        currentIdx = parentIdx;\r\n       }\r\n     }\r\n   };\r\n }\r\n"
+                },
+                {
+                    "date": 1639061754134,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,8 +33,10 @@\n         let temp = heap[parentIdx];\r\n         heap[parentIdx] = heap[currentIdx];\r\n         heap[currentIdx] = temp;\r\n         currentIdx = parentIdx;\r\n+      } else {\r\n+        break;\r\n       }\r\n     }\r\n   };\r\n }\r\n"
+                },
+                {
+                    "date": 1639061762680,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,6 +37,7 @@\n       } else {\r\n         break;\r\n       }\r\n     }\r\n+    return;\r\n   };\r\n }\r\n"
+                },
+                {
+                    "date": 1639061842667,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,5 +39,12 @@\n       }\r\n     }\r\n     return;\r\n   };\r\n+\r\n+  const erase = () => {\r\n+    let temp = heap[1];\r\n+    heap[1] = heap[heap.length - 1];\r\n+    heap[heap.length - 1] = temp;\r\n+    heap.pop();\r\n+  }\r\n }\r\n"
+                },
+                {
+                    "date": 1639061866827,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,7 +44,8 @@\n   const erase = () => {\r\n     let temp = heap[1];\r\n     heap[1] = heap[heap.length - 1];\r\n     heap[heap.length - 1] = temp;\r\n-    heap.pop();\r\n+    const prevMin = heap.pop();\r\n+    let currentIdx = 1;\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1639061929674,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,6 +46,11 @@\n     heap[1] = heap[heap.length - 1];\r\n     heap[heap.length - 1] = temp;\r\n     const prevMin = heap.pop();\r\n     let currentIdx = 1;\r\n+\r\n+    while (currentIdx <= heap.length - 1) {\r\n+      const leftChildIdx = currentIdx * 2;\r\n+      const rightChildIdx = currentIdx * 2 + 1;\r\n+    }\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1639062046674,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,7 +50,12 @@\n \r\n     while (currentIdx <= heap.length - 1) {\r\n       const leftChildIdx = currentIdx * 2;\r\n       const rightChildIdx = currentIdx * 2 + 1;\r\n+      let maxIdx = currentIdx;\r\n+\r\n+      if (leftChildIdx <= heap.length - 1 && heap[leftChildIdx] < heap[maxIdx]) {\r\n+        maxIdx = leftChildIdx;\r\n+      }\r\n     }\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1639062133355,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -55,7 +55,13 @@\n \r\n       if (leftChildIdx <= heap.length - 1 && heap[leftChildIdx] < heap[maxIdx]) {\r\n         maxIdx = leftChildIdx;\r\n       }\r\n+      if (rightChildIdx <= heap.length - 1 && heap[rightChildIdx] < heap[maxIdx]) {\r\n+        maxIdx = rightChildIdx;\r\n+      }\r\n+      if (maxIdx === currentIdx) {\r\n+        break;\r\n+      }\r\n     }\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1639062280043,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,18 +50,22 @@\n \r\n     while (currentIdx <= heap.length - 1) {\r\n       const leftChildIdx = currentIdx * 2;\r\n       const rightChildIdx = currentIdx * 2 + 1;\r\n-      let maxIdx = currentIdx;\r\n+      let minIdx = currentIdx;\r\n \r\n-      if (leftChildIdx <= heap.length - 1 && heap[leftChildIdx] < heap[maxIdx]) {\r\n-        maxIdx = leftChildIdx;\r\n+      if (leftChildIdx <= heap.length - 1 && heap[leftChildIdx] < heap[minIdx]) {\r\n+        minIdx = leftChildIdx;\r\n       }\r\n-      if (rightChildIdx <= heap.length - 1 && heap[rightChildIdx] < heap[maxIdx]) {\r\n-        maxIdx = rightChildIdx;\r\n+      if (rightChildIdx <= heap.length - 1 && heap[rightChildIdx] < heap[minIdx]) {\r\n+        minIdx = rightChildIdx;\r\n       }\r\n-      if (maxIdx === currentIdx) {\r\n+      if (minIdx === currentIdx) {\r\n         break;\r\n       }\r\n+      temp = heap[currentIdx];\r\n+      heap[currentIdx] = heap[minIdx];\r\n+      heap[minIdx] = temp;\r\n+      currentIdx = minIdx;\r\n     }\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1639062340366,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -67,5 +67,12 @@\n       heap[minIdx] = temp;\r\n       currentIdx = minIdx;\r\n     }\r\n   }\r\n+  if (prevMin === undefined) {\r\n+    answerString += '0\\n';\r\n+  } else {\r\n+    answerString += `${prevMin}\\n`;\r\n+  }\r\n+  return;\r\n+\r\n }\r\n"
+                },
+                {
+                    "date": 1639062357836,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -66,13 +66,15 @@\n       heap[currentIdx] = heap[minIdx];\r\n       heap[minIdx] = temp;\r\n       currentIdx = minIdx;\r\n     }\r\n+    \r\n+    if (prevMin === undefined) {\r\n+      answerString += '0\\n';\r\n+    } else {\r\n+      answerString += `${prevMin}\\n`;\r\n+    }\r\n+    return;\r\n   }\r\n-  if (prevMin === undefined) {\r\n-    answerString += '0\\n';\r\n-  } else {\r\n-    answerString += `${prevMin}\\n`;\r\n-  }\r\n-  return;\r\n \r\n+\r\n }\r\n"
+                },
+                {
+                    "date": 1639062406126,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -66,15 +66,22 @@\n       heap[currentIdx] = heap[minIdx];\r\n       heap[minIdx] = temp;\r\n       currentIdx = minIdx;\r\n     }\r\n-    \r\n+\r\n     if (prevMin === undefined) {\r\n       answerString += '0\\n';\r\n     } else {\r\n       answerString += `${prevMin}\\n`;\r\n     }\r\n     return;\r\n   }\r\n \r\n-\r\n+  const answer = () => {\r\n+    if (number != 0) {\r\n+      insert(number);\r\n+    } else {\r\n+      erase(number);\r\n+    }\r\n+  }\r\n+  answer();\r\n }\r\n"
+                },
+                {
+                    "date": 1639062414334,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -84,4 +84,6 @@\n     }\r\n   }\r\n   answer();\r\n }\r\n+\r\n+console.log(answerString);\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1639060476472,
+            "name": "Commit-0",
+            "content": "const fs = require('fs');"
+        }
+    ]
+}

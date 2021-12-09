@@ -1,0 +1,122 @@
+{
+    "sourceFile": "항해99/문제/chap2/11866.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 26,
+            "patches": [
+                {
+                    "date": 1639015787385,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1639016197171,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,5 @@\n-const fs = require('fs');\n\\ No newline at end of file\n+const fs = require('fs');\r\n+const stdin = (process.platform === 'linux'\r\n+  ? fs.readFileSync('/dev/stdin').toString()\r\n+  : ``\r\n+)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639016211428,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n-  : ``\r\n+  : `7 3`\r\n )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639016223684,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n   : `7 3`\r\n-)\n\\ No newline at end of file\n+).split(' ').map(Number);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639016231080,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,7 @@\n const fs = require('fs');\r\n const stdin = (process.platform === 'linux'\r\n   ? fs.readFileSync('/dev/stdin').toString()\r\n   : `7 3`\r\n-).split(' ').map(Number);\n\\ No newline at end of file\n+).split(' ').map(Number);\r\n+\r\n+console.log(stdin);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639016382347,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,5 +3,4 @@\n   ? fs.readFileSync('/dev/stdin').toString()\r\n   : `7 3`\r\n ).split(' ').map(Number);\r\n \r\n-console.log(stdin);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639016493830,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,4 +3,5 @@\n   ? fs.readFileSync('/dev/stdin').toString()\r\n   : `7 3`\r\n ).split(' ').map(Number);\r\n \r\n+const numArr = Array(stdin[0]).fill(0);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639016501055,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,5 +3,6 @@\n   ? fs.readFileSync('/dev/stdin').toString()\r\n   : `7 3`\r\n ).split(' ').map(Number);\r\n \r\n-const numArr = Array(stdin[0]).fill(0);\n\\ No newline at end of file\n+const numArr = Array(stdin[0]).fill(0);\r\n+console.log(numArr);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639016522057,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,6 +3,6 @@\n   ? fs.readFileSync('/dev/stdin').toString()\r\n   : `7 3`\r\n ).split(' ').map(Number);\r\n \r\n-const numArr = Array(stdin[0]).fill(0);\r\n-console.log(numArr);\n\\ No newline at end of file\n+const emptyArr = Array(stdin[0]).fill(0);\r\n+const \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639016550835,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,5 +4,5 @@\n   : `7 3`\r\n ).split(' ').map(Number);\r\n \r\n const emptyArr = Array(stdin[0]).fill(0);\r\n-const \n\\ No newline at end of file\n+const numArr = emptyArr.map((val, idx) => val = idx + 1);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639016556659,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,5 +4,6 @@\n   : `7 3`\r\n ).split(' ').map(Number);\r\n \r\n const emptyArr = Array(stdin[0]).fill(0);\r\n-const numArr = emptyArr.map((val, idx) => val = idx + 1);\n\\ No newline at end of file\n+const numArr = emptyArr.map((val, idx) => val = idx + 1);\r\n+console.log(numArr);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639016646427,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,5 +5,10 @@\n ).split(' ').map(Number);\r\n \r\n const emptyArr = Array(stdin[0]).fill(0);\r\n const numArr = emptyArr.map((val, idx) => val = idx + 1);\r\n-console.log(numArr);\n\\ No newline at end of file\n+let answer\r\n+\r\n+const answer = () => {\r\n+\r\n+};\r\n+answer();\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639018407126,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n ).split(' ').map(Number);\r\n \r\n const emptyArr = Array(stdin[0]).fill(0);\r\n const numArr = emptyArr.map((val, idx) => val = idx + 1);\r\n-let answer\r\n+let answer = '';\r\n \r\n const answer = () => {\r\n \r\n };\r\n"
+                },
+                {
+                    "date": 1639018415365,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,8 @@\n const emptyArr = Array(stdin[0]).fill(0);\r\n const numArr = emptyArr.map((val, idx) => val = idx + 1);\r\n let answer = '';\r\n \r\n-const answer = () => {\r\n+// const answer = () => {\r\n \r\n-};\r\n\\ No newline at end of file\n-answer();\n+// };\r\n+// answer();\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639018433581,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,9 @@\n \r\n const emptyArr = Array(stdin[0]).fill(0);\r\n const numArr = emptyArr.map((val, idx) => val = idx + 1);\r\n let answer = '';\r\n+console.log(numArr.join());\r\n \r\n // const answer = () => {\r\n \r\n // };\r\n"
+                },
+                {
+                    "date": 1639018449508,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n \r\n const emptyArr = Array(stdin[0]).fill(0);\r\n const numArr = emptyArr.map((val, idx) => val = idx + 1);\r\n let answer = '';\r\n-console.log(numArr.join());\r\n+console.log(numArr.join(', '));\r\n \r\n // const answer = () => {\r\n \r\n // };\r\n"
+                },
+                {
+                    "date": 1639018497500,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n ).split(' ').map(Number);\r\n \r\n const emptyArr = Array(stdin[0]).fill(0);\r\n const numArr = emptyArr.map((val, idx) => val = idx + 1);\r\n-let answer = '';\r\n+const answerArr = [];\r\n console.log(numArr.join(', '));\r\n \r\n // const answer = () => {\r\n \r\n"
+                },
+                {
+                    "date": 1639018506195,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,10 +6,10 @@\n \r\n const emptyArr = Array(stdin[0]).fill(0);\r\n const numArr = emptyArr.map((val, idx) => val = idx + 1);\r\n const answerArr = [];\r\n-console.log(numArr.join(', '));\r\n+// console.log(numArr.join(', '));\r\n \r\n-// const answer = () => {\r\n+const answer = () => {\r\n \r\n\\ No newline at end of file\n-// };\r\n-// answer();\n+};\r\n+answer();\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639018765213,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,12 +4,14 @@\n   : `7 3`\r\n ).split(' ').map(Number);\r\n \r\n const emptyArr = Array(stdin[0]).fill(0);\r\n+const targetNum = stdin[0];\r\n+const \r\n const numArr = emptyArr.map((val, idx) => val = idx + 1);\r\n const answerArr = [];\r\n // console.log(numArr.join(', '));\r\n \r\n const answer = () => {\r\n-\r\n+ while (answerArr.length !== )\r\n };\r\n answer();\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639018783746,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n ).split(' ').map(Number);\r\n \r\n const emptyArr = Array(stdin[0]).fill(0);\r\n const targetNum = stdin[0];\r\n-const \r\n+const deleteNum = stdin[1];\r\n const numArr = emptyArr.map((val, idx) => val = idx + 1);\r\n const answerArr = [];\r\n // console.log(numArr.join(', '));\r\n \r\n"
+                },
+                {
+                    "date": 1639018866437,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,14 +4,16 @@\n   : `7 3`\r\n ).split(' ').map(Number);\r\n \r\n const emptyArr = Array(stdin[0]).fill(0);\r\n-const targetNum = stdin[0];\r\n+const fullNum = stdin[0];\r\n const deleteNum = stdin[1];\r\n const numArr = emptyArr.map((val, idx) => val = idx + 1);\r\n const answerArr = [];\r\n // console.log(numArr.join(', '));\r\n \r\n const answer = () => {\r\n- while (answerArr.length !== )\r\n+  while (answerArr.length !== fullNum) {\r\n+    let cnt = 0;\r\n+ }\r\n };\r\n answer();\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639018884091,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,7 +13,8 @@\n \r\n const answer = () => {\r\n   while (answerArr.length !== fullNum) {\r\n     let cnt = 0;\r\n+    while ()\r\n  }\r\n };\r\n answer();\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639018937861,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,11 @@\n // console.log(numArr.join(', '));\r\n \r\n const answer = () => {\r\n   while (answerArr.length !== fullNum) {\r\n-    let cnt = 0;\r\n-    while ()\r\n- }\r\n+    let cnt = 1;\r\n+    while () {\r\n+      \r\n+    }\r\n+  }\r\n };\r\n answer();\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639019114135,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,10 +13,12 @@\n \r\n const answer = () => {\r\n   while (answerArr.length !== fullNum) {\r\n     let cnt = 1;\r\n-    while () {\r\n-      \r\n+    while (cnt < deleteNum) {\r\n+      numArr.push(numArr.shift());\r\n+      cnt++;\r\n     }\r\n+    answerArr.push(numArr.shift());\r\n   }\r\n };\r\n answer();\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1639019131317,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,5 +20,5 @@\n     }\r\n     answerArr.push(numArr.shift());\r\n   }\r\n };\r\n-answer();\n\\ No newline at end of file\n+answer();\r\n"
+                },
+                {
+                    "date": 1639019165889,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,6 +19,7 @@\n       cnt++;\r\n     }\r\n     answerArr.push(numArr.shift());\r\n   }\r\n+  console.log(answerArr)l\r\n };\r\n answer();\r\n"
+                },
+                {
+                    "date": 1639019228484,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,7 +19,7 @@\n       cnt++;\r\n     }\r\n     answerArr.push(numArr.shift());\r\n   }\r\n-  console.log(answerArr)l\r\n+  console.log(`<${answerArr.join(', ')}>`);\r\n };\r\n answer();\r\n"
+                }
+            ],
+            "date": 1639015787385,
+            "name": "Commit-0",
+            "content": "const fs = require('fs');"
+        }
+    ]
+}
