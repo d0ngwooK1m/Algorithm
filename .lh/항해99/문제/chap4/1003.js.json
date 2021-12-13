@@ -1,0 +1,22 @@
+{
+    "sourceFile": "항해99/문제/chap4/1003.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1639396643928,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1639396661427,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,5 +4,5 @@\n   : `3\r\n 0\r\n 1\r\n 3`\r\n-).split('\\n');\n\\ No newline at end of file\n+).split('\\n');\r\n"
+                }
+            ],
+            "date": 1639396643928,
+            "name": "Commit-0",
+            "content": "const fs = require('fs');\r\nconst stdin = (process.platform === 'linux'\r\n  ? fs.readFileSync('/dev/stdin').toString()\r\n  : ``\r\n)"
+        }
+    ]
+}
